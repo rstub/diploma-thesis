@@ -1,0 +1,116 @@
+%%% Master-File f"ur Diplomarbeit
+%%% Time-stamp: <1999-03-05 11:51:53 ralf>
+%
+%\documentclass[12pt,german,a4paper,draft]{book}
+% draft ausschalten, um Bilder anzuzeigen
+\documentclass[12pt,german,a4paper]{book}
+% brauche ich immer
+\usepackage{babel,latexsym,amsmath,amssymb}
+% zum Einbinden von .eps files
+\usepackage[dvips]{graphicx}
+% sch?ne headings
+\usepackage{fancyhdr}
+% Rotieren von Objekten
+\usepackage{rotating,lscape,rotfloat}
+% narrow floating figures and tables
+\usepackage{floatflt}
+% erm?glicht eqnarrays mit allen tabular Befehlen
+\usepackage{eqnarray}
+% Mehr Kontrolle ?ber floats
+\usepackage{afterpage,float}
+
+% floating equation, rotierbar
+\newfloat{floateq}{tpbh}{feq}[chapter]
+\floatname{floateq}{Gleichung}
+% \setcounter{floateq}{\value{equation}}
+% macht Numerierung Einheitlich zu equations
+\newenvironment{floateqnum}{\setcounter{floateq}{\value{equation}}\begin{floateq}}{\end{floateq}}
+\newenvironment{sidewaysfloateqnum}{\setcounter{floateq}{\value{equation}}\begin{sidewaysfloateq}}{\end{sidewaysfloateq}}
+
+\input{mathe}
+\input{diplom_inputs}
+
+% Headings Definitionen
+\pagestyle{fancy}
+\fancyhf{} %clear all
+\fancyhead[LO]{\nouppercase{\leftmark}}
+\fancyhead[RE]{\nouppercase{\rightmark}}
+\fancyhead[LE,RO]{\thepage}
+%\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter.\ #1}{}}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+
+\setlength{\oddsidemargin}{1.6\oddsidemargin}
+\setlength{\evensidemargin}{0.625\evensidemargin}
+
+
+% L?ngenangabe f?r k.p-Matrix mit Text drinnen 
+\newlength{\Matrixform}
+\setlength{\Matrixform}{3cm}
+
+%\includeonly{einleitung}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%
+\frontmatter
+% Titelseite
+\include{titel}
+
+% TOC
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%
+\mainmatter
+% Einleitung
+\include{einleitung}
+
+% k.p f?r periodische St?rung
+\include{period_efa}
+
+% Anwendung auf GaInP
+\include{anwendung}
+
+% Ergebnisse
+\include{ergebnisse}
+
+% Zusammenfassung
+\include{zusammenfassung}
+
+%\addcontentsline{toc}{chapter}{Anhang1}
+
+% Anh?nge
+\begin{appendix}
+%  \addcontentsline{toc}{chapter}{Anhang2}
+  % LCAO
+  \include{lcao}
+  
+  % als Funktion von BGR
+  \include{ergeb-BGR}
+\end{appendix}
+
+%%%%%%%%%%%%%%%%%%
+\backmatter 
+
+\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+
+%\bibliographystyle{unsrt}
+%\bibliographystyle{plain}
+\bibliographystyle{myprsty}
+\bibliography{journal,kp,gainp,tba}
+
+% Best?tigung und Danksagung
+\include{danke}
+\include{erklaerung}
+
+\end{document}
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 
+
+
+
+

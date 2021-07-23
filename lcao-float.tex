@@ -1,0 +1,232 @@
+%%%% Floats für LCAO Anhang
+%%%% Time-stamp: <1999-03-03 23:54:56 ralf>
+
+
+%%%%
+%%%% Abkürzungen für sp3d5s* TBA Hamiltonian
+%%%%
+\begin{floateqnum}
+  \label{eq:abk-spds-tba}
+   \begin{equationarray*}{*{4}{r@{=}l}}
+%%%% g1, g2
+     g_{1} & \multicolumn{3}{l}
+     {e^{i \sprod{k}{d_{1}}} +  e^{i \sprod{k}{d_{2}}} +
+      e^{i \sprod{k}{d_{3}}} + e^{i \sprod{k}{d_{4}}}} & 
+     g_{2} & \multicolumn{3}{l}
+     {e^{i \sprod{k}{d_{1}}} +  e^{i \sprod{k}{d_{2}}} -
+      e^{i \sprod{k}{d_{3}}} - e^{i \sprod{k}{d_{4}}}} \\[2ex]
+%%%% g3, g4
+     g_{3} & \multicolumn{3}{l}
+     {e^{i \sprod{k}{d_{1}}} -  e^{i \sprod{k}{d_{2}}} +
+      e^{i \sprod{k}{d_{3}}} - e^{i \sprod{k}{d_{4}}}} &
+     g_{4} & \multicolumn{3}{l}
+     {e^{i \sprod{k}{d_{1}}} -  e^{i \sprod{k}{d_{2}}} -
+      e^{i \sprod{k}{d_{3}}} + e^{i \sprod{k}{d_{4}}}} \\[3ex]
+%%%% ss
+    E_{ss} & ss\sigma  &  
+    E_{s^{\ast}s} & s_{a}^{\ast}s_{c}\sigma  &
+    E_{ss^{\ast}} & s_{a}s_{c}^{\ast}\sigma  &
+    E_{s^{\ast}s^{\ast}} & s^{\ast}s^{\ast}\sigma \\[2ex]
+%%%% sp und sd    
+    E_{ps} & \frac{1}{\sqrt{3}}s_{c}p_{a}\sigma &
+    E_{sp} & \frac{1}{\sqrt{3}}s_{a}p_{c}\sigma &
+    E_{ds} & \frac{1}{\sqrt{3}}s_{c}d_{a}\sigma &
+    E_{sd} & \frac{1}{\sqrt{3}}s_{a}d_{c}\sigma \\[2ex]
+%%%% s*p und s*d
+    E_{ps^{\ast}} & \frac{1}{\sqrt{3}}s^{\ast}_{c}p_{a}\sigma &
+    E_{s^{\ast}p} & \frac{1}{\sqrt{3}}s^{\ast}_{a}p_{c}\sigma &
+    E_{ds^{\ast}} & \frac{1}{\sqrt{3}}s^{\ast}_{c}d_{a}\sigma &
+    E_{s^{\ast}d} & \frac{1}{\sqrt{3}}s^{\ast}_{a}d_{c}\sigma \\[2ex]
+%%%% pp
+    E_{pp}^{xx}   & \multicolumn{3}{l}{\frac{1}{3}(pp\sigma + 2 pp\pi)} &
+    E_{pp}^{xy}   & \multicolumn{3}{l}{\frac{1}{3}(pp\sigma -   pp\pi)} \\[2ex]
+%%%% dd
+    E_{dd}^{xx}   & \multicolumn{3}{l}
+    {\frac{1}{3}(dd\sigma + \frac{2}{3} dd\pi + \frac{4}{3} dd\delta)} &
+    E_{dd}^{xy}   & \multicolumn{3}{l}
+    {\frac{1}{3}(dd\sigma - \frac{1}{3} dd\pi - \frac{2}{3} dd\delta)} \\[2ex]
+%%%% dd
+    E_{dd}^{33}   & \multicolumn{3}{l}{\frac{1}{3}(2 dd\pi +  dd\delta)} &
+    E_{dd}^{53}   & \multicolumn{3}{l}
+    {E_{dd}^{35} = \frac{1}{3}(dd\pi -  dd\delta)} \\[2ex]
+%%%% pd
+    E_{pd}^{xx}   & \multicolumn{3}{l}
+    {\frac{1}{3}(p_{a}d_{c}\sigma - \frac{2}{\sqrt{3}} p_{a}d_{c}\pi)} &
+    E_{pd}^{xy}   & \multicolumn{3}{l}
+    {\frac{1}{3}(p_{a}d_{c}\sigma + \frac{1}{\sqrt{3}} p_{a}d_{c}\pi)} \\[2ex]
+%%%% dp
+    E_{dp}^{xx}   & \multicolumn{3}{l}
+    {\frac{1}{3}(p_{c}d_{a}\sigma - \frac{2}{\sqrt{3}} p_{c}d_{a}\pi)} &
+    E_{dp}^{xy}   & \multicolumn{3}{l}
+    {\frac{1}{3}(p_{c}d_{a}\sigma + \frac{1}{\sqrt{3}} p_{c}d_{a}\pi)} \\[2ex]
+%%%% pd und dp
+    E_{pd}^{53}   & \multicolumn{3}{l}{\frac{1}{\sqrt{3}} p_{a}d_{c}\pi} &
+    E_{dp}^{35}   & \multicolumn{3}{l}{\frac{1}{\sqrt{3}} p_{c}d_{a}\pi} 
+  \end{equationarray*}
+  \stepcounter{equation}
+  \caption{Abk"urzungen f"ur den Wechselwirkunsmatrix \eqref{eq:tba-sp3d5s}}
+\end{floateqnum}
+
+
+%%%%
+%%%% sp3d5s TBA Hamiltonoperator
+%%%%
+\begin{sidewaysfloateqnum}
+  \begin{equation}
+    \label{eq:tba-sp3d5s}
+    \left(\begin{widearray}{@{\hspace{-17ex}}r@{\hspace{7ex}}cc|ccc|ccc|cc}
+%
+& \raisebox{2.0em}[0ex][0ex]{\ket{s_{a}}} 
+& \raisebox{2.0em}[0ex][0ex]{\ket{s_{a}^{\ast}}} 
+& \raisebox{2.0em}[0ex][0ex]{\ket{x_{a}}} 
+& \raisebox{2.0em}[0ex][0ex]{\ket{y_{a}}} 
+& \raisebox{2.0em}[0ex][0ex]{\ket{z_{a}}} 
+& \raisebox{2.0em}[0ex][0ex]{\ket{yz_{a}}} 
+& \raisebox{2.0em}[0ex][0ex]{\ket{zx_{a}}} 
+& \raisebox{2.0em}[0ex][0ex]{\ket{xy_{a}}} 
+& \raisebox{2.0em}[0ex][0ex]{\ket{(3z^{2}-r^{2})_{a}}} 
+& \raisebox{2.0em}[0ex][0ex]{\ket{(x^{2}-y^{2})_{a}}} \\[-4ex]
+%%%%%%%
+\bra{s_{c}}
+&   E_{ss} g_{0}       &   E_{s^{\ast}s} g_{0}
+& - E_{ps} g_{1}       & - E_{ps}        g_{2}   & - E_{ps} g_{3}
+&   E_{ds} g_{1}       &   E_{ds}        g_{2}   &   E_{ds} g_{3}
+&   0                  &   0\\
+%%%%%%%
+\bra{s_{c}^{\ast}}
+&   E_{ss^{\ast}} g_{0}  &   E_{s^{\ast}s^{\ast}} g_{0}
+& - E_{ps^{\ast}} g_{1}  & - E_{ps^{\ast}}        g_{2} & - E_{ps^{\ast}} g_{3}
+&   E_{ds^{\ast}} g_{1}  &   E_{ds^{\ast}}        g_{2} &   E_{ds^{\ast}} g_{3}
+&   0                  &   0\\
+%%%%%%%
+\hline
+\bra{x_{c}}
+&   E_{sp}      g_{1}  &    E_{s^{\ast}p} g_{1}
+&   E_{pp}^{xx} g_{0}  &    E_{pp}^{xy}   g_{3}  &   E_{pp}^{xy} g_{2}
+& - E_{dp}^{xx} g_{0}  & -  E_{dp}^{xy}   g_{3}  & - E_{dp}^{xy} g_{2}
+& \frac{1}{\sqrt{3}} E_{dp}^{35} g_{1} & -E_{dp}^{35} g_{1} \\
+%%%%%%%
+\bra{y_{c}}
+&   E_{sp}      g_{2}  &    E_{s^{\ast}p} g_{2}
+&   E_{pp}^{xy} g_{3}  &    E_{pp}^{xx}   g_{0}  &   E_{pp}^{xy} g_{1}
+& - E_{dp}^{xy} g_{3}  & -  E_{dp}^{xx}   g_{0}  & - E_{dp}^{xy} g_{1}
+& \frac{1}{\sqrt{3}} E_{dp}^{35} g_{2} &  E_{dp}^{35} g_{2} \\
+%%%%%%%
+\bra{z_{c}}
+&   E_{sp}      g_{3}  &    E_{s^{\ast}p} g_{3}
+&   E_{pp}^{xy} g_{2}  &    E_{pp}^{xy}   g_{1}  &   E_{pp}^{xx} g_{0}
+& - E_{dp}^{xy} g_{2}  & -  E_{dp}^{xy}   g_{1}  & - E_{dp}^{xx} g_{0}
+& - \frac{2}{\sqrt{3}} E_{dp}^{35} g_{3} & 0  \\
+%%%%%%%
+\hline
+\bra{yz_{c}}
+&   E_{sd}      g_{1}  &    E_{s^{\ast}d} g_{1}
+&   E_{pd}^{xx} g_{0}  &    E_{pd}^{xy}   g_{3}  &   E_{pd}^{xy} g_{2}
+&   E_{dd}^{xx} g_{0}  &    E_{dd}^{xy}   g_{3}  &   E_{dd}^{xy} g_{2}
+& \frac{1}{\sqrt{3}} E_{dd}^{35} g_{1} & -E_{dd}^{35} g_{1} \\
+%%%%%%%
+\bra{zx_{c}}
+&   E_{sd}      g_{2}  &    E_{s^{\ast}d} g_{2}
+&   E_{pd}^{xy} g_{3}  &    E_{pd}^{xx}   g_{0}  &   E_{pd}^{xy} g_{1}
+&   E_{dd}^{xy} g_{3}  &    E_{dd}^{xx}   g_{0}  &   E_{dd}^{xy} g_{1}
+& \frac{1}{\sqrt{3}} E_{dd}^{35} g_{2} &  E_{dd}^{35} g_{2} \\
+%%%%%%%
+\bra{xy_{c}}
+&   E_{sd}      g_{3}  &    E_{s^{\ast}d} g_{3}
+&   E_{pd}^{xy} g_{2}  &    E_{pd}^{xy}   g_{1}  &   E_{pd}^{xx} g_{0}
+&   E_{dd}^{xy} g_{2}  &    E_{dd}^{xy}   g_{1}  &   E_{dd}^{xx} g_{0}
+& - \frac{2}{\sqrt{3}} E_{dd}^{35} g_{3} & 0  \\
+\hline
+%%%%%%%
+\bra{(3z^{2}-r^{2})_{c}}
+&   0   &   0
+& - \frac{1}{\sqrt{3}} E_{pd}^{53} g_{1} 
+& - \frac{1}{\sqrt{3}} E_{pd}^{53} g_{2}
+&   \frac{2}{\sqrt{3}} E_{pd}^{53} g_{3}
+&   \frac{1}{\sqrt{3}} E_{dd}^{53} g_{1} 
+&   \frac{1}{\sqrt{3}} E_{dd}^{53} g_{2}
+& - \frac{2}{\sqrt{3}} E_{dd}^{53} g_{3}
+& E_{dd}^{33} g_{0}  &  0 \\
+%%%%%%%
+\bra{(x^{2}-y^{2})_{c}}
+&   0   &   0
+&    E_{pd}^{53} g_{1}  &  - E_{pd}^{53} g_{2}  &  0
+&  - E_{dd}^{53} g_{1}  &    E_{dd}^{53} g_{2}  &  0
+&    0     &    E_{dd}^{33} g_{0}   \\
+    \end{widearray}\right)
+   \end{equation}
+   \caption{Wechselwirkungsmatrix $V_{ac}$ zwischen atomaren Orbitalen auf 
+     Anion und Kation in einem Zinkblendegitter mit $\ex \parallel [100]$, 
+     $\ey \parallel [010]$ und $\ez \parallel [001]$ und 
+     $sp^{3}d^{5}s^{\ast}$-Basis. Auftretende Abk"urzungen sind in 
+     Gl.~\eqref{eq:abk-spds-tba} angegeben.}
+\end{sidewaysfloateqnum}
+
+
+
+%\newpage
+%\begin{longtable}{l|*{5}{r}} %insgesamt 19 Spalten
+%  \label{tab:tba-parameter}
+%  \endhead
+%  \hline
+%  \caption{TBA Prameter}
+%  \endfoot
+\begin{table}
+\begin{minipage}{\textwidth}
+  \renewcommand{\thefootnote}{\thempfootnote}
+  \begin{tabular}{l@{\hspace{4ex}}*{5}{@{\hspace{3.5ex}}r}}
+\hline \hline
+\raisebox{0ex}[3ex][0.5ex]{Material} 
+& GaP\footnote{Ref.~\cite{jsbb:98}} %\addtocounter{footnote}{-1}
+& InP\footnotemark[\value{mpfootnote}]
+& GaP-InP\footnote{Differenz der Werte f"ur GaP und InP}
+& \GaInP\footnote{linear Interpoliert f"ur Ga:In $=$ 51:49}
+& \GaInP\footnote{Fit bez"uglich der $ss\sigma$-Martrixelemente} \\ \hline
+\raisebox{0ex}[2.5ex][0.5ex]{$a_{\text{latt}}$ (\AA)}   &     5.4509 &     5.8687 &    -0.4178 &     5.6556 &    5.6556 \\[1ex]
+% $E_{\langle 100 \rangle}$ &     5.0624 &     4.3673 &     0.6951 &     4.7218 &    4.7218 \\[1ex]
+ $E^{a}_{s}$        &    -5.3379 &    -5.3321 &    -0.0058 &    -5.3351 &   -5.3351 \\
+ $E^{c}_{s}$        &    -0.4005 &     0.3339 &    -0.7344 &    -0.0406 &   -0.0406 \\
+ $E^{a}_{p}$        &     3.3453 &     3.3447 &     0.0006 &     3.3450 &    3.3450 \\
+ $E^{c}_{p}$        &     6.3844 &     6.4965 &    -0.1121 &     6.4393 &    6.4393 \\
+ $E_{d}$            &    14.0431 &    12.7756 &     1.2675 &    13.4220 &   13.4220 \\
+ $E_{s^{\ast}}$     &    20.3952 &    18.8738 &     1.5214 &    19.6497 &   19.6497 \\[1ex]
+ $ss\sigma$         &    -1.7049 &    -1.4010 &    -0.3039 &    -1.5560 &   -1.5100 \\
+ $s^{\ast}s^{\ast}\sigma$  &    -3.5704 &    -3.6898 &     0.1194 &    -3.6289 &   -3.6470 \\
+ $s_{a}^{\ast}s_{c}\sigma$ &    -1.6034 &    -1.8450 &     0.2416 &    -1.7218 &   -1.7600 \\
+ $s_{a}s_{c}^{\ast}\sigma$ &    -1.6358 &    -1.2867 &    -0.3491 &    -1.4647 &   -1.4100 \\[1ex]
+ $s_{a}p_{c}\sigma$ &     2.8074 &     2.1660 &     0.6414 &     2.4931 &    2.4931 \\
+ $s_{c}p_{a}\sigma$ &     2.9800 &     2.6440 &     0.3360 &     2.8154 &    2.8154 \\
+ $s_{a}^{\ast}p_{c}\sigma$ &     2.3886 &     2.5652 &    -0.1766 &     2.4751 &    2.4751 \\
+ $s_{c}^{\ast}p_{a}\sigma$ &     2.1482 &     2.0521 &     0.0961 &     2.1011 &    2.1011 \\[1ex]
+ $s_{a}d_{c}\sigma$ &    -2.7840 &    -2.5559 &    -0.2281 &    -2.6722 &   -2.6722 \\
+ $s_{c}d_{a}\sigma$ &    -2.3143 &    -2.2192 &    -0.0951 &    -2.2677 &   -2.2677 \\
+ $s_{a}^{\ast}d_{c}\sigma$ &    -0.6426 &    -0.7912 &     0.1486 &    -0.7154 &   -0.7154 \\
+ $s_{c}^{\ast}d_{a}\sigma$ &    -0.6589 &    -0.8166 &     0.1577 &    -0.7362 &   -0.7362 \\[1ex]
+ $pp\sigma$         &     4.1988 &     4.0203 &     0.1785 &     4.1113 &    4.1113 \\
+ $pp\pi$            &    -1.4340 &    -1.2807 &    -0.1533 &    -1.3589 &   -1.3589 \\[1ex]
+ $p_{a}d_{c}\sigma$ &    -1.7911 &    -1.9239 &     0.1328 &    -1.8562 &   -1.8562 \\
+ $p_{c}d_{a}\sigma$ &    -1.8106 &    -1.8851 &     0.0745 &    -1.8471 &   -1.8471 \\
+ $p_{a}d_{c}\pi$    &     1.8574 &     1.5679 &     0.2895 &     1.7155 &    1.7155 \\
+ $p_{c}d_{a}\pi$    &     2.1308 &     1.7763 &     0.3545 &     1.9571 &    1.9571 \\[1ex]
+ $dd\sigma$         &    -1.2268 &    -1.2482 &     0.0214 &    -1.2373 &   -1.2373 \\
+ $dd\pi$            &     2.2752 &     2.1487 &     0.1265 &     2.2132 &    2.2132 \\
+ $dd\delta$         &    -2.0124 &    -1.6857 &    -0.3267 &    -1.8523 &   -1.8523  \\[1ex] \hline \hline
+% $\Delta_{a}/3$     &     0.0301 &     0.0228 &     0.0073 &  & \\
+% $\Delta_{c}/3$     &     0.0408 &     0.1124 &    -0.0716 &  & \\ \hline
+%
+%\end{longtable}
+\end{tabular}
+  \caption{TBA-Prameter f"ur $sp^{3}d^{5}s^{\ast}$-Basis. Die Gitterkonstante
+ $a_{\text{latt}}$  gilt f"ur Raumtemperatur. Die anderen Paramter sind 
+ tieftemperatur Werte, die in  eV angegeben sind.}
+  \label{tab:tba-parameter}
+\end{minipage}
+\end{table}
+ 
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "diplom"
+%%% fill-column: 150
+%%% End: 

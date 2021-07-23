@@ -1,0 +1,11 @@
+*~
+.Rproj.user
+*.aux
+*.bbl
+*.blg
+*.log
+diplom.toc
+auto
+diplom.dvi
+diplom.pdf
+diplom.ps

@@ -1,0 +1,154 @@
+% mathe.tex
+% Time-stamp: <1999-09-23 19:34:49 ralf>
+%
+% Mathematisches allerlei
+%
+\DeclareMathAlphabet{\mathsfbf}{T1}{cmss}{bx}{n}
+\DeclareMathAlphabet{\mathcalbf}{U}{eus}{b}{n}
+%
+% mathematische Objekte
+%
+\newcommand{\Matrix}[1]{\ensuremath{#1}}
+% Operator (ohne Hut)
+\newcommand{\op}[1]{\ensuremath{\protect #1}}
+\newcommand{\vecop}[1]{\ensuremath{\mathbf{\protect #1}}}
+\newcommand{\grvecop}[1]{\mbox{\mathversion{bold}$\protect #1$}}
+%
+\newcommand{\menge}[1]{\ensuremath{\mathcal{#1}}}
+\newcommand{\raum}[1]{\ensuremath{\mathsf{#1}}}
+\renewcommand{\vec}[1]{\ensuremath{\mathbf{#1}}}
+\newcommand{\grvec}[1]{\mbox{\mathversion{bold}$#1$}}
+% Einheitsvectoren
+\newcommand{\ex}{\ensuremath{\vec{\protect\hat e}_{x}}}
+\newcommand{\ey}{\ensuremath{\vec{\protect\hat e}_{y}}}
+\newcommand{\ez}{\ensuremath{\vec{\protect\hat e}_{z}}}
+%
+% Operationen/Operatoren
+%
+% hermitesch konjugiert, transponiert, komplex konjugiert
+\newcommand{\hc}[1]{\ensuremath{#1^{\dagger}}}
+\newcommand{\transp}[1]{\ensuremath{#1^{\mathsf{T}}}}
+\newcommand{\cc}[1]{\ensuremath{#1^{\ast}}}
+% Skalarprodukt <#1, #2> und vec.vec 
+\newcommand{\scp}[2]{\ensuremath{\left\langle {#1}, {#2} \right\rangle}}
+\newcommand{\sprod}[2]{\ensuremath{\vec{#1} \cdot \vec{#2} }}
+% Kommutator [#1, #2]
+\newcommand{\kom}[2]{\ensuremath{\left [\, {#1}, {#2} \, \right] }}
+% Antikommutator {#1, #2}
+\newcommand{\akom}[2]{\ensuremath{\left \{\, {#1}, {#2} \, \right \}}}
+% Poissonklammern
+\newcommand{\poisson}[2]{\akom{#1}{#2}}
+% Ableitungen etc.
+\newcommand{\dx}[1]{d#1\,}
+\newcommand{\vdx}[1]{d^{3}\!\!\: #1\,}
+\newcommand{\ddx}[1]{\frac{d}{d#1}}
+\newcommand{\pdx}[1]{\frac{\partial}{\partial#1}}
+% Benannte mathem. Objekte
+\newcommand{\kronecker}[2]{\ensuremath{\delta_{#1\,#2}}}
+\newcommand{\Rn}[1]{\ensuremath{\real^{#1}}}
+% Konstanten
+\newcommand{\eins}{\ensuremath{\mathsf{1}}}
+\newcommand{\halb}{\ensuremath{\frac{1}{2}}}
+\newcommand{\veps}{\varepsilon}
+\newcommand{\vphi}{\varphi}
+\newcommand{\element}{\,\in\,}
+% bra und ket etc...
+\newcommand{\bra}[1]{\ensuremath{\langle {#1}|}}
+\newcommand{\ket}[1]{\ensuremath{| {#1} \rangle}}
+\newcommand{\braket}[2]{\ensuremath{\langle {#1} | {#2} \rangle}}
+\newcommand{\matrixel}[3]{\ensuremath{\langle {#1} | {#2} | {#3} \rangle}}
+\newcommand{\expect}[1]{\ensuremath{\langle {#1} \rangle}}
+% für große Einträge
+\newcommand{\Bra}[1]{\ensuremath{\left\langle {#1} \right|}}
+\newcommand{\Ket}[1]{\ensuremath{\left| {#1} \right\rangle}}
+\newcommand{\BraKet}[2]{\ensuremath{\left\langle {#1} | {#2} \right\rangle}}
+\newcommand{\Matrixel}[3]{\ensuremath{\left\langle {#1}%
+\left| {#2} \right| {#3} \right\rangle}}
+\newcommand{\Expect}[1]{\ensuremath{\left\langle {#1} \right\rangle}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% von Roland 
+
+%  %  \newcommand {\arc}{\mbox{$\rm <\hspace{-0.6em}
+%  %               \raise0.3ex\hbox{$\scriptscriptstyle )$}$}}
+
+\newcommand{\vektor}[1]{\ensuremath{\underline{\bf #1}}}
+%\newcommand {\PSI}{\ensuremath{\mathbf{\underline{\psi}}}}
+%\newcommand {\Matrix}[1]{\ensuremath{\underline{\underline{\bf #1}}}}
+%\newcommand {\ableit}{\ensuremath{\frac{1}{i}\partial_z}}
+\newcommand{\kdotp}{\ensuremath{\bf k \cdot p}}
+\newcommand{\kreuz}{\ensuremath{\times}}
+\newcommand{\eps}{\ensuremath{\varepsilon}}
+% waum gibt es hier fehler???
+%  \newcommand{\epsfett}[0][]{\mbox{\mathversion{bold}$#1 \varepsilon$}}
+%  \newcommand{\pifett}[0][]{\mbox{\mathversion{bold}$#1 \pi$}}
+%  \newcommand{\sigmafett}[0][]{\mbox{\mathversion{bold}$#1 \sigma$}}
+%  \newcommand{\rhofett}[0][]{\mbox{\mathversion{bold}$#1 \sigmapi$}}
+\newcommand{\BETA}[2]{\ensuremath{\displaystyle \frac{\hbar^2 #1}{2 m #2}}}
+\newcommand{\spur}{{\mbox{tr}\hspace{0.3ex}}}
+\newcommand{\kk}{\ensuremath{{\bf k}}}
+\newcommand{\pp}{\ensuremath{{\bf p}}}
+\newcommand{\rr}{\ensuremath{{\bf r}}}
+\newcommand{\Qq}{\ensuremath{{\bf Q}}}
+\newcommand{\dd}{{\rm d}}
+\newcommand{\Ee}{\ensuremath{\mathcal E}}
+\newcommand{\EE}{\mbox{\mathversion{bold}$\mathcal E$}}
+\newcommand{\EEk}{\mbox{\small\mathversion{bold}$\cal E$}}
+\newcommand{\ee}{{\rm e}}
+
+\newcommand{\natur}{\mbox{\rm I\hspace{-0.12em}N}}
+\newcommand{\real}{\mbox{\rm I\hspace{-0.12em}R}}
+\newcommand{\komplex}{\mbox{\rm%
+\hspace{0.7ex}\rule[0.15ex]{0.10ex}{1.35ex}\hspace{-0.7ex}C}}
+
+\newcommand{\rational}{\mbox{\rm%
+\hspace{0.7ex}\rule[0.15ex]{0.10ex}{1.35ex}\hspace{-0.7ex}Q}}
+
+\newcommand{\indizes}[1]{{\mbox{\scriptsize #1}}}
+
+\newcommand{\Ds}{\displaystyle}
+\newcommand{\Ts}{\textstyle}
+\newcommand{\Ss}{\scriptstyle}
+\newcommand{\SSs}{\scriptscriptstyle}
+
+% \newcommand {\bkopf}[1]{\refstepcounter{figure}\label{#1}Fig.\ \ref{#1}:}
+
+% \newcounter{eintrag}
+% \newenvironment{liste}[1]{\begin{list}{#1}{\usecounter{eintrag}%
+%    \labelwidth1em \leftmargin1.5em \labelsep0.5em \itemsep0ex
+%    \rightmargin0pt \topsep-\parskip \addtolength{\topsep}{1ex}%
+%    \partopsep1ex \parsep0.6ex}}{\end{list}}
+
+% \newenvironment{einrueck}[1]{\begin{list}{}{%
+%    \settowidth{\labelwidth}{#1}%              Argument=Textstring
+%    \setlength{\leftmargin}{\labelwidth}%
+%    \addtolength{\leftmargin}{\labelsep}%
+%    \parsep0.5ex plus0.2ex minus 0.2ex
+%    \itemsep0.3ex
+%    \renewcommand{\makelabel}[1]{##1\hfill}}}{\end{list}}
+
+% \newenvironment{Einrueck}[1]{\begin{list}{}{%
+%    \labelwidth#1%                              Argument=Massangabe
+%    \labelsep1em
+%    \setlength{\leftmargin}{\labelwidth}%
+%    \addtolength{\leftmargin}{\labelsep}%
+%    \parsep0.5ex plus0.2ex minus 0.2ex
+%    \itemsep0.3ex
+%    \renewcommand{\makelabel}[1]{##1\hfill}}}{\end{list}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \def\lesssim{\raisebox{0pt}[1pt][0pt]{$
+%    \begin{array}{c}{<}\\[-1.6ex]{\sim}\end{array}$}}
+% \def\gtrsim{\raisebox{0pt}[1pt][0pt]{$
+%    \begin{array}{c}{>}\\[-1.6ex]{\sim}\end{array}$}}
+
+% % \newcolumntype {s}[1]{@{\hspace{#1}}}
+% \def\openone{\leavevmode\hbox{\small1\kern-0.8ex\normalsize1}}
+
+% \endinput
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 

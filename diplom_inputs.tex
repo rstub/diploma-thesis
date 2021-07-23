@@ -1,0 +1,91 @@
+%%% Definitionen für Diplomarbeit
+%%% Time-stamp: <1999-06-01 17:11:35 ralf>
+
+% primed 
+\newcommand{\pri}[1]{\ensuremath{#1^{\prime}}}
+% k in aBZ
+\newcommand{\ak}{\grvec{\kappa}}
+\newcommand{\akb}{\ensuremath{\kappa}}
+% k in nBZ
+\newcommand{\nk}{\vec{k}}
+\newcommand{\nkb}{\ensuremath{k}}
+% Set an k-punkten
+%\newcommand{\set}{\vec{K}}
+\newcommand{\set}{\ensuremath{\mathcalbf{K}}}
+% reziproke Gittervektoren
+\newcommand{\aG}{\ensuremath{\mathcalbf{G}_{\mathnormal{m}}}}
+\newcommand{\paG}{\ensuremath{\mathcalbf{G}_{\mathnormal{\pri{m}}}}}
+\newcommand{\nG}{\ensuremath{\vec{G}_{\mathnormal{m}}}}
+\newcommand{\pnG}{\ensuremath{\vec{G}_{\mathnormal{\pri{m}}}}}
+% Basisfunktionen
+\newcommand{\altebasis}{\ensuremath{\phi_{n \ak}}}
+\newcommand{\paltebasis}{\ensuremath{\phi_{\pri{n} \ak}}}
+\newcommand{\basis}{\ensuremath{\chi^{\set}_{n\nk}}}
+\newcommand{\varbasis}{\ensuremath{n\,\nk\,\set}}
+\newcommand{\pbasis}{\ensuremath{\chi^{\pri{\set}}_{\pri{n}\pri{\nk}}}}
+\newcommand{\pvarbasis}{\ensuremath{\pri{n}\,\pri{\nk}\,\pri{\set}}}
+%\newcommand{\ccbasis}{\ensuremath{\chi^{\set\ast}_{n\vec{k}}}}
+% Integral mit text drunter
+\newcommand{\bzint}[1]{\ensuremath{\int\limits_{\scriptscriptstyle \text{#1}}}}
+% Entwicklungskoeffizienten
+%\newcommand{\BnnKK}[1]{\ensuremath{B_{\begin{array}{l}\Ss \!\! n\pri{n}\\\Ss \!\! \set\pri{\set}\end{array}}^{#1}}}
+\newcommand{\BnnKK}[1]{\ensuremath{B_{\!\!\!{n\pri{n} \atop \set\pri{\set}}}^{#1}}}
+\newcommand{\koeff}{\ensuremath{A^{\set}_{n} \! (\nk) \,}}
+\newcommand{\pkoeff}{\ensuremath{A^{\pri{\set}}_{\pri{n}} \! (\pri{\nk}) \,}}
+% Impuls- und Potential-Matrixelement
+\newcommand{\pnn}{\ensuremath{\vec{p}_{\mathnormal{n\pri{n}}}}}
+\newcommand{\pnnK}{\ensuremath{\vec{p}^{\set}_{\mathnormal{n\pri{n}}}}}
+\newcommand{\VnnKK}{\ensuremath{V^{\set \pri{\set}}_{n \pri{n}}}}
+% für 11, 21 und 22 Quadranten
+\newcommand{\VnnKKee}{\ensuremath{V^{\set \set}_{n \pri{n}}}}
+\newcommand{\VnnKKze}{\ensuremath{V^{\pri{\set} \set}_{n \pri{n}}}}
+\newcommand{\VnnKKzz}{\ensuremath{V^{\pri{\set} \pri{\set}}_{n \pri{n}}}}
+
+%% Symmetriebezeichnungen
+% Gamma
+\newcommand{\GCB}{\ensuremath{\Gamma_{1 \text{c}}}}
+\newcommand{\GVBx}{\ensuremath{\Gamma^{x}_{5 \text{v}}}}
+\newcommand{\GVBy}{\ensuremath{\Gamma^{y}_{5 \text{v}}}}
+\newcommand{\GVBz}{\ensuremath{\Gamma^{z}_{5 \text{v}}}}
+\newcommand{\GVB}{\ensuremath{\Gamma_{5 \text{v}}}}
+% L
+\newcommand{\LCB}{\ensuremath{\text{L}_{1 \text{c}}}}
+\newcommand{\LVBx}{\ensuremath{\text{L}^{x}_{3 \text{v}}}}
+\newcommand{\LVBy}{\ensuremath{\text{L}^{y}_{3 \text{v}}}}
+\newcommand{\LVB}{\ensuremath{\text{L}_{3 \text{v}}}}
+% Mit Strich drüber
+\newcommand{\bGCB}{\ensuremath{\protect\bar \Gamma_{1 \text{c}}}}
+\newcommand{\bGVBx}{\ensuremath{\protect\bar \Gamma^{x}_{3 \text{v}}}}
+\newcommand{\bGVBy}{\ensuremath{\protect\bar \Gamma^{y}_{3 \text{v}}}}
+\newcommand{\bGVB}[1]{\ensuremath{\protect\bar \Gamma_{#1 \text{v}}}}
+
+% allgemeine IRREP
+\newcommand{\IRREP}[1]{\ensuremath{\Gamma_{#1}}}
+
+% Punktgruppen
+\newcommand{\Td}{\ensuremath{T_{d}}}
+\newcommand{\Cdv}{\ensuremath{C_{3v}}}
+
+%% Impulsmatrixelemente
+\newcommand{\PG}{\ensuremath{P_{\Gamma}}}
+\newcommand{\PL}{\ensuremath{P_{\text{L}}}}
+
+%% Potentialmatrixelemente
+\newcommand{\V}[1]{\ensuremath{V_{#1}}}
+
+%% Material
+\newcommand{\GaInP}{\text{GaInP}\ensuremath{_{\! 2}}}
+%\newcommand{\CuPt}{\text{CuPt}\ensuremath{_{\text{B}}}}
+\newcommand{\CuPt}{\text{CuPt}}
+
+%% array für Hamiltons
+\newenvironment{widearray}[1]{\renewcommand{\arraystretch}{1.6}\begin{array}{#1}}{\end{array}\renewcommand{\arraystretch}{0.625}}
+\newenvironment{normalarray}[1]{\renewcommand{\arraystretch}{0.625}\begin{array}{#1}}{\end{array}\renewcommand{\arraystretch}{1.6}}
+
+
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 

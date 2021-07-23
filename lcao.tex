@@ -1,0 +1,476 @@
+%%% Kapitel "uber LCAO
+%%% Time-stamp: <1999-03-04 14:08:42 ralf>
+
+
+%\addcontentsline{toc}{chapter}{Anhang}%{57}
+
+\chapter[Die LCAO-Methode]{Die Methode der Linearkombination atomarer Orbitale}
+\label{cha:lcao}
+
+%\addcontentsline{toc}{chapter}{Anhang4}
+
+
+\section{Grundlagen der LCAO-Methode}
+\label{sec:lcao-allgemein}
+
+In der Methode der Linearkombination atomarer Orbitale 
+[\emph{linear combination of atomic orbitals} (LCAO), oft auch
+\emph{tight-binding approximation} (TBA) genannt] verwenden wir Bloch-Summen
+%
+\begin{displaymath}
+  \Phi_{i \vec{k}} (\vec{r}) = \frac{1}{\sqrt{N}} \sum_{j} e^{i
+  \sprod{k}{R_{\mathnormal{j}}}} \phi_{i} (\vec{r} - \vec{R_{\mathnormal{j}}})
+\end{displaymath}
+%
+als Basis f"ur die Entwicklung der L"osung des Problems eines Elektrons in
+einem periodischen Potential. Die $\phi_{i} (\vec{r} -
+\vec{R_{\mathnormal{i}}})$ stellen dabei atomare Orbitale dar, die auf dem
+Atom am Ort \vec{R_{\mathnormal{j}}} lokalisiert sind und durch den Index $i$
+charakterisiert werden.  Die Summe l"auft "uber alle $N$ "aquivalenten Atome
+des Kristalls. Die diskrete Translationssymmetrie wird durch den Wellenvektor
+\vec{k} charakterisiert. F"ur jedes Atom in der Einheitszelle und alle
+atomaren Wellenfunktionen k"onnen wir solch eine Blochsumme konstruieren, und
+erhalten so eine Basis f"ur die Entwicklung der Wellenfunktionen. Eine L"osung
+f"ur des Problems eines Elektrons in einem periodischen Potential l"a"st sich
+dann als $\psi_{n\vec{k}}(\vec{r}) = \sum_{i} a_{ni} \Phi_{i \vec{k}}$
+schreiben, wobei die Summe "uber alle Atome in der Einheitszelle und alle
+atomaren Wellenfunktionen in der Basis geht.
+
+Schreiben wir den Hamilton-Operator f"ur das periodische Potential in
+dieser Basis, so erhalten wir viele Matrixelemente, die nur schwer zu
+berechnen sind. Deshalb wird die LCAO-Methode seit Slater und Koster
+\cite{slko:54} meist als Interpolationsmethode verwendet. Dabei wird die
+Anzahl der Matrixelemente durch verschieden N"aherungen reduziert. Danach wird
+der Wert dieser Matrixelemente an experimentelle oder aus anderen Rechnungen
+bekannte Energieeigenwerte an Punkten hoher Symmetrie in der Brillouin-Zone
+angepa"st. Ist dies geschehen, so k"onnen wir die Dispersion f"ur die
+gesamte Brillouin-Zone berechnen. Typische N"aherungen sind, da"s wir
+nur wenige Orbitale pro Atom in die Basis aufnehemen (hier $sp^{3}$
+bzw. $sp^{3}d^{5}s^{\ast}$), Wechselwirkungen ab einer gewissen Entfernung
+zwischen den Atomen vernachl"assigen (hier nur
+N"achste-Nachbar-Wechselwirkungen) und die auftretenden Matrixelemente durch
+eine Kombination 
+sogenannter Zwei-Zentren-Integrale (\emph{two-center integrals})
+n"ahern.\footnote{Diese sind zu den kovalenten Bindungen in der Chemie
+  vergleichbar.} 
+Diese Reduzierung der Anzahl der Parameter ist auch deshalb notwendig, um bei
+den meist wenigen bekannten Energieeigenwerten ein aussagekr"aftiges Modell zu
+erhalten.%\marginpar{Berechnung von Matrixelementen}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\section{$sp^{3}$-Basis f"ur qualitative Aussagen}
+\label{sec:sp3}
+
+Wie Harrison \cite{harr:80} gezeigt hat, lassen sich viele Eigenschaften
+tetraedrisch koordinierter Halbleiter schon in einer $sp^{3}$-Basis mit nur
+N"achste-Nachbar-Wechselwirkungen qualitativ erkl"aren. Wir wollen ein
+solches Modell hier benutzen, um die in Kap.~\ref{sec:phase} gezeigte Form
+der Wellenfuntkionen zu erkl"aren.
+
+Dazu verwenden wir wie in Kap.~\ref{sec:k.p-H} das symmetrieangepa"ste
+Koordinatensystem $\ex \parallel [1 \bar{1} 0]$, $\ey \parallel [1 1 \bar{2}]$
+und $\ez \parallel [111]$. W"ahlen wir das Anion in der Einheitszelle als
+Ursprung, so sind die umgebenden vier Kationen an den Positionen
+%
+\begin{equationarray*}{rrrr}
+  \vec{d_{1}} = &
+\frac{\sqrt{3}a_{\text{latt}}}{4}\left( 
+    \begin{array}[c]{r}
+      0 \\ 0 \\ 1
+    \end{array}
+\right) &
+%%%
+  \vec{d_{2}} = &
+\frac{a_{\text{latt}}}{4\sqrt{3}}\left( 
+    \begin{array}[c]{r}
+      2\sqrt{2} \\ 0 \\ -1
+    \end{array}
+\right) \\[4ex]
+%%%%%%
+  \vec{d_{3}} = &
+\frac{a_{\text{latt}}}{4\sqrt{3}}\left( 
+    \begin{array}[c]{r}
+      -\sqrt{2} \\ \sqrt{6} \\ -1
+    \end{array}
+\right) &
+%%%
+  \vec{d_{4}} = &
+\frac{a_{\text{latt}}}{4\sqrt{3}}\left( 
+    \begin{array}[c]{r}
+      -\sqrt{2} \\ -\sqrt{6} \\ -1
+    \end{array}
+\right)
+\end{equationarray*}
+%
+zu finden. 
+
+%%%%
+%%%% sp3 TBA Hamiltonoperator
+%%%%
+%\setcounter{floateq}{\value{equation}}
+\begin{sidewaysfloateqnum}
+%\renewcommand{\arraystretch}{1.6}
+  \begin{equation}
+    \label{eq:tba-sp3}
+    \left(\begin{array}{@{\hspace{-9ex}}r@{\hspace{6ex}}cccc}
+%
+& \raisebox{2.0em}[0ex][0ex]{\ket{s_{a}}} 
+& \raisebox{2.0em}[0ex][0ex]{\ket{x_{a}}} 
+& \raisebox{2.0em}[0ex][0ex]{\ket{y_{a}}} 
+& \raisebox{2.0em}[0ex][0ex]{\ket{z_{a}}} \\[-2ex]
+%%%%%%
+\bra{s_{c}}
+& ss\sigma (g_{1}+g_{2}) 
+& - \frac{\sqrt{2}}{3} s_{c}p_{a}\sigma (2g_{2}-3g_{3})
+& - \sqrt{\frac{2}{3}} s_{c}p_{a}\sigma g_{4}
+& - s_{c}p_{a}\sigma (g_{1}-\frac{1}{3} g_{2})\\[3ex]
+%%%%%%
+\bra{x_{c}}
+& \frac{\sqrt{2}}{3} s_{c}p_{a}\sigma (2g_{2}-3g_{3})
+& \begin{array}[c]{c}
+pp\pi(g_{1}+g_{2}) - \\[1ex]
+\frac{2}{9} (pp\pi - pp\sigma) (4g_{2}-3g_{3})
+\end{array}
+& \frac{\sqrt{12}}{9} (pp\pi - pp\sigma) g_{4}
+&  \frac{\sqrt{2}}{9} (pp\pi - pp\sigma) (2g_{2}-3g_{3})\\[3ex]
+%%%%%
+\bra{y_{c}}
+& \sqrt{\frac{2}{3}} s_{c}p_{a}\sigma g_{4}
+& \frac{\sqrt{12}}{9} (pp\pi - pp\sigma) g_{4} 
+& \begin{array}[c]{c}
+pp\pi(g_{1}+g_{2}) +\\[1ex]
+\frac{2}{3} (pp\pi - pp\sigma) g_{3}
+\end{array}
+& \frac{\sqrt{6}}{9} (pp\pi - pp\sigma) g_{4}\\[3ex]
+%%%%%
+\bra{z_{c}}
+& s_{c}p_{a}\sigma (g_{1}-\frac{1}{3} g_{2})
+& \frac{\sqrt{2}}{9} (pp\pi - pp\sigma) (2g_{2}-3g_{3})
+& \frac{\sqrt{6}}{9} (pp\pi - pp\sigma) g_{4}
+& \begin{array}[c]{c}
+pp\sigma (g_{1}+g_{2}) + \\[1ex]
+\frac{8}{9} (pp\pi - pp\sigma) g_{2}
+\end{array}
+    \end{array}\right)
+  \end{equation}
+  \begin{eqnarray*}
+    g_{1} &=& e^{i \sprod{k}{d_{1}}}\\
+    g_{2} &=& e^{i \sprod{k}{d_{2}}} + e^{i \sprod{k}{d_{3}}} 
+            + e^{i \sprod{k}{d_{4}}} \\
+    g_{3} &=& e^{i \sprod{k}{d_{3}}} + e^{i \sprod{k}{d_{4}}}\\  
+    g_{4} &=& e^{i \sprod{k}{d_{3}}} - e^{i \sprod{k}{d_{4}}}\\
+  \end{eqnarray*}
+%\renewcommand{\arraystretch}{0.625}
+\caption{Wechselwirkungsmatrix $V_{ac}$ zwischen atomaren Orbitalen auf Anion
+  und Kation in einem Zinkblendegitter mit $\ex \parallel [1 \bar{1} 0]$, $\ey
+  \parallel [1 1 \bar{2}]$ und $\ez \parallel [111]$ und $sp^{3}$-Basis.}
+\end{sidewaysfloateqnum}
+
+
+
+Bei Slater und Koster \cite{slko:54} sind die Beziehungen zwischen
+Matrixelementen des Hamilton-Operators bez"uglich atomarer Wellenfunktionen
+$\phi_{i}$ und den Zwei-Zentren-Integralen angegeben. Damit k"onnen wir
+die Form des TBA-Hamilton-Operators
+%
+\begin{equation}
+  \label{eq:tba-H}
+  \op{H}_{0}^{\SSs \text{TBA}} = \left(
+  \begin{array}[c]{cc}
+    E_{c}       & V_{ac} \\
+    \hc{V_{ac}} & E_{a}
+  \end{array} \right)
+\end{equation}
+%
+bestimmen. $E_{c}$ und $E_{a}$ sind Diagonalmatrixen mit den sogenannten
+\emph{on-site} Energien der verschiedenen atomaren Orbitalen auf der
+Hauptdiagonalen. 
+%
+\begin{displaymath}
+  E_{i} = \left(
+  \begin{array}[c]{cccc}
+E_{s}^{i} & 0 & 0 & 0 \\
+0 & E_{p}^{i} & 0 & 0 \\
+0 & 0 & E_{p}^{i} & 0 \\
+0 & 0 & 0 & E_{p}^{i}
+  \end{array} \right)
+\end{displaymath}
+%
+$V_{ac}$ ist die Wechselwirungsmatrix zwischen den Orbitalen
+auf Anion und Kation. Sie ist in Gl.~\eqref{eq:tba-sp3} dargestellt.
+
+F"ur den $\Gamma$-Punkt mit $k=0$ zerf"allt diese $8\times8$-Matrix in vier
+$2\times2$-Matrizen. Eine davon liefert uns den \GCB-Zustand, d.~h.\ das obere
+Niveau des Zwei-Niveau-Systems:
+%
+\begin{displaymath}
+  \left(
+    \begin{array}[c]{cc}
+E_{s}^{c} & 4 ss\sigma \\
+4 ss\sigma & E_{s}^{a}
+    \end{array}
+\right)
+\end{displaymath}
+%
+Da $ss\sigma<0$ gilt \cite{harr:80}, ist das obere Niveau gegenphasig. Der
+\GCB-Zustand ist also durch
+%
+\begin{displaymath}
+  \ket{\GCB} = + \alpha_{\Gamma}^{\text{c}} \ket{s_{c}} -
+  \beta_{\Gamma}^{\text{c}} \ket{s_{a}}
+\end{displaymath}
+%
+gegeben, mit $\alpha_{\Gamma}^{\text{c}} > \beta_{\Gamma}^{\text{c}} >0$.
+
+Die anderen drei Matrizen sind gleich und liefern das dreifach entarteten
+\GVB-Niveau, d.~h.\ das untere Niveau des Zwei-Niveau-Systems:
+%
+\begin{displaymath}
+  \left(
+    \begin{array}[c]{cc}
+E_{p}^{c} & \frac{4}{3} (pp\sigma + 2 pp\pi) \\
+\frac{4}{3} (pp\sigma + 2 pp\pi) & E_{p}^{a}
+    \end{array}
+\right)
+\end{displaymath}
+%
+Da $pp\sigma + 2 pp\pi>0$ gilt \cite{harr:80}, ist hier das untere Niveau
+gegenphasig. Der \GVBx-Zustand ist also durch
+%
+\begin{displaymath}
+  \ket{\GVBx} = + \alpha_{\Gamma}^{\text{v}} \ket{x_{c}} -
+  \beta_{\Gamma}^{\text{v}} \ket{x_{a}}
+\end{displaymath}
+%
+gegeben, mit $\beta_{\Gamma}^{\text{v}} > \alpha_{\Gamma}^{\text{v}} > 0$.
+Analoges ergibt sich f"ur \GVBy\ und \GVBz.  Die Beziehungen zwischen den
+$\beta_{\Gamma}^{\text{i}}$ und $\alpha_{\Gamma}^{\text{i}}$ gelten dabei,
+weil das Anion im Vergleich zum Kation immer die geringere \emph{on-site}
+Energie besitzt.
+
+F"ur den L-Punkt mit $\vec{k} = 2\pi/a_{\text{latt}} (1/2,1/2,1/2)$ zerf"allt
+unsere Matrix in zwei "aquivalente $2\times2$-Matrizen und eine
+$4\times4$-Matrix. Die beiden $2\times2$-Matrizen liefern das zweifach
+entartete \LVB-Niveau . Dabei ist das Au"serdiagonalelement eine komplexe 
+Gr"o"se. Doch diese Phase hebt sich mit dem Phasenunterschied zwischen den
+Wellenfunktionen auf Anion und Kation gerade auf, so da"s wir die
+Wellenfunktion als Summe "uber atomare Orbitale mit reellen Koeffizienten
+schreiben k"onnen.\footnote{Das entspricht der Aussage aus Kap.~\ref{sec:ME},
+  da"s auch am L-Punkt die Wellenfuntionen reell gew"ahlt werden k"onnen.} 
+Der \LVBx-Zustand ist also durch
+%
+\begin{displaymath}
+  \ket{\LVBx} = + \alpha_{\text{L}}^{\text{v}} \ket{x_{c}} +
+  \beta_{\text{L}}^{\text{v}} \ket{x_{a}}
+\end{displaymath}
+%
+gegeben, mit $\beta_{\text{L}}^{\text{v}} > \alpha_{\text{L}}^{\text{v}} >
+0$. Analoges ergibt sich f"ur \LVBy.
+
+Auch in der verbleibenden $4\times4$-Matrix heben sich die verschiedenen
+Phasen gegenseitig auf. Das \LCB-Niveau ist also der Zustand, der zum
+zweith"ochs"-ten Eigenwerte dieser reellen $4\times4$-Matrix geh"ort. Dies ist
+der Zustand mit gleichphasigen $s$-Orbitalen und gegenphasigen
+$p_{z}$-Orbitalen, wenn wir die Zwei-Zentren-Integrale aus
+Ref.~\cite{harr:80} verwenden:
+%
+\begin{displaymath}
+  \ket{\LCB} = - \alpha_{\text{L}}^{\text{c}} \ket{s_{c}} 
+               - \alpha_{\text{L}}^{\text{c}\prime} \ket{z_{c}} 
+               -  \beta_{\text{L}}^{\text{c}} \ket{s_{a}} 
+               +  \beta_{\text{L}}^{\text{c}\prime} \ket{z_{a}} 
+\end{displaymath}
+
+Der "Ubergang von der Einheitszelle des Zinkblende-Gitters zu der
+Einheitszelle des CuPt-geordneten Gitters ist dann einfach. F"ur die
+Wellenfunktionen am $\Gamma$-Punkt gilt, da"s die atomaren Orbitale auf allen
+"aquivalenten Atomen gleiche Phase haben. Die Orbitale auf den Atomen A2 und
+C2 aus Abb.~\ref{fig:wfkt-G}(a) haben also das gleiche Vorzeichen, wie die auf
+A1 und C1. F"ur die Wellenfunktionen am L-Punkt, haben die Orbitale auf den
+Atomen A2 und C2 gerade das umgekehrte Vorzeichen, wie die auf A1 und C1. Wir
+erhalten also f"ur die Wellenfunktionen in der Einheitszelle der
+CuPt-geordneten Struktur:
+%
+\begin{eqnarray*}
+%%%%%
+\ket{\GCB} &=& + \alpha_{\Gamma}^{\text{c}} (\ket{s_{c1}} + \ket{s_{c2}})
+               -  \beta_{\Gamma}^{\text{c}} (\ket{s_{a1}} + \ket{s_{a2}}) \\
+%%%%%
+\ket{\GVBx}&=& + \alpha_{\Gamma}^{\text{v}} (\ket{x_{c1}} + \ket{x_{c2}})
+               -  \beta_{\Gamma}^{\text{v}} (\ket{x_{a1}} + \ket{x_{a2}}) \\
+%%%%%
+\ket{\LCB} &=& - \alpha_{\text{L}}^{\text{c}} (\ket{s_{c1}} - \ket{s_{c2}}) 
+               - \alpha_{\text{L}}^{\text{c}\prime} (\ket{z_{c1}} - \ket{z_{c2}}) \\
+           &&  -  \beta_{\text{L}}^{\text{c}} (\ket{s_{a1}} - \ket{s_{a2}}) 
+               +  \beta_{\text{L}}^{\text{c}\prime} (\ket{z_{a1}} - \ket{z_{a2}}) \\
+%%%%%
+\ket{\LVBx}&=& + \alpha_{\text{L}}^{\text{v}} (\ket{x_{c1}} - \ket{x_{c2}})
+               +  \beta_{\text{L}}^{\text{v}} (\ket{x_{a1}} - \ket{x_{a2}})
+%%%%%
+\end{eqnarray*}
+%
+Dies entspricht den Wellenfunktionen, wie sie in Abb.~\ref{fig:wfkt-G} und
+\ref{fig:wfkt-L} zu sehen sind.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{$sp^{3}d^{5}s^{\ast}$-Basis f"ur quantitative Aussagen}
+\label{sec:sp3d5s*}
+
+TBA-Modelle mit einer $sp^{3}$-Basis sind gut geeignet um qualitative Aussagen
+zu treffen. Doch insbesondere f"ur quantitative Aussagen "uber die
+Leitungsb"ander, wie wir sie ben"otigen um die Eigenergien der Basiszust"ande
+in unserem \kdotp-Modell und die Impulsmatrixelemente festzulegen, sind sie
+weniger geeignet.\footnote{F"ur eine Diskussion der Probleme sie
+  Ref.~\cite{jsbb:98}.}  
+Jancu \emph{et al.} \cite{jsbb:98} haben f"ur verschiedene Gruppe-IV- und
+III-V-Halbleiter empirische TBA-Parameter f"ur eine
+$sp^{3}d^{5}s^{\ast}$-Basis bestimmt, und dabei eine gute Beschreibung der
+Valenzb"ander und der untersten beiden Leitungsb"ander erhalten. Diese
+Parametrisierung wollen wir hier als Ausgangspunkt verwenden.
+
+Der TBA-Hamilton-Operator hat wieder die Form \eqref{eq:tba-H}, nur da"s
+$E_{i}$ und $V_{ac}$ $10\times10$-Matrizen sind. Die Form von $V_{ac}$ k"onnen
+wir wieder mit Hilfe der Beziehungen zwischen den Matrixelementen des
+Hamilton-Operators bez"uglich atomarer Wellenfunktionen $\phi_{i}$ und den
+Zwei-Zentren-Integralen aus Ref.~\cite{slko:54} bestimmen. $V_{ac}$ ist in
+Gl.~\eqref{eq:tba-sp3d5s} dargestellt.
+
+\input{lcao-float}
+
+
+Das Anion w"ahlen wir dabei wieder als Ursprung des Koordinatensystems,
+diesmal aber mit $\ex \parallel [100]$, $\ey \parallel [010]$ und $\ez
+\parallel [001]$. Die umgebenden Kationen sind also an den Positionen 
+%
+\begin{equationarray*}{rrrr}
+  \vec{d_{1}} = &
+\frac{a_{\text{latt}}}{4}\left( 
+    \begin{array}[c]{r}
+      1 \\ 1 \\ 1
+    \end{array}
+\right) &
+%%%
+  \vec{d_{2}} = &
+\frac{a_{\text{latt}}}{4}\left( 
+    \begin{array}[c]{r}
+      1 \\ -1 \\ -1
+    \end{array}
+\right) \\[4ex]
+%%%%%%
+  \vec{d_{3}} = &
+\frac{a_{\text{latt}}}{4}\left( 
+    \begin{array}[c]{r}
+      -1 \\ 1 \\ -1
+    \end{array}
+\right) &
+%%%
+  \vec{d_{4}} = &
+\frac{a_{\text{latt}}}{4}\left( 
+    \begin{array}[c]{r}
+      -1 \\ -1 \\ 1
+    \end{array}
+\right)
+\end{equationarray*}
+%
+zu finden. 
+
+Um Zwei-Zentren-Integrale $(l\pri{l}\lambda)$ f"ur ungeordnetes \GaInP\ zu
+erhalten, interpolieren wir die von Jancu \emph{et al.} \cite{jsbb:98} f"ur
+GaP und InP angegebenen Werte linear
+%
+\begin{displaymath}
+  (l\pri{l}\lambda)_{\GaInP} = x (l\pri{l}\lambda)_{\mathrm{GaP}} + (1-x) (l\pri{l}\lambda)_{\mathrm{InP}}
+\end{displaymath}
+%
+und analog f"ur die \emph{on-site} Energien. F"ur $x=0.51$ liefern diese
+Parameter aber eine zu gro"se Bandl"ucke von 2,28~eV, was ziemlich genau dem
+Mittelwert der direkten Bandl"ucken von GaP und InP entspricht. Da
+verschiedene Untersuchungen \cite{LB17a} darauf hinweisen, da"s das
+Leitungsband f"ur das nicht-lineare Verhalten der direkten Bandl"ucke
+verantwortlich ist, f"uhren wir einen empirischen \emph{bowing} Faktor
+f"ur die vier $(ss\sigma)$-artigen Zwei-Zentren-Integrale ein
+%
+\begin{displaymath}
+  (ss\sigma)_{\GaInP} = x (ss\sigma)_{\mathrm{GaP}} + (1-x)
+  (ss\sigma)_{\mathrm{InP}} + b_{(ss\sigma)} x(1-x)
+\end{displaymath}
+%
+mit $b_{(ss\sigma)} =
+\frac{1}{2}((ss\sigma)_{\mathrm{GaP}}-(ss\sigma)_{\mathrm{InP}})$. 
+Analog f"ur $s_{a}s_{c}^{\ast}\sigma$, $s_{a}^{\ast}s_{c}\sigma$ und
+$s^{\ast}s^{\ast}\sigma$. Die so erhaltenen Parameter sind in der rechten
+Spalte von Tab.~\ref{tab:tba-parameter} angegeben.
+
+Experimentelle Werte f"ur die Bandl"ucke bei tiefen Temperaturen schwanken
+zwischen 1,975~eV und 2,006~eV \cite{kipp:97,fgmz:98}. Die mit den hier
+verwendeten Parametern berechnete Bandl"ucke liegt mit 1.991~eV in diesem
+Bereich. Dabei wurde bereits eingerechnet, da"s die Bandl"ucke um ein drittel
+der Spin-Bahn-Aufspaltung von etwa 100~meV reduziert wird, wenn die
+Spin-Bahn-Wechselwirkung ber"ucksichtigt wird.
+
+Die in Kap.~\ref{sec:basiswahl} dargestellten Bandstrukturen, sowie die in
+Kap.~\ref{sec:betrag} verwendeten effektiven Massen erhalten wir durch eine
+numerische Diagonalisierung dieses TBA-Hamilton-Operators mit den in der
+rechten Spalte von Tab.~\ref{tab:tba-parameter} angegebenen Parametern.
+
+%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Berechnung von Matrixelementen}
+\label{sec:me-berechnung}
+
+Bei der Berechnung von Matrixelementen mit Hilfe der LCAO-Methode gehen wir
+wie folgt vor. Zun"achst berechnen wir die Eigenfunktionen des
+TBA-Hamilton-Operators des ungeordneten Systems f"ur $\Gamma$- und L-Punkt.
+Diese Wellenfunktionen sind f"ur eine Zinkblende-Einheitszelle definiert,
+lassen sich aber nach dem in Kap.~\ref{sec:sp3} gezeigten Verfahren auf die
+Einheitszelle des \CuPt-geordneten Materials erweitern.
+
+Der TBA-Hamilton-Operators des geordneten Systems zeichnet sich dadurch aus,
+da"s die beiden Kationen C1 und C2 verschieden sind, und damit auch die
+Zwei-Zentren-Integrale sich unterscheiden. So gilt i.~A.\ $p_{c2}p_{a1}\pi
+\neq p_{c1}p_{a2}\pi$ etc. Diesen Hamilton-Operator k"onnen wir in eine Summe
+aus zwei Matrizen aufteilen. In der ersten Matrix \op{H_{0}^{\SSs \text{TBA}}}
+setzen wir "uberall die \emph{on-site} Energien und Zwei-Zentren-Integrale des
+ungeordneten Systems ein, die zweite Matrix \op{H_{1}^{\SSs \text{TBA}}}
+enth"alt dann die Unterschiede zum tats"achlichen Wert f"ur ein geordnetes
+System.
+
+Die auf die Einheitszelle des \CuPt-geordneten Materials erweiterten
+Eigenfunktionen des ungeordneten Systems sind Eigenfunktionen zu
+\op{H_{0}^{\SSs \text{TBA}}}. Das Ordnungspotential ist in der TBA-Basis durch
+\op{H_{1}^{\SSs \text{TBA}}} gegeben, und dessen Matrixelemente bez"uglich der
+Zust"ande aus Kap.~\ref{sec:sp3} k"onnen wir berechnen. Eines davon ist
+in Gl.~\eqref{eq:V35-tba} angegeben. Die Unterschiede der Form $\Delta
+l_{c1}\pri{l}_{a2}\lambda$ k"onnen wir durch den Unterschied zwischen
+den entsprechenden Zwei-Zentren-Integralen f"ur GaP und InP multipliziert mit
+dem Ordnungsgrad modellieren. Die Schwierigkeit hier ist, da"s die
+Zwei-Zentren-Integralen vom Abstand abh"angen, aber f"ur die Form dieser
+Abstandsabh"angigkeit verschiedene Modelle existieren
+\cite[p.~504ff]{jsbb:98, harr:80}. Je nach dem welche Abstandsabh"angigkeit
+(und welche Parametrisierung) wir verwenden, erhalten wir unterschiedliche
+Ergebnisse. 
+
+Eine M"oglichkeit um zu testen, ob die LCAO-Methode "uberhaupt
+geeignet ist solche Matrixelemente zu berechnen, w"aren
+(GaAs)$_{n}$(AlAs)$_{n}$ "Ubergitter f"ur verschiedenes $n$. Auch hier wurden
+Schwierigkeiten mit der Standard \kdotp-Theorie berichtet \cite{wozu:96}, die
+mit der hier diskutierten Verallgemeinerung nicht auftreten sollten. Der
+Vorteil bei diesem System w"are, da"s GaAs und AlAs fast die gleiche
+Gitterkonstante haben, so da"s die Schwierigkeiten mit der
+Abstandsabh"angigkeit der Zwei-Zentren-Integrale vermieden werden k"onnen,
+wenn Potentialmatrixelemente "uber TBA berechnet werden
+
+
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "diplom"
+%%% End: 
+
+
+
+
+
+
+
