@@ -1,4 +1,4 @@
-name: Render and deploy quarto files
+name: Render and deploy Quarto files
 on:
   push:
   pull_request:
@@ -6,15 +6,43 @@ on:
 jobs:
   quarto-render-and-deploy:
     runs-on: ubuntu-latest
+    env:
+      RENV_PATHS_ROOT: ~/.local/share/renv
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: "Install Quarto and render project"
-      uses: pommevilla/quarto-render@v0.3.0
+      - uses: actions/setup-python@v2
 
-    - name: "Deploy to gh-pages"
-      uses: peaceiris/actions-gh-pages@v3
-      if: github.ref == 'refs/heads/main'
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_site
+      - name: "Install Python deps"
+        run: |
+          pip install -r requirements.txt
+
+      - uses: r-lib/actions/setup-r@v1
+
+      - name: "Install curl for Bioconductor"
+        run: |
+          sudo apt -y install libcurl4-openssl-dev
+
+      - name: "Install R Packages: Cache packages"
+        uses: actions/cache@v1
+        with:
+          path: ${{ env.RENV_PATHS_ROOT }}
+          key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-renv-
+
+      - name: "Install R Packages: Restore packages"
+        shell: Rscript {0}
+        run: |
+          if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
+          renv::restore()
+
+      - name: "Install Quarto and render"
+        uses: pommevilla/quarto-render@main
+
+      - name: "Deploy to gh-pages"
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_book
