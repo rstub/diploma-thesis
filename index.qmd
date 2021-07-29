@@ -1,9 +1,12 @@
-# Preface {.unnumbered}
-
-This is a Quarto book.
-
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
-
-```{r}
-1 + 1
+```{r, results='asis', echo=FALSE, eval=knitr::is_html_output()}
+input <- file("header.tex")
+cat(sub("%.*$", "", readLines(input)), sep = "\n")
+close(input)
 ```
+
+
+# Einleitung
+
+Bei der Beschreibung der Eigenschaften von Festkörpern stehen wir vor der Schwierigkeit, daß es sich dabei um ein wechselwirkendes Vielteilchensystem handelt. Oft wird daher die Näherung verwendet, dieses Vielteilchenproblem auf ein effektives Einteilchenproblem abzubilden und die Einteilchenzustände zu betrachten, die sich daraus ergeben. In Halbleitern werden die wesentlichen Eigenschaften von jenen effektiven Einteilchenzustände bestimmt, die in der Nähe der Bandkanten liegen. Die $\kdotp$-Theorie [@kane:66] beschreibt diese Zustände gut, weshalb sie sehr erfolgreich bei der Erklärung vieler Effekte in Halbleitern ist und breite Anwendung findet, insbesondere in Verbindung mit der Envelopefunktionsnäherung [@luko:55].
+
+...

@@ -102,10 +102,15 @@
     },
     "rmarkdown": {
       "Package": "rmarkdown",
-      "Version": "2.9",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "912c09266d5470516df4df7a303cde92"
+      "Version": "2.9.5",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "rmarkdown",
+      "RemoteUsername": "rstudio",
+      "RemoteRef": "main",
+      "RemoteSha": "bc936f75d44d34b60c4fc90cd76304d22b524be6",
+      "Hash": "ddd55a3f346f191a717a6715b94eab9f"
     },
     "stringi": {
       "Package": "stringi",

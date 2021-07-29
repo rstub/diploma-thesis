@@ -1,0 +1,17 @@
+```{r, results='asis', echo=FALSE, eval=knitr::is_html_output()}
+input <- file("header.tex")
+cat(sub("%.*$", "", readLines(input)), sep = "\n")
+close(input)
+```
+
+# Periodische Störungen im Rahmen der $\kdotp$-Theorie {#sec-periodstoer}
+
+In diesem Kapitel soll die allgemeine Theorie für die Verallgemeinerung der $\kdotp$-Theorie auf periodische Störungen vorgestellt werden. Dazu wollen wir zunächst die Standard $\kdotp$-Theorie skizzieren, wie sie etwa bei @kane:66 zu finden ist, und danach die nötigen Verallgemeinerungen vornehmen.
+
+## Standard $\kdotp$-Theorie
+
+Im Rahmen der $\kdotp$-Theorie wird normalerweise das Problem eines Elektrons in einem periodischen Potential behandelt, d.h. die stationäre Schrödinger-Gleichung mit dem Hamilton-Operator
+
+$$
+ H_{0} = \frac{\pp^{2}}{2m} + V_{0}(\rr).
+$$

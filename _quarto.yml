@@ -2,22 +2,41 @@ project:
   type: book
 
 book:
-  title: "diploma-thesis"
-  author: "Jane Doe"
-  date: "7/23/2021"
+  title: "Verallgemeinerung der $\\kdotp$-Theorie für periodische Störungen"
+  output-file: "stubner_1999_verallgemeinerung_kp_theorie"
+  author: "Ralf Stubner"
+  date: "März 1999"
   chapters:
     - index.qmd
-    - intro.qmd
-    - summary.qmd
+    - period_efa.qmd
+    - anwendung.qmd
+    - ergebnisse.qmd
+    - zusammenfassung.qmd
+  appendices:
+    - lcao.qmd
+    - ergeb-BGR.qmd
     - references.qmd
+    - danke.qmd
+    - erklaerung.qmd
+  search: true
+  repo-url: https://github.com/rstub/diploma-thesis/
+  downloads: [pdf]
+  sharing: [twitter, facebook]
 
+#pdf-engine: xelatex
+lang: de
+link-citations: true
 bibliography: references.bib
+csl: reviews-of-modern-physics-with-titles.csl
 
 format:
   html:
     theme: cosmo
+    html-math-method: katex
   pdf:
-    documentclass: scrreport
-  epub:
-    cover-image: cover.png
-
+    documentclass: scrbook
+    classoption: [a5paper]
+    keep-tex: true
+    include-in-header: header.tex
+    #cite-method: biblatex
+    #biblatexoptions: [style=phys]

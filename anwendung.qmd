@@ -1,0 +1,29 @@
+```{r, results='asis', echo=FALSE, eval=knitr::is_html_output()}
+input <- file("header.tex")
+cat(sub("%.*$", "", readLines(input)), sep = "\n")
+close(input)
+```
+
+# Anwendung auf geordnetes GaInP₂ {#sec-anwendung}
+
+In diesem Kapitel soll gezeigt werden, wie sich die in Kap.
+@sec-periodstoer abgeleitete Theorie auf ein konkretes Problem, die
+effektive Masse der Elektronen im Leitungsband von (teil-)geordnetem
+GaInP₂, anwenden läßt.
+
+## Allgemeines zum Materialsystem {#sec-materialsystem}
+
+Viele III--V-Halbleiterlegierungen $A_{x}B_{1-x}C$ mit Kationen $A$ und
+$B$ zeigen spontane, langreichweitige CuPt-Ordnung, wenn sie mit
+metallorganischer Gasphasen-Epitaxie
+\[\emph{metalorganic vapour phase epitaxy} (MOVPE)\] auf
+$(001)$-orientierten Substraten gewachsen werden [@zuma:94]. Die
+geordnete Phase besteht aus abwechselnden Monolagen
+$A_{x+\eta/2}B_{1-x-\eta/2}C$ und $A_{x-\eta/2}B_{1-x+\eta/2}C$, die
+längs der $[111]$-Richtung angeordnet sind. Dabei ist
+$0 \le \eta \le 1$ der Ordnungsgrad. Die $[111]$-Richtung wird als
+Ordnungsrichtung
+bezeichnet.^[Im Prinzip wäre auch eine der drei Richtungen möglich,
+  die zur $[111]$-Richtung äquivalent sind. Doch hat dies hier keinerlei
+  Auswirkungen, so daß wir hier bei nur einer Richtung bleiben wollen.]
+

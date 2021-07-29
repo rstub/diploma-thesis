@@ -1,0 +1,17 @@
+\usepackage[osf,slantedGreek]{mathpazo}
+\linespread{1.15}\selectfont
+\typearea[8mm]{16}% calc gives 20
+\addtokomafont{sectioning}{\rmfamily}
+\addtokomafont{descriptionlabel}{\rmfamily}
+\addtokomafont{pagehead}{\itshape}
+\usepackage{bm}
+\DeclareUnicodeCharacter{2082}{\textsubscript{2}}
+
+\renewcommand{\vec}[1]{\bm{#1}}
+\newcommand{\raum}[1]{\mathsf{#1}}
+\newcommand{\V}[1]{V_{#1}}
+\newcommand{\kk}{\vec{k}}
+\newcommand{\pp}{\vec{p}}
+\newcommand{\rr}{\vec{r}}
+\newcommand{\kdotp}{\kk \cdot \pp}
+
