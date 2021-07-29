@@ -19,7 +19,7 @@ jobs:
 
       - name: "Install TeX Live"
         run: |
-          sudo apt -y install texlive
+          sudo apt -y install texlive-latex-extra
 
       - name: "Install R Packages: Cache packages"
         uses: actions/cache@v1
