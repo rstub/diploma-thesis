@@ -4,9 +4,20 @@ cat(sub("%.*$", "", readLines(input)), sep = "\n")
 close(input)
 ```
 
-
 # Einleitung
 
 Bei der Beschreibung der Eigenschaften von Festkörpern stehen wir vor der Schwierigkeit, daß es sich dabei um ein wechselwirkendes Vielteilchensystem handelt. Oft wird daher die Näherung verwendet, dieses Vielteilchenproblem auf ein effektives Einteilchenproblem abzubilden und die Einteilchenzustände zu betrachten, die sich daraus ergeben. In Halbleitern werden die wesentlichen Eigenschaften von jenen effektiven Einteilchenzustände bestimmt, die in der Nähe der Bandkanten liegen. Die $\kdotp$-Theorie [@kane:66] beschreibt diese Zustände gut, weshalb sie sehr erfolgreich bei der Erklärung vieler Effekte in Halbleitern ist und breite Anwendung findet, insbesondere in Verbindung mit der Envelopefunktionsnäherung [@luko:55].
 
-...
+Allerdings ergeben sich Schwierigkeiten, wenn das betrachtete System sich auf einer der Gitterkonstante vergleichbaren Längenskala periodisch ändert. Beispiele für Systeme in denen dies untersucht wurde sind Halbleiterlegierungen in denen spontane Ordnung auftritt [@fwz:95] und kurzperiodische Übergitter [@wozu:96]. Diese Schwierigkeiten können wir so verstehen, daß die $\kdotp$-Theorie Bereiche der Brillouin-Zone schlecht beschreibt, die im reziproken Raum einen großen Abstand von den Bandkantenzuständen haben. Doch es sind diese weit entfernten Zustände, die in Systemen mit kurzperiodischer Störung entscheidend beitragen.
+
+Aus diesem Grund konnten solche Systeme meist nur mit All-Elektronen-Rechnungen behandelt werden. Die Ergebnisse solch einer Rechnung sind aber schwieriger zu interpretieren, als Ergebnisse von Rechnungen mit $\kdotp$-Theorie. Deshalb wollen wir hier zeigen, wie sich die $\kdotp$-Theorie so erweitern läßt, daß periodische Störungen effektiv beschrieben werden können. Als Beispiel für eine Anwendung dieser Verallgemeinerung soll die Ordnungsabhängigkeit der effektiven Masse im Leitungsband von spontan geordnetem GaInP₂ untersucht werden.
+
+Diese Arbeit gliedert sich wie folgt.
+
+Im zweiten Kapitel werden wir die Standard $\kdotp$-Theorie skizzieren und die notwendigen Verallgemeinerungen für die Behandlung periodischer Störungen durchführen.
+
+Das dritte Kapitel enthält eine Einführung in wichtige Eigenschaften des Materialsystems GaInP₂. Danach zeigen wir mit welchem Hamilton-Operator die effektive Masse des Leitungsbandes in diesem Material beschrieben werden kann.
+
+Im vierten Kapitel lösen wir diesen Hamilton-Operator und präsentieren die Ergebnisse dieser Rechnung.
+
+Das letzte Kapitel enthält eine Zusammenfassung und einen kurzen Ausblick auf künftige Weiterentwicklungen.
