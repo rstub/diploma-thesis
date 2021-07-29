@@ -25,6 +25,10 @@ book:
 
 #pdf-engine: xelatex
 lang: de
+crossref:
+  fig-prefix: Abb.   # (default is "fig.")
+  tbl-prefix: Tab.    # (default is "tbl.")
+  sec-prefix: Kap.
 link-citations: true
 bibliography: references.bib
 csl: reviews-of-modern-physics-with-titles.csl

@@ -6,7 +6,7 @@ close(input)
 
 # Anwendung auf geordnetes GaInP₂ {#sec-anwendung}
 
-In diesem Kapitel soll gezeigt werden, wie sich die in Kap.
+In diesem Kapitel soll gezeigt werden, wie sich die in
 @sec-periodstoer abgeleitete Theorie auf ein konkretes Problem, die
 effektive Masse der Elektronen im Leitungsband von (teil-)geordnetem
 GaInP₂, anwenden läßt.
@@ -16,7 +16,7 @@ GaInP₂, anwenden läßt.
 Viele III--V-Halbleiterlegierungen $A_{x}B_{1-x}C$ mit Kationen $A$ und
 $B$ zeigen spontane, langreichweitige CuPt-Ordnung, wenn sie mit
 metallorganischer Gasphasen-Epitaxie
-\[\emph{metalorganic vapour phase epitaxy} (MOVPE)\] auf
+[*metalorganic vapour phase epitaxy* (MOVPE)] auf
 $(001)$-orientierten Substraten gewachsen werden [@zuma:94]. Die
 geordnete Phase besteht aus abwechselnden Monolagen
 $A_{x+\eta/2}B_{1-x-\eta/2}C$ und $A_{x-\eta/2}B_{1-x+\eta/2}C$, die
