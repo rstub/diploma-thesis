@@ -194,7 +194,16 @@
   <div id="quarto-toc-sidebar" class="col col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-toc order-last"><nav id="TOC" role="doc-toc">
 <h2 id="toc-title">On this page</h2>
 <ul>
-<li><a href="#standard-bmkcdot-bmp-theorie" class="nav-link active" data-scroll-target="#standard-bmkcdot-bmp-theorie"> <span class="header-section-number">2.1</span> Standard <span class="math inline">\bm{k}\cdot \bm{p}</span>-Theorie</a></li>
+<li><a href="#sec-standard-k.p" class="nav-link active" data-scroll-target="#sec-standard-k.p"> <span class="header-section-number">2.1</span> Standard <span class="math inline">\bm{k}\cdot \bm{p}</span>-Theorie</a></li>
+<li><a href="#sec-basis" class="nav-link" data-scroll-target="#sec-basis"> <span class="header-section-number">2.2</span> Wahl der Basis</a></li>
+<li><a href="#sec-ansatz" class="nav-link" data-scroll-target="#sec-ansatz"> <span class="header-section-number">2.3</span> Ansatz für die Wellenfunktion</a>
+<ul class="collapse">
+<li><a href="#sec-h0" class="nav-link" data-scroll-target="#sec-h0"> <span class="header-section-number">2.3.1</span> Matrixelemente von <span class="math inline">H_0</span></a></li>
+<li><a href="#sec-h1" class="nav-link" data-scroll-target="#sec-h1"> <span class="header-section-number">2.3.2</span> Matrixelemente von <span class="math inline">H_1</span></a></li>
+</ul></li>
+<li><a href="#sec-disk" class="nav-link" data-scroll-target="#sec-disk"> <span class="header-section-number">2.4</span> Diskussion</a></li>
+<li><a href="#sec-erweiterungen" class="nav-link" data-scroll-target="#sec-erweiterungen"> <span class="header-section-number">2.5</span> Mögliche Erweiterungen</a></li>
+<li><a href="#sec-vergleich" class="nav-link" data-scroll-target="#sec-vergleich"> <span class="header-section-number">2.6</span> Vergleich mit anderen Methoden</a></li>
 </ul>
 </nav></div>
   <div class="col mx-auto col-sm-12 col-md-9 col-lg-7 px-lg-4">
@@ -207,18 +216,221 @@
 
 </div>
 <p>In diesem Kapitel soll die allgemeine Theorie für die Verallgemeinerung der <span class="math inline">\bm{k}\cdot \bm{p}</span>-Theorie auf periodische Störungen vorgestellt werden. Dazu wollen wir zunächst die Standard <span class="math inline">\bm{k}\cdot \bm{p}</span>-Theorie skizzieren, wie sie etwa bei <span class="citation" data-cites="kane:66">Kane (<a href="references.html#ref-kane:66" role="doc-biblioref">1966</a>)</span> zu finden ist, und danach die nötigen Verallgemeinerungen vornehmen.</p>
-<section id="standard-bmkcdot-bmp-theorie" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="standard-bmkcdot-bmp-theorie"><span class="header-section-number">2.1</span> Standard <span class="math inline">\bm{k}\cdot \bm{p}</span>-Theorie</h2>
+<section id="sec-standard-k.p" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="sec-standard-k.p"><span class="header-section-number">2.1</span> Standard <span class="math inline">\bm{k}\cdot \bm{p}</span>-Theorie</h2>
 <p>Im Rahmen der <span class="math inline">\bm{k}\cdot \bm{p}</span>-Theorie wird normalerweise das Problem eines Elektrons in einem periodischen Potential behandelt, d.h. die stationäre Schrödinger-Gleichung mit dem Hamilton-Operator</p>
 <p><span class="math display">
  H_{0} = \frac{\bm{p}^{2}}{2m} + V_{0}(\bm{r}).
 </span></p>
+<p>Dabei ist <span class="math inline">\\p</span> der Impulsoperator, <span class="math inline">V_{0}(\bm{r})</span> das ortsabhängige Kristallpotential und <span class="math inline">m</span> die Masse des freien Elektrons. Gesucht sind dann die Eigenfunktionen <span class="math inline">\psi_{n}</span> und Energieeigenwerte <span class="math inline">\varepsilon_{n}</span> des Eigenwertproblems</p>
+<p><span id="eq-standard-sg"><span class="math display">
+  H_{0} \psi_{n} =  \left[ \frac{\bm{p}^{2}}{2m} +
+  V_{0}(\bm{r}) \right] \psi_{n} = \varepsilon_{n} \psi_{n} .
+ \qquad(2.1)</span></span></p>
+<p>Das Bloch-Theorem besagt, daß sich <span class="math inline">\psi_{n}</span> als</p>
+<p><span id="eq-bloch"><span class="math display">
+  \psi_{n} \equiv  \psi_{n\bm{\kappa}}(\bm{r}) = e^{i\bm{\bm{\kappa}} \cdot \bm{r}}
+  u_{n\bm{\kappa}}(\bm{r}) 
+ \qquad(2.2)</span></span></p>
+<p>schreiben läßt, wobei <span class="math inline">u_{n\bm{\kappa}}(\bm{r})</span> die selbe Periodizität wie <span class="math inline">V_{0}(\bm{r})</span> hat und <span class="math inline">\bm{\kappa}</span>&nbsp;ein Wellenvektor aus der ersten Brillouin-Zone ist. Betrachten wir die Zustände mit verschiedenem Bandindex <span class="math inline">n</span> aber  <span class="math inline">\bm{\kappa}_{0}</span> aus der ersten Brillouin-Zone, so bilden sie eine vollständige Basis. <span class="citation" data-cites="luko:55">Luttinger und Kohn (<a href="references.html#ref-luko:55" role="doc-biblioref">1955</a>)</span> haben gezeigt, daß auch <span id="eq-altebasis"><span class="math display">
+  {\phi_{n \bm{\kappa}}}= e^{i\bm{\bm{\kappa}} \cdot \bm{r}} e^{i\bm{\bm{\kappa}_{0}} \cdot \bm{r}} u_{n\bm{\kappa}_{0}}(\bm{r})
+ \qquad(2.3)</span></span></p>
+<p>eine orthonormale und vollständige Basis bilden. Wir können also die gesuchte Lösung <span class="math inline">\psi_{n}</span> in die <span class="math inline">{\phi_{n \bm{\kappa}}}</span> zu einem <span class="math inline">\bm{\kappa}_{0}</span> entwickeln</p>
+<p><span id="eq-standard-entwicklung"><span class="math display">
+  \psi_{n} = \sum_{{n^{\prime}}} \int d^{3}\!\!\: {\kappa}\, c_{n{n^{\prime}}}(\bm{\kappa}) {\phi_{{n^{\prime}} \bm{\kappa}}}.
+ \qquad(2.4)</span></span></p>
+<p>Setzen wir nun die Entwicklung <a href="#eq-standard-entwicklung">Gl.&nbsp;<span>2.4</span></a> in die stationäre Schrödinger-Gleichung <a href="#eq-standard-sg">Gl.&nbsp;<span>2.1</span></a> ein, so stellen wir fest, daß sich die Energieeigenwerte <span class="math inline">\varepsilon_{n}</span> mit dem Wellenvektor <span class="math inline">\bm{\kappa}</span> charakterisieren lassen. Dies war auf Grund des Bloch-Theorems auch zu erwarten, und wir erhalten die bekannte <span class="math inline">\bm{k}\cdot \bm{p}</span>-Gleichung</p>
+<p><span id="eq-standard-k.p"><span class="math display">
+   \left( \varepsilon_{n}(\bm{\kappa}_{0}) + \frac{\hbar^{2}}{2m}{\kappa}^{2} \right) c_{nn}(\bm{\kappa})
+  + \sum_{{n^{\prime}}} \frac{\hbar}{m} \bm{\bm{\kappa}} \cdot \bm{{\bm{p}_{\mathnormal{n{n^{\prime}}}}}} c_{n{n^{\prime}}}(\bm{\kappa})
+  = \varepsilon_{n}(\bm{\kappa}) c_{nn}(\bm{\kappa})
+ \qquad(2.5)</span></span></p>
+<p>mit den Impulsmatrixelementen</p>
+<p><span id="eq-pnn"><span class="math display">
+  {\bm{p}_{\mathnormal{n{n^{\prime}}}}}:= {\frac{(2\pi)}{\Omega_{0}}}^{3} \int d^{3}\!\!\: r\,
+  e^{-i\bm{\bm{\kappa}_{0}} \cdot \bm{r}} u_{n\bm{\kappa}_{0}}^{\ast} \, \bm{p} \,
+  e^{i\bm{\bm{\kappa}_{0}} \cdot \bm{r}} u_{{n^{\prime}}\bm{\kappa}_{0}}.
+ \qquad(2.6)</span></span></p>
+<p>Dabei geht das Integral über die Einheitszelle mit Volumen <span class="math inline">\Omega_{0}</span>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p><a href="#eq-standard-k.p">Gl.&nbsp;<span>2.5</span></a> ist äquivalent zur Schrödinger-Gleichung <a href="#eq-standard-sg">Gl.&nbsp;<span>2.1</span></a>, von der wir ausgegangen sind. Um nun <a href="#eq-standard-k.p">Gl.&nbsp;<span>2.5</span></a> zu lösen, benötigen wir alle Eigenenergie <span class="math inline">\varepsilon_{n}(\bm{\kappa}_{0})</span> am Entwicklungspunkt <span class="math inline">\bm{\kappa}_{0}</span>, sowie alle Impulsmatrixelemente <span class="math inline">{\bm{p}_{\mathnormal{n{n^{\prime}}}}}</span> zwischen diesen Zuständen. Wir haben es dabei aber mit einem unendlich-dimensionalen Gleichungssystem zu tun, weshalb normalerweise <a href="#eq-standard-k.p">Gl.&nbsp;<span>2.5</span></a> für kleine Werte von <span class="math inline">{\kappa}</span> störungstheoretisch behandelt wird. Das bekannteste Ergebnis solch einer Rechnung, die Gleichung für die efffektive Masse der Elektronen, erhalten wir, wenn wir für ein nichtentartetes Band an einem Extremum der Energiedispersion bis zur zweiten Ordnung in <span class="math inline">{\kappa}</span> entwickeln:</p>
+<p><span id="eq-standard-meff"><span class="math display">
+  E(\bm{\kappa}) = \varepsilon_{n}(\bm{\kappa}_{0}) + \frac{\hbar^{2}}{2m}{\kappa}^{2} + 
+  \left(\frac{\hbar}{m}\right)^{2} \sum_{{n^{\prime}}}
+  \frac{|\bm{\bm{\kappa}} \cdot \bm{{\bm{p}_{\mathnormal{n{n^{\prime}}}}}}|^{2}}{\varepsilon_{n}(\bm{\kappa}_{0})-\varepsilon_{{n^{\prime}}}(\bm{\kappa}_{0})}
+ \qquad(2.7)</span></span></p>
+<p>Oft reicht es nicht aus, sich wie in <a href="#eq-standard-meff">Gl.&nbsp;<span>2.7</span></a> nur auf ein nichtentartetes Band zu beschränken. Eine systematische Möglichkeit die außerdiagonalen Störungen in <a href="#eq-standard-k.p">Gl.&nbsp;<span>2.5</span></a> zu berücksichtigen bietet die Löwdin Störungstheorie <span class="citation" data-cites="lowd:51">(<a href="references.html#ref-lowd:51" role="doc-biblioref">Löwdin 1951</a>)</span>. Dieses Verfahren können wir uns so vorstellen, daß die Schritte, die normalerweise bei einer (pseudo-)entarten Störungstheorie in der Quanten-Mechanik durchgeführt werden müssen, in umgekehrter Reihenfolge durchgeführt werden. Es werden <em>zunächst</em> die Einflüsse der energetisch weit entfernten Zustände berücksichtigt und erst dann die verbliebene Matrix für den (pseudo-)entarteten Unterraum diagonalisiert. Da die Reihenfolge der Schritte umgekehrt wurde, führt der erste Schritt auch zu Veränderungen in den Kopplungskonstanten, d.h. in den Ausserdiagonaltermen der verbleibenden Matrix, die bei normaler (pseudo-)-entarteter Störungstheorie nicht auftreten.</p>
+<p>Formal bedeutet dies, daß die Zustände unseres Systems in zwei Gruppen aufgeteilt werden. Die Zustände in Gruppe <span class="math inline">\mathsf{A}</span> sind diejenigen, die uns interessieren und deren Wechselwirkungen wir exakt behandeln wollen. Die Zustände in Gruppe <span class="math inline">\mathsf{B}</span> haben nur eine schwache Wechselwirkung mit denen in <span class="math inline">\mathsf{A}</span>. Diese Wechselwirkung wird in Störungstheorie berücksichtigt. Dabei wird die Wechselwirkungsmatrix <span class="math inline">H_{i j}</span> der Zustände in <span class="math inline">\mathsf{A}</span> wie folgt abgeändert:<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p><span class="math display">
+  \tilde{H}_{ij} = H_{ij} + \frac{1}{2} \sum_{\beta \in \mathsf{B}} H_{i \beta}
+  H_{\beta j} \left( \frac{1}{E_{i}-E_{\beta}} + \frac{1}{E_{j}-E_{\beta}}
+  \right) + \dots
+</span></p>
+<p>Dadurch erhalten wir ein endliches Gleichungssystem, das es uns ermöglicht, die Entwicklungskoeffizienten <span class="math inline">c_{n{n^{\prime}}}(\bm{\kappa})</span> mit <span class="math inline">n \in \mathsf{A}</span> zu bestimmen und aus diesen dann die Entwicklungskoeffizienten für <span class="math inline">n \in \mathsf{B}</span> zu erhalten.</p>
+<p>Sollen im Rahmen der Standard <span class="math inline">\bm{k}\cdot \bm{p}</span>-Theorie Valenzband-Zustände beschrieben werden, so müssen wir meist die Spin-Bahn-Wechselwirkung berücksichtigen. Diese führt zu einem zusätzlichen Term der Form <span id="eq-spin-bahn"><span class="math display">
+H_{\text{SO}} = \frac{\hbar}{4m^{2}c^{2}} (\bm{\sigma} \times
+  \nabla V) \cdot \bm{p}
+ \qquad(2.8)</span></span> im Hamilton-Operator. Dabei ist <span class="math inline">\bm{\sigma}</span> der Vektor der Pauli-Spin-Matrizen und <span class="math inline">V</span> das Kristallpotential.</p>
+<p>Dieser Term wird normalerweise störungstheoretisch so behandelt, daß er im Unterraum entarteter Zustände diagonalisiert wird. Dadurch erhöht sich die Anzahl der notwendigen Parameter nur um die jeweiligen Spin-Bahn-Aufspaltungen <span class="citation" data-cites="kane:66">(<a href="references.html#ref-kane:66" role="doc-biblioref">Kane 1966</a>)</span>. Für die Wechselwirkung mit anderen Zuständen müssen wir nur von den <span class="math inline">{\bm{p}_{\mathnormal{n{n^{\prime}}}}}</span> zu <span class="math inline">\bm{\pi}_{\mathnormal{n{n^{\prime}}}}</span> übergehen, die sich in ihrer Definition darin unterscheiden, daß in <a href="#eq-pnn">Gl.&nbsp;<span>2.6</span></a> <span class="math inline">\bm{p}</span> durch <span class="math inline">\bm{p} + \frac{\hbar}{4mc^{2}} (\bm{\sigma} \times \nabla V)</span> ersetzt werden muß <span class="citation" data-cites="luko:55">(<a href="references.html#ref-luko:55" role="doc-biblioref">Luttinger und Kohn 1955</a>)</span>.</p>
+<p>Verzerrungen auf Grund äußeren Drucks lassen sich mit der Invarianten-Theorie berücksichtigen, wie sie <span class="citation" data-cites="bipi:74">Bir und Pikus (<a href="references.html#ref-bipi:74" role="doc-biblioref">1974</a>)</span> entwickelt haben.</p>
+<p>Bei Störungen, die die Periodizität des Kristalls brechen, wie z.B. flache Störstellen oder Magnetfelder, können wir zur Envelopfunktionsnäherung (EFA) <span class="citation" data-cites="luko:55">(<a href="references.html#ref-luko:55" role="doc-biblioref">Luttinger und Kohn 1955</a>)</span> übergehen, und so eine gute Beschreibung der auftretenden Phänomene finden. Die dabei erhaltenen Gleichungen sind nicht mehr diagonal in <span class="math inline">\bm{\kappa}</span>. Vielmehr kommt es zu Wechselwirkungen zwischen Zuständen in der Umgebung des Entwicklungspunktes <span class="math inline">\bm{\kappa}_{0}</span>.</p>
+<p>Wie wir gesehen haben, ist die Standard <span class="math inline">\bm{k}\cdot \bm{p}</span>-Theorie auf ein große Anzahl von Problemen anwendbar, oder aber es bestehen Erweiterungen wie die EFA. Dies ist nicht der Fall für periodischen und insbesondere kommensurable Störungen,<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> wie wir sie hier betrachten wollen.</p>
+</section>
+<section id="sec-basis" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="sec-basis"><span class="header-section-number">2.2</span> Wahl der Basis</h2>
+<p>Zu unserm Gesamtproblem, d.h. ungestörter Kristall plus periodisches Störpotential, gehört eine neue Einheitszelle (nEZ), die größer als die alte Einheitszelle (aEZ) ist. Auf Grund der Kommensurabilität der Störung, lassen sich die Basisvektoren zur neuen Einheitszelle als ganzzahlige Vielfache der alten Basisvektoren schreiben.</p>
+<p>Im reziproken Raum drehen sich diese Verhältnisse um. Die neue Brillouin-Zone (nBZ) ist <em>kleiner</em> als die alte Brillouin-Zone (aBZ), und die alten Basisvektoren im reziproken Raum lassen sich als ganzzahlige Linearkombination der neuen Basisvektoren darstellen.</p>
+<p>Das bedeutet aber, daß zu den reziproken Gitterpunkten <span class="math inline">\{{\bm{\mathcal{G}}_{\mathnormal{m}}}\}</span> unseres ungestörten Systems neue Vektoren hinzukommen. Unser Gesamtproblem besitzt also reziproke Gittervektoren <span class="math inline">\{{\bm{G}_{\mathnormal{m}}}\}</span>, wobei <span class="math inline">\{{\bm{\mathcal{G}}_{\mathnormal{m}}}\}</span> eine Teilmenge von <span class="math inline">\{{\bm{G}_{\mathnormal{m}}}\}</span> ist.</p>
+<p>Die neuen reziproken Gittervektoren führen dazu, daß an jedem Punkt der neuen Brillouin-Zone Zustände zu finden sind, die von verschiedenen Punkten der alten Brillouin-Zone kommen. Dieser Vorgang ist auch als (Rück-)Faltung von Zuständen bekannt. Diese auf einen Punkt im reziproken Raum zurückgefalteten Zustände werden i.A.&nbsp;auch wechselwirken, und die sich daraus ergebenden Effekte wollen wir untersuchen. Schwierigkeiten mit der Standard <span class="math inline">\bm{k}\cdot \bm{p}</span>-Theorie ergeben sich, weil die rückgefalteten Zustände aus der gesamten alten Brillouin-Zone stammen können. Es können also Zustände wechselwirken, deren Abstand im reziproken Raum ursprünglich vergleichbar zur Gitterkonstante im reziproken Raum ist. Da wir aber in Standard <span class="math inline">\bm{k}\cdot \bm{p}</span>-Theorie nur einen Punkt im reziproken Raum exakt beschreiben, die Umgebung dieses Punktes aber in Störungstheorie, ist unsere Beschreibung weit entfernter Zustände schlecht. Dies könnten wir nur dadurch umgehen, daß wir zu viele Bänder umfassenden <span class="math inline">\bm{k}\cdot \bm{p}</span>-Modellen übergehen <span class="citation" data-cites="wazu:96">(<a href="references.html#ref-wazu:96" role="doc-biblioref">Wang und Zunger 1996</a>)</span>.</p>
+<p>Wir wollen hier einen anderen Ansatz wählen, indem wir von vornherein von einer anderen Basis ausgehen, die dem hier betrachteten Problem besser angepaßt ist.</p>
+<p>Ausgangspunkt ist das ungestörtes Problem <span id="eq-ungestoert"><span class="math display">
+  H_{0}\psi_{n\bm{\kappa}}(\bm{r}) = \varepsilon_{n}(\bm{\kappa}) \psi_{n\bm{\kappa}}(\bm{r}),
+ \qquad(2.9)</span></span> dessen Lösungen <span class="math inline">\psi_{n\bm{\kappa}}(\bm{r})</span> mit Eigenenergien <span class="math inline">\varepsilon_{n}(\bm{\kappa})</span> bekannt seien. Dabei ist <span class="math inline">\bm{\kappa}</span>&nbsp;aus der alten Brillouin-Zone, die durch die reziproken Gittervektoren <span class="math inline">{{\bm{\mathcal{G}}_{\mathnormal{m}}}}</span> definiert wird.</p>
+<p>Dieses System werde nun durch ein periodisches Potential <span class="math inline">H_{1}</span> gestört, das kommensurabel zur Periodizität des ungestörten Problems sein soll. <span class="math inline">H_{1}</span> läßt sich also als <span id="eq-h1-gm"><span class="math display">
+  H_{1} = \sum_{m} \rho_{m} e^{i\bm{{\bm{G}_{\mathnormal{m}}}} \cdot \bm{r}}
+ \qquad(2.10)</span></span> mit Entwicklungskoeffizienten <span class="math inline">\rho_{m}</span> schreiben, wobei die <span class="math inline">\{{\bm{G}_{\mathnormal{m}}}\}</span> wie oben beschrieben alle reziproken Gittervektoren des gestörten Systems umfassen.</p>
+<p>Gesucht sind nun Eigenfunktionen <span class="math inline">\psi</span> und Energieeigenwerte <span class="math inline">E</span> zur stationären Schrödingergleichung des gestörten Sytems: <span id="eq-h0+h1"><span class="math display">
+  \left( H_{0} + H_{1} \right) \psi = E \psi
+ \qquad(2.11)</span></span></p>
+<p>In Analogie zu <a href="#eq-altebasis">Gl.&nbsp;<span>2.3</span></a> wählen wir <span id="eq-basis"><span class="math display">
+  {\chi^{{\bm{\mathcal{K}}}}_{n\bm{k}}}(\bm{r}) = e^{i\bm{\bm{k}} \cdot \bm{r}} \psi_{n{\bm{\mathcal{K}}}}(\bm{r})
+  = e^{i\bm{\bm{k}} \cdot \bm{r}} e^{i\bm{{\bm{\mathcal{K}}}} \cdot \bm{r}} u_{n{\bm{\mathcal{K}}}}(\bm{r})
+ \qquad(2.12)</span></span> als Basis. Dabei ist <span class="math inline">\bm{k}</span>&nbsp;ein Wellenvektor aus der <em>neuen</em> Brillouin-Zone, während <span class="math inline">\{{\bm{\mathcal{K}}}\}</span> ein Satz von Wellenvektoren aus der <em>alten</em> Brillouin-Zone ist.</p>
+<p>Wir verwenden also die Lösungen <span class="math inline">\psi_{n{\bm{\mathcal{K}}}}(\bm{r})</span> der ungestörten Schrödinger-Gleichung <a href="#eq-ungestoert">Gl.&nbsp;<span>2.9</span></a> von <em>mehreren</em> Punkten der alten Brillouin-Zone als Basis. Welche Punkte wir benötigen, d.h. welche Punkte der alten Brillouin-Zone im Satz <span class="math inline">\{{\bm{\mathcal{K}}}\}</span> enthalten sein müssen, hängt davon ab, welchen Punkt der neuen Brillouin-Zone wir beschreiben wollen. Wir wollen hier die Zustände im Zentrum der neuen Brillouin-Zone untersuchen und müssen deshalb diejenigen reziproken Gittervektoren des gestörten Systems <span class="math inline">{\bm{G}_{\mathnormal{m}}}</span> verwenden, die innerhalb der alten ersten Brillouin-Zone liegen.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> Es ist leicht zu sehen, daß <span class="math inline">e^{i\bm{{\bm{\mathcal{K}}}} \cdot \bm{r}}</span> mit diesem Satz von Entwicklungspunkten <span class="math inline">{\bm{\mathcal{K}}}</span> periodisch bezüglich der neuen Einheitszelle ist.</p>
+<p><a href="#fig-2d_bz">Abb.&nbsp;<span>2.1</span></a> zeigt ein einfaches zweidimensionales Beispiel zur Illustration der von uns gewählten Basisfunktionen.</p>
+<div id="fig-2d_bz" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/2d_bz.png" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Abbildung 2.1: Zweidimensionales Beispiel, in dem auf Grund der Verdopplung der Periode in einer Richtung ein Punkt des reziproken Raumes zurückfaltet. Der Satz <span class="math inline">\{{\bm{\mathcal{K}}}\}</span> besteht hier aus den beiden Punkten <span class="math inline">\bm{K}</span> und <span class="math inline">\bm{{K^{\prime}}}</span>.</figcaption><p></p>
+</figure>
+</div>
+<p>Die Funktionen <span class="math inline">{\chi^{{\bm{\mathcal{K}}}}_{n\bm{k}}}(\bm{r})</span> stellen eine geeignete Basis dar, da sie vollständig und orthonormal sind.</p>
+<p>Als nächstes wollen wir die Orthonormalität der Basisfunktionen <span class="math inline">{\chi^{{\bm{\mathcal{K}}}}_{n\bm{k}}}</span> zeigen, die durch die folgende Relation ausgedrückt wird: <span id="eq-orth1"><span class="math display">
+  {\int\limits_{\scriptscriptstyle \text{Kristall}}}\!\!\!\! d^{3}\!\!\: r\, {{\chi^{{\bm{\mathcal{K}}}}_{n\bm{k}}}}^{\ast} {\chi^{{{\bm{\mathcal{K}}}^{\prime}}}_{{n^{\prime}}{\bm{k}^{\prime}}}}=
+  {\delta_{{\bm{\mathcal{K}}}\,{{\bm{\mathcal{K}}}^{\prime}}}} {\delta_{n\,{n^{\prime}}}}
+  \delta(\bm{k}-{\bm{k}^{\prime}}) 
+ \qquad(2.13)</span></span> Daß dies erfüllt ist, zeigt sich folgendermaßen: <span id="eq-orth2"><span class="math display">
+\begin{aligned}
+  {\int\limits_{\scriptscriptstyle \text{Kristall}}}\!\!\!\! d^{3}\!\!\: r\, {{\chi^{{\bm{\mathcal{K}}}}_{n\bm{k}}}}^{\ast}{\chi^{{{\bm{\mathcal{K}}}^{\prime}}}_{{n^{\prime}}{\bm{k}^{\prime}}}}&amp; = 
+  {\int\limits_{\scriptscriptstyle \text{Kristall}}}\!\!\!\! d^{3}\!\!\: r\, e^{i\bm{({k^{\prime}}-k)} \cdot \bm{r}}
+  \underbrace{e^{i\bm{({{\bm{\mathcal{K}}}^{\prime}}-{\bm{\mathcal{K}}})} \cdot \bm{r}}
+  u_{n{\bm{\mathcal{K}}}}^{\ast}u_{{n^{\prime}}{{\bm{\mathcal{K}}}^{\prime}}}}_{\text{periodisch in nEZ}} \\
+  &amp;= (2\pi)^{3} \sum_{m} {B_{\!\!\!{n{n^{\prime}} \atop {\bm{\mathcal{K}}}{{\bm{\mathcal{K}}}^{\prime}}}}^{m}} \delta({\bm{k}^{\prime}}-\bm{k}-{\bm{G}_{\mathnormal{m}}}) \\
+  &amp;= (2\pi)^{3} {B_{\!\!\!{n{n^{\prime}} \atop {\bm{\mathcal{K}}}{{\bm{\mathcal{K}}}^{\prime}}}}^{0}} \delta({\bm{k}^{\prime}}-\bm{k})
+\end{aligned}
+ \qquad(2.14)</span></span></p>
+</section>
+<section id="sec-ansatz" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="sec-ansatz"><span class="header-section-number">2.3</span> Ansatz für die Wellenfunktion</h2>
+<section id="sec-h0" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="sec-h0"><span class="header-section-number">2.3.1</span> Matrixelemente von <span class="math inline">H_0</span></h3>
+<p>Es ergeben sich also keine Impulsmatrixelemente zwischen Zuständen verschiedener Entwicklungspunkte <span class="math inline">{\bm{\mathcal{K}}}</span>. In Analogie zu <a href="#eq-pnn">Gl.&nbsp;<span>2.6</span></a> definieren wir nun: <span id="eq-pnnk"><span class="math display">
+  {\bm{p}^{{\bm{\mathcal{K}}}}_{\mathnormal{n{n^{\prime}}}}}:= {\frac{(2\pi)}{\Omega}}^{3} {\int\limits_{\scriptscriptstyle \text{nEZ}}} d^{3}\!\!\: r\,
+  e^{-i\bm{{\bm{\mathcal{K}}}} \cdot \bm{r}} u_{n{\bm{\mathcal{K}}}}^{\ast} \, \bm{p}  \,
+  e^{i\bm{{\bm{\mathcal{K}}}} \cdot \bm{r}} u_{{n^{\prime}}{\bm{\mathcal{K}}}}
+ \qquad(2.20)</span></span> Damit ergibt sich aus <a href="#eq-preh0">Gl.&nbsp;<span>2.19</span></a>: <span id="eq-h0"><span class="math display">
+  {\langle {{n\,\bm{k}\,{\bm{\mathcal{K}}}}} | {H_{0}} | {{{n^{\prime}}\,{\bm{k}^{\prime}}\,{{\bm{\mathcal{K}}}^{\prime}}}} \rangle} 
+  = \delta({\bm{k}^{\prime}}-\bm{k}) {\delta_{{\bm{\mathcal{K}}}\,{{\bm{\mathcal{K}}}^{\prime}}}} \left[
+  {\delta_{n\,{n^{\prime}}}} \left( \varepsilon_{n}({\bm{\mathcal{K}}}) + \frac{k^{2}}{2m}
+  \right) + \frac{\bm{k} \cdot \bm{{\bm{p}^{{\bm{\mathcal{K}}}}_{\mathnormal{n{n^{\prime}}}}}}}{m} \right]
+ \qquad(2.21)</span></span></p>
+<p>Dies entspricht (natürlich) dem Ergebnis, das wir in Standard <span class="math inline">\bm{k}\cdot \bm{p}</span>-Theorie für den Punkt <span class="math inline">{\bm{\mathcal{K}}}</span>&nbsp;erhalten würden, wenn wir uns nur auf einen Entwicklungspunkt im reziproken Raum beschränkt hätten. Aus <a href="#eq-h0">Gl.&nbsp;<span>2.21</span></a> läßt sich also direkt <a href="#eq-standard-k.p">Gl.&nbsp;<span>2.5</span></a> ableiten. Dabei ist nicht nur die Form der Gleichung die selbe, sondern auch die auftretenden Impulsmatrixelemente sind identisch, da das größere Normierungsvolumen <span class="math inline">\Omega</span> den Effekt des größeren Integrationsbereichs nEZ wieder aufhebt.</p>
+</section>
+<section id="sec-h1" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="sec-h1"><span class="header-section-number">2.3.2</span> Matrixelemente von <span class="math inline">H_1</span></h3>
+<p>Die Matrixelemente des Störpotentials <span class="math inline">H_{1}</span> bezüglich der Basisfunktionen <span class="math inline">{\chi^{{\bm{\mathcal{K}}}}_{n\bm{k}}}</span>&nbsp;ergeben sich folgendermaßen: <span id="eq-h1mat"><span class="math display">
+  {\langle {{n\,\bm{k}\,{\bm{\mathcal{K}}}}} | {H_{1}} | {{{n^{\prime}}\,{\bm{k}^{\prime}}\,{{\bm{\mathcal{K}}}^{\prime}}}} \rangle} = 
+  {\int\limits_{\scriptscriptstyle \text{Kristall}}}\!\!\!\! d^{3}\!\!\: r\, e^{-i\bm{(\bm{k}+{\bm{\mathcal{K}}})} \cdot \bm{r}}
+  u_{n{\bm{\mathcal{K}}}}^{\ast} H_{1} e^{i\bm{({\bm{k}^{\prime}}+{{\bm{\mathcal{K}}}^{\prime}})} \cdot \bm{r}}
+  u_{{n^{\prime}}{{\bm{\mathcal{K}}}^{\prime}}}
+ \qquad(2.22)</span></span></p>
+<p>Da <span class="math inline">H_{1}</span> ein Potential und damit multiplikativ ist, vertauscht es mit allen übrigen Faktoren innerhalb des Integrals <a href="#eq-h1mat">Gl.&nbsp;<span>2.22</span></a>. Dadurch ergibt sich der gleiche Faktor wie auf der linken Seite von <a href="#eq-bloch-gm">Gl.&nbsp;<span>2.15</span></a>, so daß <a href="#eq-h1mat">Gl.&nbsp;<span>2.22</span></a> sich mit der Fourier-Entwicklung <a href="#eq-h1-gm">Gl.&nbsp;<span>2.10</span></a> als <span id="eq-preh1"><span class="math display">
+\begin{aligned}
+  {\langle {{n\,\bm{k}\,{\bm{\mathcal{K}}}}} | {H_{1}} | {{{n^{\prime}}\,{\bm{k}^{\prime}}\,{{\bm{\mathcal{K}}}^{\prime}}}} \rangle} 
+  &amp;=  \sum_{m,{m^{\prime}}} {B_{\!\!\!{n{n^{\prime}} \atop {\bm{\mathcal{K}}}{{\bm{\mathcal{K}}}^{\prime}}}}^{m}} \rho_{{m^{\prime}}} 
+  {\int\limits_{\scriptscriptstyle \text{Kristall}}}\!\!\!\! d^{3}\!\!\: r\, e^{i\bm{({\bm{k}^{\prime}}-\bm{k})} \cdot \bm{r}}
+  e^{i\bm{({\bm{G}_{\mathnormal{{m^{\prime}}}}}-{\bm{G}_{\mathnormal{m}}})} \cdot \bm{r}} \\
+  &amp;= (2\pi)^{3} \sum_{m,{m^{\prime}}} {B_{\!\!\!{n{n^{\prime}} \atop {\bm{\mathcal{K}}}{{\bm{\mathcal{K}}}^{\prime}}}}^{m}} \rho_{{m^{\prime}}} 
+  \delta({\bm{G}_{\mathnormal{{m^{\prime}}}}}- {\bm{G}_{\mathnormal{{m^{\prime}}}}}+ {\bm{k}^{\prime}} - \bm{k})  \\
+  &amp;= (2\pi)^{3}  \delta({\bm{k}^{\prime}} - \bm{k}) 
+  \sum_{m,{m^{\prime}}} {B_{\!\!\!{n{n^{\prime}} \atop {\bm{\mathcal{K}}}{{\bm{\mathcal{K}}}^{\prime}}}}^{m}} \rho_{{m^{\prime}}} {\delta_{m\,{m^{\prime}}}}
+\end{aligned}
+ \qquad(2.23)</span></span> schreiben läßt. Der letzte Schritt ist möglich, da <span class="math inline">\bm{k}</span>&nbsp;und <span class="math inline">{\bm{k}^{\prime}}</span> aus nBZ sind, zu der die <span class="math inline">\{{\bm{G}_{\mathnormal{m}}}\}</span> als reziproke Gittervektoren gehören. Hier bietet es sich an <span id="eq-vnnkk"><span class="math display">
+\begin{aligned}
+  {V^{{\bm{\mathcal{K}}}{{\bm{\mathcal{K}}}^{\prime}}}_{n {n^{\prime}}}}&amp;:=  (2\pi)^{3} \sum_{m,{m^{\prime}}} {B_{\!\!\!{n{n^{\prime}} \atop {\bm{\mathcal{K}}}{{\bm{\mathcal{K}}}^{\prime}}}}^{m}} \rho_{{m^{\prime}}}
+  {\delta_{m\,{m^{\prime}}}} \\
+  &amp;= {\frac{(2\pi)}{\Omega}}^{3} {\int\limits_{\scriptscriptstyle \text{nEZ}}} d^{3}\!\!\: r\,
+  e^{-i\bm{{\bm{\mathcal{K}}}} \cdot \bm{r}} u_{n{\bm{\mathcal{K}}}}^{\ast} H_{1}  
+  e^{i\bm{{{\bm{\mathcal{K}}}^{\prime}}} \cdot \bm{r}} u_{{n^{\prime}}{{\bm{\mathcal{K}}}^{\prime}}}
+\end{aligned}
+ \qquad(2.24)</span></span> zu definieren, so daß wir insgesamt <span id="eq-h1"><span class="math display">
+  {\langle {{n\,\bm{k}\,{\bm{\mathcal{K}}}}} | {H_{1}} | {{{n^{\prime}}\,{\bm{k}^{\prime}}\,{{\bm{\mathcal{K}}}^{\prime}}}} \rangle} = 
+  \delta({\bm{k}^{\prime}}-\bm{k}) {V^{{\bm{\mathcal{K}}}{{\bm{\mathcal{K}}}^{\prime}}}_{n {n^{\prime}}}}
+ \qquad(2.25)</span></span> erhalten.</p>
+<p>Setzen wir nun <a href="#eq-h0">Gl.&nbsp;<span>2.21</span></a> und <a href="#eq-h1">Gl.&nbsp;<span>2.25</span></a> in <a href="#eq-pre-sg">Gl.&nbsp;<span>2.18</span></a> ein, so erhalten wir als letztendlich zu lösende Gleichung: <span id="eq-sg"><span class="math display">
+\begin{aligned}
+  \left( \varepsilon_{n}({\bm{\mathcal{K}}}) + \frac{\hbar^{2}}{2m} {k}^{2} \right) {A^{{\bm{\mathcal{K}}}}_{n} \! (\bm{k}) \,}&amp;+ 
+  \frac{\hbar}{m} \sum_{{n^{\prime}}} \bm{\bm{k}} \cdot \bm{{\bm{p}^{{\bm{\mathcal{K}}}}_{\mathnormal{n{n^{\prime}}}}}} A^{{\bm{\mathcal{K}}}}_{{n^{\prime}}} \!
+  (\bm{k}) \,   \\
+%%%%
+  &amp;+ \sum_{{n^{\prime}},{{\bm{\mathcal{K}}}^{\prime}}}  {V^{{\bm{\mathcal{K}}}{{\bm{\mathcal{K}}}^{\prime}}}_{n {n^{\prime}}}}A^{{{\bm{\mathcal{K}}}^{\prime}}}_{{n^{\prime}}} \!
+  (\bm{k}) \,  = E(\bm{k}) {A^{{\bm{\mathcal{K}}}}_{n} \! (\bm{k}) \,}
+\end{aligned}
+ \qquad(2.26)</span></span></p>
+<p>Es ist auffallend, daß <a href="#eq-sg">Gl.&nbsp;<span>2.26</span></a> diagonal in <span class="math inline">\bm{k}</span>&nbsp;ist, weshalb sich die Energieeigenwerte <span class="math inline">E(\bm{k})</span> wieder nach dem Kristallimpuls <span class="math inline">\bm{k}</span> klassifizieren lassen, d.h.&nbsp;es ergibt sich wiederum eine Bandstruktur. Dies unterscheidet sich von dem, was <span class="citation" data-cites="luko:55">Luttinger und Kohn (<a href="references.html#ref-luko:55" role="doc-biblioref">1955</a>)</span> bei der Ableitung der EFA erhielten, die dieser Herleitung als Vorbild diente. Doch ist dies einfach dadurch zu erklären, daß hier von einer periodischen Störung <a href="#eq-k.period">Gl.&nbsp;<span>2.17</span></a> ausgegangen wurde und damit – bei geeigneter Wahl der Entwicklungspunkte im reziproken Raum – auch ihre Matrixelemente diagonal in <span class="math inline">\bm{k}</span>&nbsp;sind.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
+</section>
+</section>
+<section id="sec-disk" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="sec-disk"><span class="header-section-number">2.4</span> Diskussion</h2>
+<p>Insgesamt ist es also gelungen, die Differentialgleichung <a href="#eq-h0+h1">Gl.&nbsp;<span>2.11</span></a> auf die algebraische Gleichung <a href="#eq-sg">Gl.&nbsp;<span>2.26</span></a> zurückzuführen. Da hierfür ein vollständiges Orthonormalsystem von Zuständen verwendet wurde, ist <a href="#eq-sg">Gl.&nbsp;<span>2.26</span></a> äquivalent zu <a href="#eq-h0+h1">Gl.&nbsp;<span>2.11</span></a>. Dies ist vergleichbar zu der in <a href="#sec-standard-k.p">Kap.&nbsp;<span>2.1</span></a> gezeigten Situation in normaler <span class="math inline">\bm{k}\cdot \bm{p}</span>-Theorie, wo auch ein differentielles Problem auf ein unendlich-dimensionales algebraisches Problem zurückgeführt wird <span class="citation" data-cites="kane:66">(<a href="references.html#ref-kane:66" role="doc-biblioref">Kane 1966</a>)</span>. Dieses unendlich dimensionale Problem können wir wieder mit Hilfe der Löwdin-Störungstheorie auf ein endlich-dimensionales Problem reduzieren, wenn wir die Basisfunktionen <span class="math inline">{\chi^{{\bm{\mathcal{K}}}}_{n\bm{k}}}</span>&nbsp;in zwei Gruppen zerlegen können, wie in <a href="#sec-standard-k.p">Kap.&nbsp;<span>2.1</span></a> skizziert.</p>
+</section>
+<section id="sec-erweiterungen" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="sec-erweiterungen"><span class="header-section-number">2.5</span> Mögliche Erweiterungen</h2>
+<p>Da <a href="#eq-sg">Gl.&nbsp;<span>2.26</span></a> formal große Ähnlichkeit mit der Standard <span class="math inline">\bm{k}\cdot \bm{p}</span>-Gleichung <a href="#eq-standard-k.p">Gl.&nbsp;<span>2.5</span></a> aufweist, sind die in <a href="#sec-standard-k.p">Kap.&nbsp;<span>2.1</span></a> erwähnten Erweiterungen auch hier möglich.</p>
+<p>So ist es sinnvoll, die Spin-Bahn-Wechselwirkung <a href="#eq-spin-bahn">Gl.&nbsp;<span>2.8</span></a> als zusätzlichen Term im Hamilton-Operator zu berücksichtigen, wenn die Dispersion im Valenzband beschrieben weden soll. Es bietet sich an, diesen Term wiederum störungstheoretisch zu behandeln, da sich dann die Anzahl der notwendigen Impulsmatrixelemente <span class="math inline">{\bm{p}^{{\bm{\mathcal{K}}}}_{\mathnormal{n{n^{\prime}}}}}</span>&nbsp;und Potentialmatrixelemente <span class="math inline">{V^{{\bm{\mathcal{K}}}{{\bm{\mathcal{K}}}^{\prime}}}_{n {n^{\prime}}}}</span>&nbsp; nicht erhöht. Für die Wechselwirkung mit anderen Zuständen müssen wir analog zu <a href="#sec-standard-k.p">Kap.&nbsp;<span>2.1</span></a> von <span class="math inline">{\bm{p}^{{\bm{\mathcal{K}}}}_{\mathnormal{n{n^{\prime}}}}}</span>&nbsp;zu <span class="math inline">\bm{\pi}^{{\bm{\mathcal{K}}}}_{\mathnormal{n{n^{\prime}}}}</span> übergehen, die sich in ihrer Definition darin unterscheiden, daß in <a href="#eq-pnnk">Gl.&nbsp;<span>2.20</span></a> <span class="math inline">\bm{p}</span> durch <span class="math inline">\bm{p} + \frac{\hbar}{4mc^{2}} (\bm{\sigma} \times \nabla V)</span> ersetzt werden muß <span class="citation" data-cites="luko:55">(<a href="references.html#ref-luko:55" role="doc-biblioref">Luttinger und Kohn 1955</a>)</span>.</p>
+<p>Da in <a href="#eq-spin-bahn">Gl.&nbsp;<span>2.8</span></a> der Gradient des Kristallpotentials <span class="math inline">V</span> auftritt, stellt sich die Frage, ob das Störpotential <span class="math inline">H_{1}</span> hier berücksichtigt werden muß. Normalerweise ist dies nicht zu erwarten, da die Spin-Bahn-Wechselwirkung auf Grund des Störpotential <span class="math inline">H_{1}</span> eine Störung höherer Ordnung darstellt. Falls die Störung <span class="math inline">H_{1}</span> aber (teilweise) durch Relaxationen hervorgerufen wird, so ist es vorstellbar, daß <span class="math inline">H_{1}</span> zwar klein ist, die Gradienten von <span class="math inline">H_{1}</span> aber vergleichbar zu denen des Kristallpotentials sind.</p>
+<p>Weiterhin können auch die Methoden von <span class="citation" data-cites="bipi:74">Bir und Pikus (<a href="references.html#ref-bipi:74" role="doc-biblioref">1974</a>)</span> zur Berücksichtigung von Verzerrungen durch externen Druck im Rahmen unserer Theorie angewendet werden. Auch der Schritt von Standard <span class="math inline">\bm{k}\cdot \bm{p}</span>-Theorie zur EFA läßt sich verallgemeinern, so daß auch der Einfluß flacher Störstellen oder Magnetfelder untersucht werden kann. Dabei können wir dem Vorgehen von <span class="citation" data-cites="luko:55">Luttinger und Kohn (<a href="references.html#ref-luko:55" role="doc-biblioref">1955</a>)</span> folgen, da die von uns gewählte Basis <a href="#eq-basis">Gl.&nbsp;<span>2.12</span></a> sehr ähnlich zu der Basis ist, die sie verwendeten. Für Störstellen könnte es dabei möglich sein, nichtäquivalente Einbauplätze zu unterscheiden.</p>
+</section>
+<section id="sec-vergleich" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="sec-vergleich"><span class="header-section-number">2.6</span> Vergleich mit anderen Methoden</h2>
+<p>Eine ähnliche Methode zur Berücksichtigung der Mischung von Zuständen von verschiedenen Punkten des reziproken Raumes im Rahmen von <span class="math inline">\bm{k}\cdot \bm{p}</span>&nbsp;bzw.&nbsp;EFA hat <span class="citation" data-cites="fore:98-2">Foreman (<a href="references.html#ref-fore:98-2" role="doc-biblioref">1998</a>)</span> vorgeschlagen. Er geht dabei unmittelbar von einer größeren Einheitszelle aus, die der hier verwendeten nEZ entspricht. Bezüglich der mit dieser Einheitszelle verbundenen Brillouin-Zone gehören alle Blochzustände, die hier zur Basis beitragen, zu <em>einem</em> Punkt des reziproken Raumes. Damit entfällt der in <a href="#sec-basis">Kap.&nbsp;<span>2.2</span></a> geführte Beweis der Vollständigkeit und Orthonormalität und normale <span class="math inline">\bm{k}\cdot \bm{p}</span>-Gleichungen können für das ungestörte Problem verwendet werden. Für die durch das Störpotential induzierten Wechselwirkungen – bei Foreman das Potential eines einzelnen Heteroübergangs zwischen AlAs und GaAs – ergeben sich dann Matrixelemente zwischen Blochzuständen an <em>einem</em> Punkt des reziproken Gitters.</p>
+<p>Dieser Ansatz ist im wesentlichen äquivalent zu dem hier gewählten. Allerdings geht die Blockdiagonal-Form des Hamilton-Operators bezüglich der <span class="math inline">\bm{k}\cdot \bm{p}</span>-Wechselwirkung zunächst verloren. Der <span class="math inline">\bm{k}\cdot \bm{p}</span>-Hamilton-Operator für die größere Einheitszelle enthält zunächst Impulsmatrixelemente, deren Verschwinden erst aus einer zusätzlichen Betrachtung folgt. Vergleichbar zu den hier erhaltenen Ergebnissen würde sich bei einer solchen Betrachtung auch ergeben, daß die tatsächlich benötigten Impulsmatrixelemente die gleichen sind, wie sie in einer <span class="math inline">\bm{k}\cdot \bm{p}</span>-Rechnung für den ungestörten Kristalls in seiner primitiven Einheitszelle benötigt werden, wenn alle <span class="math inline">\{{\bm{\mathcal{K}}}\}</span> unabhängig voneinander als Entwicklungspunkte verwendet werden. Dies ist deshalb von Vorteil, da der ungestörte Kristall im Allgemeinen eine höhere Symmetrie aufweist, so daß aus gruppentheoretischen Gründen insgesamt weniger unabhängige Parameter zu berücksichtigen sind.</p>
+<p>Bei dem Problem der Mischung von Blochzuständen wie es Foreman betrachtet, spielt dies nur eine untergeordnete Rolle. Doch hier sollen auch Energiedispersionen berechnet werden, und da ist diese Reduzierung der Anzahl der unabhängigen Paramter wichtig.</p>
+<p>Das für die Berechnung der Energiedispersionen verwendete Verfahren weist Ähnlichkeiten mit Methoden auf, die auf <span class="citation" data-cites="card:63">Cardona (<a href="references.html#ref-card:63" role="doc-biblioref">1963</a>)</span> zurückgehen. Dabei werden die Impulsmatrixelemente in Halbleitern mit Zinkblende-Gitter auf entsprechenden Matrixelemente isoelektrischer Halbleiter mit Diamant-Gitter zurückgeführt.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> Das inversions-asymmetrische Potential, das den Unterschied zwischen Zinkblende- und Diamant-Struktur beschreibt, wird dazu als Störung eines zugrundeliegenden Diamant-Gitters aufgefaßt. Die Blochzustände der polaren Materialien können dadurch als Überlagerung von Zuständen eines unpolaren Materials dargestellt werden. Damit ergeben sich auch die Impulsmatrixelemente aus Überlagerungen der Impulsmatrixelemente des unpolaren Materials. Im Diamant-Gitter gibt es aber auf Grund der höheren Symmetrie weniger unabhängige Parameter, so daß auf diesem Weg unbekannte Impulsmatrixelemente der Zinkblende-Struktur durch bekannte Energieunterschiede und Impulsmatrixelemente des isoelektrischen Diamant-Gitters ausgedrückt werden können. Der wesentliche Unterschied zu dem hier behandelten Problem besteht darin, daß das von Cardona verwendete Störpotential das Bravais-Gitter des Kristalls nicht ändert, so daß keine Mischung von Zuständen verschiedener Punkte im <span class="math inline">\bm{k}</span>-Raum auftritt. Zudem ist es in diesem Fall ausreichend, nur <em>ein</em> Impulsmatrixelement und <em>ein</em> Potentialmatrixelement zu berücksichtigen, was das Problem deutlich vereinfacht.</p>
 <!-- -->
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-bipi:74" class="csl-entry" role="doc-biblioentry">
+Bir, G. L., und G. E. Pikus, 1974, <em>Symmetry and strain-induced effects in semiconductors</em> (Wiley, New York).
+</div>
+<div id="ref-card:63" class="csl-entry" role="doc-biblioentry">
+Cardona, Manuel, 1963, <span>„Band parameters of semiconductors with zincblende, wurtzite, and germanium structure“</span>, Journal of Physics and Chemistry of Solids <strong>24</strong>, 1543–1555.
+</div>
+<div id="ref-fore:98-2" class="csl-entry" role="doc-biblioentry">
+Foreman, Bradley A., 1998, <span>„Analytical envelope-function theory of interface band mixing“</span>, Physical Review Letters <strong>81</strong>, 425–428.
+</div>
 <div id="ref-kane:66" class="csl-entry" role="doc-biblioentry">
 Kane, E. O., 1966, <span>„The <span><strong>k·p</strong></span> method“</span>, in <em>Physics of <span>III-V</span> Compounds</em>, herausgegeben von R. K. Willardson und A. C. Beer, Semiconductors and Semimetals (Academic Press, New York), Bd. 1, S. 75.
 </div>
+<div id="ref-lowd:51" class="csl-entry" role="doc-biblioentry">
+Löwdin, Per-Olov, 1951, <span>„A note on the quantum-mechanical perturbation theory“</span>, The Journal of Chemical Physics <strong>19</strong>, 1396–1401.
 </div>
+<div id="ref-luko:55" class="csl-entry" role="doc-biblioentry">
+Luttinger, J. M., und W. Kohn, 1955, <span>„Motion of electrons and holes in perturbed periodic fields“</span>, Physical Review <strong>97</strong>, 869–883.
+</div>
+<div id="ref-wazu:96" class="csl-entry" role="doc-biblioentry">
+Wang, Lin-Wang, und Alex Zunger, 1996, <span>„Pseudopotential-based multiband <span><strong>k·p</strong></span> method for <span class="math inline">\sim</span> 250 000-atom nanostructure systems“</span>, Physical Review B <strong>54</strong>, 11417–11435.
+</div>
+</div>
+</section>
+<section class="footnotes" role="doc-endnotes"><h2>Footnotes</h2>
+
+<ol>
+<li id="fn1" role="doc-endnote"><p><span class="citation" data-cites="kane:66">Kane (<a href="references.html#ref-kane:66" role="doc-biblioref">1966</a>)</span> definiert die Impulsmatrixelemente zwischen den gitterperiodischen Anteilen der Bloch-Zustände, <span class="citation" data-cites="luko:55">Luttinger und Kohn (<a href="references.html#ref-luko:55" role="doc-biblioref">1955</a>)</span> zwischen den Bloch-Zuständen selbst. Wir folgen letzterem Beispiel.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>Diese bezüglich der Energienenner symmetrische Form ist z.B. bei <span class="citation" data-cites="bipi:74">Bir und Pikus (<a href="references.html#ref-bipi:74" role="doc-biblioref">1974</a>)</span> zu finden.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p>Ein periodisches Störpotential heißt dann kommensurabel zum ursprünglichen Potential, wenn sich dessen primitive Gittervektoren als ganzzahlige Linearkombinationen der ursprünglichen Gittervektoren schreiben lassen.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4" role="doc-endnote"><p>Würden wir uns für einen anderen Punkt als den <span class="math inline">\Gamma</span>-Punkt interessieren, müßten wir zu den reziproken Gittervektoren erst noch den zu diesem Punkt gehörigen Vektor hinzuaddieren.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5" role="doc-endnote"><p>Die hier gezeigt Ableitung ist so allgemein gehalten, daß sie auch für nicht strengperiodische Störungen anwendbar ist. So z.B.&nbsp;Störungen mit periodisch angeordneten Gauß-Funktionen anstelle der Deltafunktionen als Fourier-Transformierte.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6" role="doc-endnote"><p>D.h. daß z.B. Impulsmatrixelemente für GaAs auf die in Ge zurückgeführt werden.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 </main>
 <div class="page-navigation ">
