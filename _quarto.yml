@@ -24,6 +24,10 @@ book:
   sharing: [twitter, facebook]
 
 #pdf-engine: xelatex
+fontfamily: mathpazo
+fontfamilyoptions: [osf,slantedGreek]
+linestretch: 1.15
+indent: true
 lang: de
 crossref:
   fig-title: Abbildung     # (default is "Figure")
@@ -43,7 +47,7 @@ format:
     html-math-method: katex
   pdf:
     documentclass: scrbook
-    classoption: [a5paper]
+    classoption: [10pt,a5paper,1headlines,headinclude,smallheadings,cleardoubleplain,bibtotoc]
     keep-tex: true
     include-in-header: header.tex
     #cite-method: biblatex
