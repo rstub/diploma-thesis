@@ -27,10 +27,11 @@ Das Bloch-Theorem besagt, daß sich $\psi_{n}$ als
 
 $$
   \psi_{n} \equiv  \psi_{n\ak}(\vec{r}) = e^{i\sprod{\ak}{r}}
-  u_{n\ak}(\vec{r}) 
+  u_{n\ak}(\vec{r})
 $$ {#eq-bloch}
 
-schreiben läßt, wobei $u_{n\ak}(\vec{r})$ die selbe Periodizität wie $V_{0}(\vecop{r})$ hat und $\ak$ ein Wellenvektor aus der ersten Brillouin-Zone ist. Betrachten wir die Zustände mit verschiedenem Bandindex $n$ aber \emph{einem} $\ak_{0}$ aus der ersten Brillouin-Zone, so bilden sie eine vollständige Basis. @luko:55 haben gezeigt, daß auch $$
+schreiben läßt, wobei $u_{n\ak}(\vec{r})$ die selbe Periodizität wie $V_{0}(\vecop{r})$ hat und $\ak$ ein Wellenvektor aus der ersten Brillouin-Zone ist. Betrachten wir die Zustände mit verschiedenem Bandindex $n$ aber \emph{einem} $\ak_{0}$ aus der ersten Brillouin-Zone, so bilden sie eine vollständige Basis. @luko:55 haben gezeigt, daß auch
+$$
   \altebasis = e^{i\sprod{\ak}{r}} e^{i\sprod{\ak_{0}}{r}} u_{n\ak_{0}}(\vec{r})
 $$ {#eq-altebasis}
 
@@ -63,7 +64,7 @@ Dabei geht das Integral über die Einheitszelle mit Volumen $\Omega_{0}$.[^1]
 @eq-standard-k.p ist äquivalent zur Schrödinger-Gleichung @eq-standard-SG, von der wir ausgegangen sind. Um nun @eq-standard-k.p zu lösen, benötigen wir alle Eigenenergie $\veps_{n}(\ak_{0})$ am Entwicklungspunkt $\ak_{0}$, sowie alle Impulsmatrixelemente $\pnn$ zwischen diesen Zuständen. Wir haben es dabei aber mit einem unendlich-dimensionalen Gleichungssystem zu tun, weshalb normalerweise @eq-standard-k.p für kleine Werte von $\akb$ störungstheoretisch behandelt wird. Das bekannteste Ergebnis solch einer Rechnung, die Gleichung für die efffektive Masse der Elektronen, erhalten wir, wenn wir für ein nichtentartetes Band an einem Extremum der Energiedispersion bis zur zweiten Ordnung in $\akb$ entwickeln:
 
 $$
-  E(\ak) = \veps_{n}(\ak_{0}) + \frac{\hbar^{2}}{2m}\akb^{2} + 
+  E(\ak) = \veps_{n}(\ak_{0}) + \frac{\hbar^{2}}{2m}\akb^{2} +
   \left(\frac{\hbar}{m}\right)^{2} \sum_{\pri{n}}
   \frac{|\sprod{\ak}{\pnn}|^{2}}{\veps_{n}(\ak_{0})-\veps_{\pri{n}}(\ak_{0})}
 $$ {#eq-standard-meff}
@@ -82,10 +83,12 @@ $$
 
 Dadurch erhalten wir ein endliches Gleichungssystem, das es uns ermöglicht, die Entwicklungskoeffizienten $c_{n\pri{n}}(\ak)$ mit $n \in \raum{A}$ zu bestimmen und aus diesen dann die Entwicklungskoeffizienten für $n \in \raum{B}$ zu erhalten.
 
-Sollen im Rahmen der Standard $\kdotp$-Theorie Valenzband-Zustände beschrieben werden, so müssen wir meist die Spin-Bahn-Wechselwirkung berücksichtigen. Diese führt zu einem zusätzlichen Term der Form $$
+Sollen im Rahmen der Standard $\kdotp$-Theorie Valenzband-Zustände beschrieben werden, so müssen wir meist die Spin-Bahn-Wechselwirkung berücksichtigen. Diese führt zu einem zusätzlichen Term der Form
+$$
 \op{H_{\text{SO}}} = \frac{\hbar}{4m^{2}c^{2}} (\grvecop{\sigma} \times
   \nabla\op{V}) \cdot \vecop{p}
-$$ {#eq-spin-bahn} im Hamilton-Operator. Dabei ist $\grvecop{\sigma}$ der Vektor der Pauli-Spin-Matrizen und $\op{V}$ das Kristallpotential.
+$$ {#eq-spin-bahn}
+im Hamilton-Operator. Dabei ist $\grvecop{\sigma}$ der Vektor der Pauli-Spin-Matrizen und $\op{V}$ das Kristallpotential.
 
 Dieser Term wird normalerweise störungstheoretisch so behandelt, daß er im Unterraum entarteter Zustände diagonalisiert wird. Dadurch erhöht sich die Anzahl der notwendigen Parameter nur um die jeweiligen Spin-Bahn-Aufspaltungen [@kane:66]. Für die Wechselwirkung mit anderen Zuständen müssen wir nur von den $\pnn$ zu $\grvec{\pi}_{\mathnormal{n\pri{n}}}$ übergehen, die sich in ihrer Definition darin unterscheiden, daß in @eq-pnn $\vecop{p}$ durch $\vecop{p} + \frac{\hbar}{4mc^{2}} (\grvecop{\sigma} \times \nabla\op{V})$ ersetzt werden muß [@luko:55].
 
@@ -109,22 +112,29 @@ Die neuen reziproken Gittervektoren führen dazu, daß an jedem Punkt der neuen 
 
 Wir wollen hier einen anderen Ansatz wählen, indem wir von vornherein von einer anderen Basis ausgehen, die dem hier betrachteten Problem besser angepaßt ist.
 
-Ausgangspunkt ist das ungestörtes Problem $$
+Ausgangspunkt ist das ungestörtes Problem
+$$
   \op{H_{0}}\psi_{n\ak}(\vec{r}) = \veps_{n}(\ak) \psi_{n\ak}(\vec{r}),
-$$ {#eq-ungestoert} dessen Lösungen $\psi_{n\ak}(\vec{r})$ mit Eigenenergien $\veps_{n}(\ak)$ bekannt seien. Dabei ist $\ak$ aus der alten Brillouin-Zone, die durch die reziproken Gittervektoren ${\aG}$ definiert wird.
+$$ {#eq-ungestoert}
+dessen Lösungen $\psi_{n\ak}(\vec{r})$ mit Eigenenergien $\veps_{n}(\ak)$ bekannt seien. Dabei ist $\ak$ aus der alten Brillouin-Zone, die durch die reziproken Gittervektoren ${\aG}$ definiert wird.
 
-Dieses System werde nun durch ein periodisches Potential $\op{H_{1}}$ gestört, das kommensurabel zur Periodizität des ungestörten Problems sein soll. $\op{H_{1}}$ läßt sich also als $$
+Dieses System werde nun durch ein periodisches Potential $\op{H_{1}}$ gestört, das kommensurabel zur Periodizität des ungestörten Problems sein soll. $\op{H_{1}}$ läßt sich also als
+$$
   \op{H_{1}} = \sum_{m} \rho_{m} e^{i\sprod{\nG}{r}}
-$$ {#eq-h1-gm} mit Entwicklungskoeffizienten $\rho_{m}$ schreiben, wobei die $\{\nG\}$ wie oben beschrieben alle reziproken Gittervektoren des gestörten Systems umfassen.
+$$ {#eq-h1-gm}
+mit Entwicklungskoeffizienten $\rho_{m}$ schreiben, wobei die $\{\nG\}$ wie oben beschrieben alle reziproken Gittervektoren des gestörten Systems umfassen.
 
-Gesucht sind nun Eigenfunktionen $\psi$ und Energieeigenwerte $E$ zur stationären Schrödingergleichung des gestörten Sytems: $$
+Gesucht sind nun Eigenfunktionen $\psi$ und Energieeigenwerte $E$ zur stationären Schrödingergleichung des gestörten Sytems:
+$$
   \left( \op{H_{0}} + \op{H_{1}} \right) \psi = E \psi
 $$ {#eq-h0+h1}
 
-In Analogie zu @eq-altebasis wählen wir $$
+In Analogie zu @eq-altebasis wählen wir
+$$
   \basis(\vec{r}) = e^{i\sprod{\nk}{r}} \psi_{n\set}(\vec{r})
   = e^{i\sprod{\nk}{r}} e^{i\sprod{\set}{r}} u_{n\set}(\vec{r})
-$$ {#eq-basis} als Basis. Dabei ist $\nk$ ein Wellenvektor aus der *neuen* Brillouin-Zone, während $\{\set\}$ ein Satz von Wellenvektoren aus der *alten* Brillouin-Zone ist.
+$$ {#eq-basis}
+als Basis. Dabei ist $\nk$ ein Wellenvektor aus der *neuen* Brillouin-Zone, während $\{\set\}$ ein Satz von Wellenvektoren aus der *alten* Brillouin-Zone ist.
 
 Wir verwenden also die Lösungen $\psi_{n\set}(\vec{r})$ der ungestörten Schrödinger-Gleichung @eq-ungestoert von *mehreren* Punkten der alten Brillouin-Zone als Basis. Welche Punkte wir benötigen, d.h. welche Punkte der alten Brillouin-Zone im Satz $\{\set\}$ enthalten sein müssen, hängt davon ab, welchen Punkt der neuen Brillouin-Zone wir beschreiben wollen. Wir wollen hier die Zustände im Zentrum der neuen Brillouin-Zone untersuchen und müssen deshalb diejenigen reziproken Gittervektoren des gestörten Systems $\nG$ verwenden, die innerhalb der alten ersten Brillouin-Zone liegen.[^4] Es ist leicht zu sehen, daß $e^{i\sprod{\set}{r}}$ mit diesem Satz von Entwicklungspunkten $\set$ periodisch bezüglich der neuen Einheitszelle ist.
 
@@ -132,39 +142,48 @@ Wir verwenden also die Lösungen $\psi_{n\set}(\vec{r})$ der ungestörten Schrö
 
 @fig-2d_bz zeigt ein einfaches zweidimensionales Beispiel zur Illustration der von uns gewählten Basisfunktionen.
 
-![Zweidimensionales Beispiel, in dem auf Grund der Verdopplung der Periode in einer Richtung ein Punkt des reziproken Raumes zurückfaltet. Der Satz $\{\set\}$ besteht hier aus den beiden Punkten $\vec{K}$ und $\vec{\pri{K}}$.](images/2d_bz.png){#fig-2d_bz}
+![Zweidimensionales Beispiel, in dem auf Grund der Verdopplung der Periode in einer Richtung ein Punkt des reziproken Raumes zurückfaltet. Der Satz $\{\set\}$ besteht hier aus den beiden Punkten $\vec{K}$ und $\vec{\pri{K}}$.](images/2d_bz.png){#fig-2d_bz fig.env=SCfigure}
 
 Die Funktionen $\basis(\vec{r})$ stellen eine geeignete Basis dar, da sie vollständig und orthonormal sind.
 
-Um die Vollständigkeit zu zeigen, verwenden wir, daß die Bloch-Zustände @eq-bloch eine vollständige Basis bilden, d.h. jede Funktion $f(\vec{r})$ kann nach Bloch-Zuständen entwickelt werden $$
+Um die Vollständigkeit zu zeigen, verwenden wir, daß die Bloch-Zustände @eq-bloch eine vollständige Basis bilden, d.h. jede Funktion $f(\vec{r})$ kann nach Bloch-Zuständen entwickelt werden
+$$
 \begin{aligned}
-  f(\vec{r}) & =  \sum_{n} \bzint{aBZ} \vdx{\akb} 
+  f(\vec{r}) & =  \sum_{n} \bzint{aBZ} \vdx{\akb}
         g_{n}(\ak) e^{i\sprod{\ak}{r}} u_{n\ak}(\vec{r}) \\
   & =  \sum_{\set \,n} \: \bzint{nBZ} \vdx{\nkb}
-  \underbrace{g_{n}(\nk+\set)}_{\textstyle =: g_{n}^{\set}(\nk)} 
+  \underbrace{g_{n}(\nk+\set)}_{\textstyle =: g_{n}^{\set}(\nk)}
   e^{i\sprod{\nk}{r}} \underbrace{e^{i\sprod{\set}{r}}
   u_{n\vec{\nk+\set}}(\vec{r})}_{\text{periodisch in nEZ}}.
 \end{aligned}
-$$ Da die beiden letzten Terme periodisch in nEZ sind, können wir sie nach den periodischen Funktionen $e^{i\sprod{\set}{r}} u_{n\vec{\set}}$ entwickeln $$
+$$
+Da die beiden letzten Terme periodisch in nEZ sind, können wir sie nach den periodischen Funktionen $e^{i\sprod{\set}{r}} u_{n\vec{\set}}$ entwickeln
+$$
   e^{i\sprod{\set}{r}} u_{n \nk+\set} = \sum_{\pri{\set}\,\pri{n}}
   b^{\set \pri{\set}}_{n \pri{n}} \! (\nk) \,
   e^{i\sprod{\pri{\set}}{r}} u_{\pri{n} \vec{\pri{\set}}} ,
-$$ mit den Entwicklungskoeffizienten $b^{\set \pri{\set}}_{n \pri{n}} \! (\nk)$. Damit ergibt sich: $$
+$$
+mit den Entwicklungskoeffizienten $b^{\set \pri{\set}}_{n \pri{n}} \! (\nk)$. Damit ergibt sich:
+$$
   f(\vec{r}) = \sum_{\set \,n} \: \bzint{nBZ} \vdx{\nkb}
-  \tilde{g}_{n}^{\set}(\nk) \basis 
+  \tilde{g}_{n}^{\set}(\nk) \basis
   \qquad \text{mit} \quad
   \tilde{g}_{n}^{\set}(\nk) = \sum_{\pri{\set}\,\pri{n}}
   b^{\pri{\set} \set}_{\pri{n} n} \! (\nk) \,
-  g_{\pri{n}}^{\pri{\set}}(\nk) 
-$$ Wir sind also in der Lage jede beliebige Funktion $f(\vec{r})$ nach den Basisfunktionen $\basis$ zu entwickeln, was bedeutet, daß diese vollständig sind.
+  g_{\pri{n}}^{\pri{\set}}(\nk)
+$$
+Wir sind also in der Lage jede beliebige Funktion $f(\vec{r})$ nach den Basisfunktionen $\basis$ zu entwickeln, was bedeutet, daß diese vollständig sind.
 
-Als nächstes wollen wir die Orthonormalität der Basisfunktionen $\basis$ zeigen, die durch die folgende Relation ausgedrückt wird: $$
+Als nächstes wollen wir die Orthonormalität der Basisfunktionen $\basis$ zeigen, die durch die folgende Relation ausgedrückt wird:
+$$
   \bzint{Kristall}\!\!\!\! \vdx{r} \cc{{\basis}} \pbasis =
   \kronecker{\set}{\pri{\set}} \kronecker{n}{\pri{n}}
-  \delta(\nk-\pri{\nk}) 
-$$ {#eq-orth1} Daß dies erfüllt ist, zeigt sich folgendermaßen: $$
+  \delta(\nk-\pri{\nk})
+$$ {#eq-orth1}
+Daß dies erfüllt ist, zeigt sich folgendermaßen:
+$$
 \begin{aligned}
-  \bzint{Kristall}\!\!\!\! \vdx{r} \cc{{\basis}}\pbasis & = 
+  \bzint{Kristall}\!\!\!\! \vdx{r} \cc{{\basis}}\pbasis & =
   \bzint{Kristall}\!\!\!\! \vdx{r} e^{i\sprod{(\pri{k}-k)}{r}}
   \underbrace{e^{i\sprod{(\pri{\set}-\set)}{r}}
   \cc{u_{n\set}}u_{\pri{n}\pri{\set}}}_{\text{periodisch in nEZ}} \\
@@ -173,40 +192,54 @@ $$ {#eq-orth1} Daß dies erfüllt ist, zeigt sich folgendermaßen: $$
 \end{aligned}
 $$ {#eq-orth2}
 
-Der letzte Schritt ist richtig, da $\nk$ und $\pri{\nk}$ aus der neuen Brillouin-Zone sind, die durch die $\nG$ definiert ist. Dabei haben wir eine Fourier-Transformation durchgeführt $$
-  e^{i\sprod{(\pri{\set}-\set)}{r}} \cc{u_{n\set}}u_{\pri{n}\pri{\set}} = 
+Der letzte Schritt ist richtig, da $\nk$ und $\pri{\nk}$ aus der neuen Brillouin-Zone sind, die durch die $\nG$ definiert ist. Dabei haben wir eine Fourier-Transformation durchgeführt
+$$
+  e^{i\sprod{(\pri{\set}-\set)}{r}} \cc{u_{n\set}}u_{\pri{n}\pri{\set}} =
   \sum_{m} \BnnKK{m} e^{-i\sprod{\nG}{r}}
-$$ {#eq-bloch-gm} deren Koeffizienten $\BnnKK{m}$ durch $$
+$$ {#eq-bloch-gm}
+deren Koeffizienten $\BnnKK{m}$ durch
+$$
   \BnnKK{m} = \frac{1}{\Omega} \bzint{nEZ} \vdx{r}
   e^{i\sprod{\nG}{r}} e^{i\sprod{(\pri{\set}-\set)}{r}}
-  \cc{u_{n\set}}u_{\pri{n}\pri{\set}} 
-$$ gegeben sind, wenn $\Omega$ das Volumen der neuen Einheitszelle ist. Für den Spezialfall $m=0$ gilt $$
+  \cc{u_{n\set}}u_{\pri{n}\pri{\set}}
+$$
+gegeben sind, wenn $\Omega$ das Volumen der neuen Einheitszelle ist. Für den Spezialfall $m=0$ gilt
+$$
   \BnnKK{0} = \frac{1}{\Omega} \bzint{nEZ} \vdx{r}
   e^{i\sprod{(\pri{\set}-\set)}{r}} \cc{u_{n\set}}u_{\pri{n}\pri{\set}} =
   \frac{1}{(2\pi)^{3}} \kronecker{\set}{\pri{\set}}
   \kronecker{n}{\pri{n}}
-$$ {#eq-bnnkk0} so daß insgesamt @eq-orth1 erfüllt ist.
+$$ {#eq-bnnkk0}
+so daß insgesamt @eq-orth1 erfüllt ist.
 
-@eq-bnnkk0 ist ein Spezialfall von $$
+@eq-bnnkk0 ist ein Spezialfall von
+$$
   \bzint{nEZ}e^{i\sprod{k}{r}}f(\vec{r})\vdx{r}=0
-$$ {#eq-k.period} für Funktionen $f(\vec{r})$, die periodisch auf aEZ sind, und $e^{i\sprod{k}{r}}$ periodisch auf nEZ aber nicht auf aEZ, d.h. wenn $\vec{k} \notin \{\aG\}$ gilt. Dies wiederum ist nur ein Spezialfall der allgemeinen Aussage, daß $$
-  \bzint{Kristall}e^{i\sprod{k}{r}}f(\vec{r})\vdx{r}=0 
-$$ für gitterperiodische Funktionen $f(\vec{r})$, wenn $\vec{k}$ kein reziproker Gittervektor ist.
+$$ {#eq-k.period}
+für Funktionen $f(\vec{r})$, die periodisch auf aEZ sind, und $e^{i\sprod{k}{r}}$ periodisch auf nEZ aber nicht auf aEZ, d.h. wenn $\vec{k} \notin \{\aG\}$ gilt. Dies wiederum ist nur ein Spezialfall der allgemeinen Aussage, daß
+$$
+  \bzint{Kristall}e^{i\sprod{k}{r}}f(\vec{r})\vdx{r}=0
+$$
+für gitterperiodische Funktionen $f(\vec{r})$, wenn $\vec{k}$ kein reziproker Gittervektor ist.
 
 ## Ansatz für die Wellenfunktion {#sec-ansatz}
 
-Nachdem gezeigt wurde, daß unsere Basisfunktionen $\basis$ eine geeignete Basis für die Entwicklung der Eigenfunktionen $\psi$ in @eq-h0+h1 sind, soll nun der Ansatz gemacht werden: $$
+Nachdem gezeigt wurde, daß unsere Basisfunktionen $\basis$ eine geeignete Basis für die Entwicklung der Eigenfunktionen $\psi$ in @eq-h0+h1 sind, soll nun der Ansatz gemacht werden:
+$$
   \psi = \sum_{\pri{\set},\pri{n}} \bzint{nBZ} \vdx{\pri{\nkb}} \pkoeff
   \pbasis .
-$$ Wenn wir dies in @eq-h0+h1 einsetzen, so ergibt sich $$
+$$
+Wenn wir dies in @eq-h0+h1 einsetzen, so ergibt sich
+$$
   \sum_{\pri{\set},\pri{n}} \bzint{nBZ} \vdx{\pri{\nkb}}
   \matrixel{\varbasis}{\op{H_{0}}+\op{H_{1}}}{\pvarbasis} \pkoeff = E \koeff .
-$$ {#eq-pre-sg}\
+$$ {#eq-pre-sg}
 Dabei steht $\matrixel{\varbasis}{\op{H_{0}}+\op{H_{1}}}{\pvarbasis}$ für Matrixelemente bezüglich der Basisfunktionen $\basis(\vec{r}) = \braket{\vec{r}}{\varbasis}$.
 
 ### Matrixelemente von $\op{H_0}$ {#sec-h0}
 
-Zunächst sollen die Matrixelemente von \op{H_{0}} bezüglich der Basisfunktionen \basis untersucht werden. $$
+Zunächst sollen die Matrixelemente von $\op{H_{0}}$ bezüglich der Basisfunktionen $\basis$ untersucht werden.
+$$
 \begin{aligned}
   & \matrixel{\varbasis}{\op{H_{0}}}{\pvarbasis} \\
   & =\bzint{Kristall}\!\!\!\! \vdx{r} e^{-i\sprod{(\nk+\set)}{r}}
@@ -214,8 +247,8 @@ Zunächst sollen die Matrixelemente von \op{H_{0}} bezüglich der Basisfunktione
   u_{\pri{n}\pri{\set}}\\
 %%%
   & =\bzint{Kristall}\!\!\!\! \vdx{r} e^{i\sprod{(\pri{\nk}-\nk)}{r}}
-  e^{-i\sprod{\set}{r}} \cc{u_{n\set}} 
-  (\op{H_{0}} + \frac{\hbar^{2}}{2m} {\pri{\nkb}}^{2} 
+  e^{-i\sprod{\set}{r}} \cc{u_{n\set}}
+  (\op{H_{0}} + \frac{\hbar^{2}}{2m} {\pri{\nkb}}^{2}
   + \frac{\hbar}{m}\sprod{\pri{\nk}}{\op{p}}) e^{i\sprod{\pri{\set}}{r}}
   u_{\pri{n}\pri{\set}}\\
 %%%
@@ -225,29 +258,33 @@ Zunächst sollen die Matrixelemente von \op{H_{0}} bezüglich der Basisfunktione
   \frac{\hbar}{m} \sprod{\pri{\nk}}{\op{p}} \right)
   e^{i\sprod{\pri{\set}}{r}} u_{\pri{n}\pri{\set}}}_{\text{periodisch in nEZ}}.
 \end{aligned}
-$$ Auf Grund der Periodizität in nEZ können wir ähnlich wie beim Schritt von @eq-orth1 zu @eq-orth2 vorgehen. Damit erhalten wir $$
+$$
+Auf Grund der Periodizität in nEZ können wir ähnlich wie beim Schritt von @eq-orth1 zu @eq-orth2 vorgehen. Damit erhalten wir
+$$
 \begin{aligned}
   & \matrixel{\varbasis}{\op{H_{0}}}{\pvarbasis} \\
 %%%
   & = \delta(\pri{\nk}-\nk) {\frac{(2\pi)}{\Omega}}^{3} \!\!\!
   \bzint{nEZ}\! \vdx{r} e^{-i\sprod{\set}{r}} \cc{u_{n\set}}
   \left( \veps_{\pri{n}}(\pri{\set}) + \frac{\hbar^{2}}{2m} {\nkb}^{2} +
-  \frac{\hbar}{m} \sprod{\nk}{\op{p}} \right) 
+  \frac{\hbar}{m} \sprod{\nk}{\op{p}} \right)
   e^{i\sprod{\pri{\set}}{r}} u_{\pri{n}\pri{\set}} \\
 %%%%
   & = \delta(\pri{\nk}-\nk) \bigg[ \kronecker{n}{\pri{n}}
-  \kronecker{\set}{\pri{\set}} \left( \veps_{n}(\set) 
+  \kronecker{\set}{\pri{\set}} \left( \veps_{n}(\set)
     + \frac{\hbar^{2}}{2m} \nkb^{2} \right)  \\
 %%%%
   & \qquad + \: {\frac{(2\pi)}{\Omega}}^{3} \frac{\hbar}{m}
-  \bzint{nEZ} \vdx{r} 
-  e^{-i\sprod{\set}{r}} \cc{u_{n\set}}  \sprod{\nk}{\op{p}}  
-  e^{i\sprod{\pri{\set}}{r}} u_{\pri{n}\pri{\set}}   \bigg] 
+  \bzint{nEZ} \vdx{r}
+  e^{-i\sprod{\set}{r}} \cc{u_{n\set}}  \sprod{\nk}{\op{p}}
+  e^{i\sprod{\pri{\set}}{r}} u_{\pri{n}\pri{\set}}   \bigg]
 \end{aligned}
-$$ {#eq-preh0} Der zweite Summand in @eq-preh0 ergibt $$
+$$ {#eq-preh0}
+Der zweite Summand in @eq-preh0 ergibt
+$$
 \begin{aligned}
   & {\frac{(2\pi)}{\Omega}}^{3} \frac{\hbar}{m} \bzint{nEZ} \vdx{r}
-  e^{-i\sprod{\set}{r}} \cc{u_{n\set}} \sprod{\nk}{\op{p}}  
+  e^{-i\sprod{\set}{r}} \cc{u_{n\set}} \sprod{\nk}{\op{p}}
   e^{i\sprod{\pri{\set}}{r}} u_{\pri{n}\pri{\set}} \\
 %%%%
   & = \kronecker{n}{\pri{n}} \kronecker{\set}{\pri{\set}}
@@ -256,19 +293,23 @@ $$ {#eq-preh0} Der zweite Summand in @eq-preh0 ergibt $$
   \underbrace{\cc{u_{n\set}} \sprod{\nk}{\op{p}}
   u_{\pri{n}\pri{\set}}}_{\text{periodisch in  aEZ}}\\
 %%%%
-  & = \kronecker{\set}{\pri{\set}} \frac{\hbar}{m} 
+  & = \kronecker{\set}{\pri{\set}} \frac{\hbar}{m}
   \left( \kronecker{n}{\pri{n}} \sprod{\nk}{\set} +
-  {\frac{(2\pi)}{\Omega}}^{3} \bzint{nEZ}  
+  {\frac{(2\pi)}{\Omega}}^{3} \bzint{nEZ}
   \vdx{r}  \cc{u_{n\set}} \sprod{\nk}{\op{p}} u_{\pri{n}\set} \right) ,
 \end{aligned}
-$$ wobei im letzten Schritt @eq-k.period angewendet wurde.
+$$
+wobei im letzten Schritt @eq-k.period angewendet wurde.
 
-Es ergeben sich also keine Impulsmatrixelemente zwischen Zuständen verschiedener Entwicklungspunkte $\set$. In Analogie zu @eq-pnn definieren wir nun: $$
+Es ergeben sich also keine Impulsmatrixelemente zwischen Zuständen verschiedener Entwicklungspunkte $\set$. In Analogie zu @eq-pnn definieren wir nun:
+$$
   \pnnK := {\frac{(2\pi)}{\Omega}}^{3} \bzint{nEZ} \vdx{r}
   e^{-i\sprod{\set}{r}} \cc{u_{n\set}} \, \op{\vec{p}}  \,
   e^{i\sprod{\set}{r}} u_{\pri{n}\set}
-$$ {#eq-pnnk} Damit ergibt sich aus @eq-preh0: $$
-  \matrixel{\varbasis}{\op{H_{0}}}{\pvarbasis} 
+$$ {#eq-pnnk}
+Damit ergibt sich aus @eq-preh0:
+$$
+  \matrixel{\varbasis}{\op{H_{0}}}{\pvarbasis}
   = \delta(\pri{\nk}-\nk) \kronecker{\set}{\pri{\set}} \left[
   \kronecker{n}{\pri{n}} \left( \veps_{n}(\set) + \frac{k^{2}}{2m}
   \right) + \frac{\sprod{k}{\pnnK}}{m} \right]
@@ -278,40 +319,48 @@ Dies entspricht (natürlich) dem Ergebnis, das wir in Standard $\kdotp$-Theorie 
 
 ### Matrixelemente von $\op{H_1}$ {#sec-h1}
 
-Die Matrixelemente des Störpotentials $\op{H_{1}}$ bezüglich der Basisfunktionen $\basis$ ergeben sich folgendermaßen: $$
-  \matrixel{\varbasis}{\op{H_{1}}}{\pvarbasis} = 
+Die Matrixelemente des Störpotentials $\op{H_{1}}$ bezüglich der Basisfunktionen $\basis$ ergeben sich folgendermaßen:
+$$
+  \matrixel{\varbasis}{\op{H_{1}}}{\pvarbasis} =
   \bzint{Kristall}\!\!\!\! \vdx{r} e^{-i\sprod{(\nk+\set)}{r}}
   \cc{u_{n\set}} \op{H_{1}} e^{i\sprod{(\pri{\nk}+\pri{\set})}{r}}
   u_{\pri{n}\pri{\set}}
 $$ {#eq-h1mat}
 
-Da $\op{H_{1}}$ ein Potential und damit multiplikativ ist, vertauscht es mit allen übrigen Faktoren innerhalb des Integrals @eq-h1mat. Dadurch ergibt sich der gleiche Faktor wie auf der linken Seite von @eq-bloch-gm, so daß @eq-h1mat sich mit der Fourier-Entwicklung @eq-h1-gm als $$
+Da $\op{H_{1}}$ ein Potential und damit multiplikativ ist, vertauscht es mit allen übrigen Faktoren innerhalb des Integrals @eq-h1mat. Dadurch ergibt sich der gleiche Faktor wie auf der linken Seite von @eq-bloch-gm, so daß @eq-h1mat sich mit der Fourier-Entwicklung @eq-h1-gm als
+$$
 \begin{aligned}
-  \matrixel{\varbasis}{\op{H_{1}}}{\pvarbasis} 
-  &=  \sum_{m,\pri{m}} \BnnKK{m} \rho_{\pri{m}} 
+  \matrixel{\varbasis}{\op{H_{1}}}{\pvarbasis}
+  &=  \sum_{m,\pri{m}} \BnnKK{m} \rho_{\pri{m}}
   \bzint{Kristall}\!\!\!\! \vdx{r} e^{i\sprod{(\pri{\nk}-\nk)}{r}}
   e^{i\sprod{(\pnG-\nG)}{r}} \\
-  &= (2\pi)^{3} \sum_{m,\pri{m}} \BnnKK{m} \rho_{\pri{m}} 
+  &= (2\pi)^{3} \sum_{m,\pri{m}} \BnnKK{m} \rho_{\pri{m}}
   \delta(\pnG - \pnG + \pri{\nk} - \nk)  \\
-  &= (2\pi)^{3}  \delta(\pri{\nk} - \nk) 
+  &= (2\pi)^{3}  \delta(\pri{\nk} - \nk)
   \sum_{m,\pri{m}} \BnnKK{m} \rho_{\pri{m}} \kronecker{m}{\pri{m}}
 \end{aligned}
-$$ {#eq-preh1} schreiben läßt. Der letzte Schritt ist möglich, da $\nk$ und $\pri{\nk}$ aus nBZ sind, zu der die $\{\nG\}$ als reziproke Gittervektoren gehören. Hier bietet es sich an $$
+$$ {#eq-preh1}
+schreiben läßt. Der letzte Schritt ist möglich, da $\nk$ und $\pri{\nk}$ aus nBZ sind, zu der die $\{\nG\}$ als reziproke Gittervektoren gehören. Hier bietet es sich an
+$$
 \begin{aligned}
   \VnnKK &:=  (2\pi)^{3} \sum_{m,\pri{m}} \BnnKK{m} \rho_{\pri{m}}
   \kronecker{m}{\pri{m}} \\
   &= {\frac{(2\pi)}{\Omega}}^{3} \bzint{nEZ} \vdx{r}
-  e^{-i\sprod{\set}{r}} \cc{u_{n\set}} \op{H_{1}}  
+  e^{-i\sprod{\set}{r}} \cc{u_{n\set}} \op{H_{1}}
   e^{i\sprod{\pri{\set}}{r}} u_{\pri{n}\pri{\set}}
 \end{aligned}
-$$ {#eq-vnnkk} zu definieren, so daß wir insgesamt $$
-  \matrixel{\varbasis}{\op{H_{1}}}{\pvarbasis} = 
+$$ {#eq-vnnkk}
+zu definieren, so daß wir insgesamt
+$$
+  \matrixel{\varbasis}{\op{H_{1}}}{\pvarbasis} =
   \delta(\pri{\nk}-\nk) \VnnKK
-$$ {#eq-h1} erhalten.
+$$ {#eq-h1}
+erhalten.
 
-Setzen wir nun @eq-h0 und @eq-h1 in @eq-pre-sg ein, so erhalten wir als letztendlich zu lösende Gleichung: $$
+Setzen wir nun @eq-h0 und @eq-h1 in @eq-pre-sg ein, so erhalten wir als letztendlich zu lösende Gleichung:
+$$
 \begin{aligned}
-  \left( \veps_{n}(\set) + \frac{\hbar^{2}}{2m} \nkb^{2} \right) \koeff &+ 
+  \left( \veps_{n}(\set) + \frac{\hbar^{2}}{2m} \nkb^{2} \right) \koeff &+
   \frac{\hbar}{m} \sum_{\pri{n}} \sprod{\nk}{\pnnK} A^{\set}_{\pri{n}} \!
   (\nk) \,   \\
 %%%%
@@ -326,7 +375,8 @@ Es ist auffallend, daß @eq-sg diagonal in $\nk$ ist, weshalb sich die Energiee
 
 ## Diskussion {#sec-disk}
 
-Als erstes ist festzustellen, daß sich @eq-SG auf die normale $\kdotp$-Gleichung @eq-standard-k.p reduziert, wenn alle $\VnnKK$ verschwinden und nur ein Entwicklungspunkt $\set$ herangezogen wird. Schreiben wir @eq-sg für nichtverschwindende $\VnnKK$ und zwei Entwicklungspunkte in Matrixform, so erhalten wir eine Matrix der Form $$
+Als erstes ist festzustellen, daß sich @eq-SG auf die normale $\kdotp$-Gleichung @eq-standard-k.p reduziert, wenn alle $\VnnKK$ verschwinden und nur ein Entwicklungspunkt $\set$ herangezogen wird. Schreiben wir @eq-sg für nichtverschwindende $\VnnKK$ und zwei Entwicklungspunkte in Matrixform, so erhalten wir eine Matrix der Form
+$$
 \left(
   \begin{array}{c|c}
     \text{$\kdotp$-Matrix für $\set$} & 0 \\ \hline
@@ -340,13 +390,14 @@ Als erstes ist festzustellen, daß sich @eq-SG auf die normale $\kdotp$-Gleichun
     \VnnKKze & \VnnKKzz
   \end{array}
 \right)
-$$ für den Hamilton-Operator $\op{H_{0}}+\op{H_{1}}$ in der Basis der $\basis$. Dabei stellt jeder der obigen Quadranten eine unendlich-dimensionale Matrix dar, da es zu jedem Punkt im reziproken Raum unendlich viele Lösungen der ungestörten Schrödingergleichung @eq-ungestoert gibt, und damit auch unendlich viele Basisfunktionen $\basis$ zu jedem Entwicklungspunkt $\set$.
+$$
+für den Hamilton-Operator $\op{H_{0}}+\op{H_{1}}$ in der Basis der $\basis$. Dabei stellt jeder der obigen Quadranten eine unendlich-dimensionale Matrix dar, da es zu jedem Punkt im reziproken Raum unendlich viele Lösungen der ungestörten Schrödingergleichung @eq-ungestoert gibt, und damit auch unendlich viele Basisfunktionen $\basis$ zu jedem Entwicklungspunkt $\set$.
 
 Insgesamt ist es also gelungen, die Differentialgleichung @eq-h0+h1 auf die algebraische Gleichung @eq-sg zurückzuführen. Da hierfür ein vollständiges Orthonormalsystem von Zuständen verwendet wurde, ist @eq-SG äquivalent zu @eq-h0+h1. Dies ist vergleichbar zu der in @sec-standard-k.p gezeigten Situation in normaler $\kdotp$-Theorie, wo auch ein differentielles Problem auf ein unendlich-dimensionales algebraisches Problem zurückgeführt wird [@kane:66]. Dieses unendlich dimensionale Problem können wir wieder mit Hilfe der Löwdin-Störungstheorie auf ein endlich-dimensionales Problem reduzieren, wenn wir die Basisfunktionen $\basis$ in zwei Gruppen zerlegen können, wie in @sec-standard-k.p skizziert.
 
 ## Mögliche Erweiterungen {#sec-erweiterungen}
 
-Da @eq-SG formal große Ähnlichkeit mit der Standard $\kdotp$-Gleichung @eq-standard-k.p aufweist, sind die in @sec-standard-k.p erwähnten Erweiterungen auch hier möglich.
+Da @eq-sg formal große Ähnlichkeit mit der Standard $\kdotp$-Gleichung @eq-standard-k.p aufweist, sind die in @sec-standard-k.p erwähnten Erweiterungen auch hier möglich.
 
 So ist es sinnvoll, die Spin-Bahn-Wechselwirkung @eq-Spin-Bahn als zusätzlichen Term im Hamilton-Operator zu berücksichtigen, wenn die Dispersion im Valenzband beschrieben weden soll. Es bietet sich an, diesen Term wiederum störungstheoretisch zu behandeln, da sich dann die Anzahl der notwendigen Impulsmatrixelemente $\pnnK$ und Potentialmatrixelemente $\VnnKK$  nicht erhöht. Für die Wechselwirkung mit anderen Zuständen müssen wir analog zu @sec-standard-k.p von $\pnnK$ zu $\grvec{\pi}^{\set}_{\mathnormal{n\pri{n}}}$ übergehen, die sich in ihrer Definition darin unterscheiden, daß in @eq-pnnk $\vecop{p}$ durch $\vecop{p} + \frac{\hbar}{4mc^{2}} (\grvecop{\sigma} \times \nabla\op{V})$ ersetzt werden muß [@luko:55].
 
