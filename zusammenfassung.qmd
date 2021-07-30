@@ -4,7 +4,7 @@ cat(sub("%.*$", "", readLines(input)), sep = "\n")
 close(input)
 ```
 
-# Zusammenfassung und Ausblick {sec-zusamm}
+# Zusammenfassung und Ausblick {#sec-zusamm}
 
 Im Rahmen dieser Arbeit wurde eine Verallgemeinerung der $\kdotp$-Theorie
 abgeleitet, die eine effiziente Behandlung periodischer Störungen erlaubt.

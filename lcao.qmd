@@ -46,7 +46,7 @@ durch eine Kombination sogenannter Zwei-Zentren-Integrale (*two-center
 integrals*) nähern.[^1] Diese Reduzierung der Anzahl der Parameter ist
 auch deshalb notwendig, um bei den meist wenigen bekannten
 Energieeigenwerten ein aussagekräftiges Modell zu
-erhalten.%\marginpar{Berechnung von Matrixelementen}
+erhalten.
 
 [^1]: Diese sind zu den kovalenten Bindungen in der Chemie vergleichbar.
 
