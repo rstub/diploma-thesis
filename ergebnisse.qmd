@@ -14,6 +14,6 @@ Die Diagonalisierung des $\kdotp$-Hamilton-Operators \eqref{eq:k.p-H} wollen wir
 
 In Gl.\~\eqref{eq:V15-V11} haben wir gesehen, daß $\V{15}$, verglichen mit den dazugehörigen Energienennern, das Matrixelement mit dem geringsten Effekt ist. Wie wir noch sehen werden, gilt $|\V{11}| \approx 200\;\text{meV}$ für die höchstgeordneten Proben, die im Experiment bisher gefunden wurden. Setzen wir aber nun die Werte aus Tab.\~\ref{tab:Em*P} ein, so erhalten wir, daß auch $|\V{15}| \approx 200\;\text{meV}$ ist und damit eine Größenordnung kleiner als der dazugehörige Energienenner. Dies rechtfertigt es, diese Kopplung störungstheoretisch zu behandeln.
 
-Dabei wollen wir Löwdin-Störungstheorie [@lowd:51] verwenden, wie wir sie in Kap.\~\ref{sec:standard-k.p} beschrieben haben. Da wir hier eine Entkopplung von Valenz- und Leitungsband durchführen möchten, bedeutet dies, daß wir einmal die Leitungsbänder als Gruppe $\raum{A}$ betrachten und die Valenzbänder als Gruppe $\raum{B}$ und dann diese Rollen vertauschen.
+Dabei wollen wir Löwdin-Störungstheorie [@lowd:51] verwenden, wie wir sie in @sec-standard-k.p beschrieben haben. Da wir hier eine Entkopplung von Valenz- und Leitungsband durchführen möchten, bedeutet dies, daß wir einmal die Leitungsbänder als Gruppe $\raum{A}$ betrachten und die Valenzbänder als Gruppe $\raum{B}$ und dann diese Rollen vertauschen.
 
 Führen wir dies für den Hamilton-Operator \eqref{eq:k.p-H} durch, so müssen wir nur folgende Energien abändern, um die Kopplung zwischen Valenz- und Leitungsband in zweiter Ordnung zu beseitigen:

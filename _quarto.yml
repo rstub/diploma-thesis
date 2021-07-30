@@ -26,9 +26,13 @@ book:
 #pdf-engine: xelatex
 lang: de
 crossref:
+  fig-title: Abbildung     # (default is "Figure")
+  tbl-title: Tabelle     # (default is "Table")
   fig-prefix: Abb.   # (default is "fig.")
   tbl-prefix: Tab.    # (default is "tbl.")
   sec-prefix: Kap.
+  eq-prefix: Gl.
+
 link-citations: true
 bibliography: references.bib
 csl: reviews-of-modern-physics-with-titles.csl
