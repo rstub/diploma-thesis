@@ -236,7 +236,7 @@
 <p>Das Bloch-Theorem besagt, daß sich <span class="math inline">\psi_{n}</span> als</p>
 <p><span id="eq-bloch"><span class="math display">
   \psi_{n} \equiv  \psi_{n\bm{\kappa}}(\bm{r}) = e^{i\bm{\bm{\kappa}} \cdot \bm{r}}
-  u_{n\bm{\kappa}}(\bm{r}) 
+  u_{n\bm{\kappa}}(\bm{r})
  \qquad(2.2)</span></span></p>
 <p>schreiben läßt, wobei <span class="math inline">u_{n\bm{\kappa}}(\bm{r})</span> die selbe Periodizität wie <span class="math inline">V_{0}(\bm{r})</span> hat und <span class="math inline">\bm{\kappa}</span>&nbsp;ein Wellenvektor aus der ersten Brillouin-Zone ist. Betrachten wir die Zustände mit verschiedenem Bandindex <span class="math inline">n</span> aber  <span class="math inline">\bm{\kappa}_{0}</span> aus der ersten Brillouin-Zone, so bilden sie eine vollständige Basis. <span class="citation" data-cites="luko:55">Luttinger und Kohn (<a href="references.html#ref-luko:55" role="doc-biblioref">1955</a>)</span> haben gezeigt, daß auch <span id="eq-altebasis"><span class="math display">
   {\phi_{n \bm{\kappa}}}= e^{i\bm{\bm{\kappa}} \cdot \bm{r}} e^{i\bm{\bm{\kappa}_{0}} \cdot \bm{r}} u_{n\bm{\kappa}_{0}}(\bm{r})
@@ -260,7 +260,7 @@
 <p>Dabei geht das Integral über die Einheitszelle mit Volumen <span class="math inline">\Omega_{0}</span>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <p><a href="#eq-standard-k.p">Gl.&nbsp;<span>2.5</span></a> ist äquivalent zur Schrödinger-Gleichung <a href="#eq-standard-sg">Gl.&nbsp;<span>2.1</span></a>, von der wir ausgegangen sind. Um nun <a href="#eq-standard-k.p">Gl.&nbsp;<span>2.5</span></a> zu lösen, benötigen wir alle Eigenenergie <span class="math inline">\varepsilon_{n}(\bm{\kappa}_{0})</span> am Entwicklungspunkt <span class="math inline">\bm{\kappa}_{0}</span>, sowie alle Impulsmatrixelemente <span class="math inline">{\bm{p}_{\mathnormal{n{n^{\prime}}}}}</span> zwischen diesen Zuständen. Wir haben es dabei aber mit einem unendlich-dimensionalen Gleichungssystem zu tun, weshalb normalerweise <a href="#eq-standard-k.p">Gl.&nbsp;<span>2.5</span></a> für kleine Werte von <span class="math inline">{\kappa}</span> störungstheoretisch behandelt wird. Das bekannteste Ergebnis solch einer Rechnung, die Gleichung für die efffektive Masse der Elektronen, erhalten wir, wenn wir für ein nichtentartetes Band an einem Extremum der Energiedispersion bis zur zweiten Ordnung in <span class="math inline">{\kappa}</span> entwickeln:</p>
 <p><span id="eq-standard-meff"><span class="math display">
-  E(\bm{\kappa}) = \varepsilon_{n}(\bm{\kappa}_{0}) + \frac{\hbar^{2}}{2m}{\kappa}^{2} + 
+  E(\bm{\kappa}) = \varepsilon_{n}(\bm{\kappa}_{0}) + \frac{\hbar^{2}}{2m}{\kappa}^{2} +
   \left(\frac{\hbar}{m}\right)^{2} \sum_{{n^{\prime}}}
   \frac{|\bm{\bm{\kappa}} \cdot \bm{{\bm{p}_{\mathnormal{n{n^{\prime}}}}}}|^{2}}{\varepsilon_{n}(\bm{\kappa}_{0})-\varepsilon_{{n^{\prime}}}(\bm{\kappa}_{0})}
  \qquad(2.7)</span></span></p>
@@ -310,13 +310,34 @@ H_{\text{SO}} = \frac{\hbar}{4m^{2}c^{2}} (\bm{\sigma} \times
 </figure>
 </div>
 <p>Die Funktionen <span class="math inline">{\chi^{{\bm{\mathcal{K}}}}_{n\bm{k}}}(\bm{r})</span> stellen eine geeignete Basis dar, da sie vollständig und orthonormal sind.</p>
+<p>Um die Vollständigkeit zu zeigen, verwenden wir, daß die Bloch-Zustände <a href="#eq-bloch">Gl.&nbsp;<span>2.2</span></a> eine vollständige Basis bilden, d.h. jede Funktion <span class="math inline">f(\bm{r})</span> kann nach Bloch-Zuständen entwickelt werden <span class="math display">
+\begin{aligned}
+  f(\bm{r}) &amp; =  \sum_{n} {\int\limits_{\scriptscriptstyle \text{aBZ}}} d^{3}\!\!\: {\kappa}\,
+        g_{n}(\bm{\kappa}) e^{i\bm{\bm{\kappa}} \cdot \bm{r}} u_{n\bm{\kappa}}(\bm{r}) \\
+  &amp; =  \sum_{{\bm{\mathcal{K}}}\,n} \: {\int\limits_{\scriptscriptstyle \text{nBZ}}} d^{3}\!\!\: {k}\,
+  \underbrace{g_{n}(\bm{k}+{\bm{\mathcal{K}}})}_{\textstyle =: g_{n}^{{\bm{\mathcal{K}}}}(\bm{k})}
+  e^{i\bm{\bm{k}} \cdot \bm{r}} \underbrace{e^{i\bm{{\bm{\mathcal{K}}}} \cdot \bm{r}}
+  u_{n\bm{\bm{k}+{\bm{\mathcal{K}}}}}(\bm{r})}_{\text{periodisch in nEZ}}.
+\end{aligned}
+</span> Da die beiden letzten Terme periodisch in nEZ sind, können wir sie nach den periodischen Funktionen <span class="math inline">e^{i\bm{{\bm{\mathcal{K}}}} \cdot \bm{r}} u_{n\bm{{\bm{\mathcal{K}}}}}</span> entwickeln <span class="math display">
+  e^{i\bm{{\bm{\mathcal{K}}}} \cdot \bm{r}} u_{n \bm{k}+{\bm{\mathcal{K}}}} = \sum_{{{\bm{\mathcal{K}}}^{\prime}}\,{n^{\prime}}}
+  b^{{\bm{\mathcal{K}}}{{\bm{\mathcal{K}}}^{\prime}}}_{n {n^{\prime}}} \! (\bm{k}) \,
+  e^{i\bm{{{\bm{\mathcal{K}}}^{\prime}}} \cdot \bm{r}} u_{{n^{\prime}} \bm{{{\bm{\mathcal{K}}}^{\prime}}}} ,
+</span> mit den Entwicklungskoeffizienten <span class="math inline">b^{{\bm{\mathcal{K}}}{{\bm{\mathcal{K}}}^{\prime}}}_{n {n^{\prime}}} \! (\bm{k})</span>. Damit ergibt sich: <span class="math display">
+  f(\bm{r}) = \sum_{{\bm{\mathcal{K}}}\,n} \: {\int\limits_{\scriptscriptstyle \text{nBZ}}} d^{3}\!\!\: {k}\,
+  \tilde{g}_{n}^{{\bm{\mathcal{K}}}}(\bm{k}) {\chi^{{\bm{\mathcal{K}}}}_{n\bm{k}}}
+  \qquad \text{mit} \quad
+  \tilde{g}_{n}^{{\bm{\mathcal{K}}}}(\bm{k}) = \sum_{{{\bm{\mathcal{K}}}^{\prime}}\,{n^{\prime}}}
+  b^{{{\bm{\mathcal{K}}}^{\prime}} {\bm{\mathcal{K}}}}_{{n^{\prime}} n} \! (\bm{k}) \,
+  g_{{n^{\prime}}}^{{{\bm{\mathcal{K}}}^{\prime}}}(\bm{k})
+</span> Wir sind also in der Lage jede beliebige Funktion <span class="math inline">f(\bm{r})</span> nach den Basisfunktionen <span class="math inline">{\chi^{{\bm{\mathcal{K}}}}_{n\bm{k}}}</span> zu entwickeln, was bedeutet, daß diese vollständig sind.</p>
 <p>Als nächstes wollen wir die Orthonormalität der Basisfunktionen <span class="math inline">{\chi^{{\bm{\mathcal{K}}}}_{n\bm{k}}}</span> zeigen, die durch die folgende Relation ausgedrückt wird: <span id="eq-orth1"><span class="math display">
   {\int\limits_{\scriptscriptstyle \text{Kristall}}}\!\!\!\! d^{3}\!\!\: r\, {{\chi^{{\bm{\mathcal{K}}}}_{n\bm{k}}}}^{\ast} {\chi^{{{\bm{\mathcal{K}}}^{\prime}}}_{{n^{\prime}}{\bm{k}^{\prime}}}}=
   {\delta_{{\bm{\mathcal{K}}}\,{{\bm{\mathcal{K}}}^{\prime}}}} {\delta_{n\,{n^{\prime}}}}
-  \delta(\bm{k}-{\bm{k}^{\prime}}) 
+  \delta(\bm{k}-{\bm{k}^{\prime}})
  \qquad(2.13)</span></span> Daß dies erfüllt ist, zeigt sich folgendermaßen: <span id="eq-orth2"><span class="math display">
 \begin{aligned}
-  {\int\limits_{\scriptscriptstyle \text{Kristall}}}\!\!\!\! d^{3}\!\!\: r\, {{\chi^{{\bm{\mathcal{K}}}}_{n\bm{k}}}}^{\ast}{\chi^{{{\bm{\mathcal{K}}}^{\prime}}}_{{n^{\prime}}{\bm{k}^{\prime}}}}&amp; = 
+  {\int\limits_{\scriptscriptstyle \text{Kristall}}}\!\!\!\! d^{3}\!\!\: r\, {{\chi^{{\bm{\mathcal{K}}}}_{n\bm{k}}}}^{\ast}{\chi^{{{\bm{\mathcal{K}}}^{\prime}}}_{{n^{\prime}}{\bm{k}^{\prime}}}}&amp; =
   {\int\limits_{\scriptscriptstyle \text{Kristall}}}\!\!\!\! d^{3}\!\!\: r\, e^{i\bm{({k^{\prime}}-k)} \cdot \bm{r}}
   \underbrace{e^{i\bm{({{\bm{\mathcal{K}}}^{\prime}}-{\bm{\mathcal{K}}})} \cdot \bm{r}}
   u_{n{\bm{\mathcal{K}}}}^{\ast}u_{{n^{\prime}}{{\bm{\mathcal{K}}}^{\prime}}}}_{\text{periodisch in nEZ}} \\
@@ -324,17 +345,98 @@ H_{\text{SO}} = \frac{\hbar}{4m^{2}c^{2}} (\bm{\sigma} \times
   &amp;= (2\pi)^{3} {B_{\!\!\!{n{n^{\prime}} \atop {\bm{\mathcal{K}}}{{\bm{\mathcal{K}}}^{\prime}}}}^{0}} \delta({\bm{k}^{\prime}}-\bm{k})
 \end{aligned}
  \qquad(2.14)</span></span></p>
+<p>Der letzte Schritt ist richtig, da <span class="math inline">\bm{k}</span>&nbsp;und <span class="math inline">{\bm{k}^{\prime}}</span> aus der neuen Brillouin-Zone sind, die durch die <span class="math inline">{\bm{G}_{\mathnormal{m}}}</span> definiert ist. Dabei haben wir eine Fourier-Transformation durchgeführt <span id="eq-bloch-gm"><span class="math display">
+  e^{i\bm{({{\bm{\mathcal{K}}}^{\prime}}-{\bm{\mathcal{K}}})} \cdot \bm{r}} u_{n{\bm{\mathcal{K}}}}^{\ast}u_{{n^{\prime}}{{\bm{\mathcal{K}}}^{\prime}}} =
+  \sum_{m} {B_{\!\!\!{n{n^{\prime}} \atop {\bm{\mathcal{K}}}{{\bm{\mathcal{K}}}^{\prime}}}}^{m}} e^{-i\bm{{\bm{G}_{\mathnormal{m}}}} \cdot \bm{r}}
+ \qquad(2.15)</span></span> deren Koeffizienten <span class="math inline">{B_{\!\!\!{n{n^{\prime}} \atop {\bm{\mathcal{K}}}{{\bm{\mathcal{K}}}^{\prime}}}}^{m}}</span> durch <span class="math display">
+  {B_{\!\!\!{n{n^{\prime}} \atop {\bm{\mathcal{K}}}{{\bm{\mathcal{K}}}^{\prime}}}}^{m}} = \frac{1}{\Omega} {\int\limits_{\scriptscriptstyle \text{nEZ}}} d^{3}\!\!\: r\,
+  e^{i\bm{{\bm{G}_{\mathnormal{m}}}} \cdot \bm{r}} e^{i\bm{({{\bm{\mathcal{K}}}^{\prime}}-{\bm{\mathcal{K}}})} \cdot \bm{r}}
+  u_{n{\bm{\mathcal{K}}}}^{\ast}u_{{n^{\prime}}{{\bm{\mathcal{K}}}^{\prime}}}
+</span> gegeben sind, wenn <span class="math inline">\Omega</span> das Volumen der neuen Einheitszelle ist. Für den Spezialfall <span class="math inline">m=0</span> gilt <span id="eq-bnnkk0"><span class="math display">
+  {B_{\!\!\!{n{n^{\prime}} \atop {\bm{\mathcal{K}}}{{\bm{\mathcal{K}}}^{\prime}}}}^{0}} = \frac{1}{\Omega} {\int\limits_{\scriptscriptstyle \text{nEZ}}} d^{3}\!\!\: r\,
+  e^{i\bm{({{\bm{\mathcal{K}}}^{\prime}}-{\bm{\mathcal{K}}})} \cdot \bm{r}} u_{n{\bm{\mathcal{K}}}}^{\ast}u_{{n^{\prime}}{{\bm{\mathcal{K}}}^{\prime}}} =
+  \frac{1}{(2\pi)^{3}} {\delta_{{\bm{\mathcal{K}}}\,{{\bm{\mathcal{K}}}^{\prime}}}}
+  {\delta_{n\,{n^{\prime}}}}
+ \qquad(2.16)</span></span> so daß insgesamt <a href="#eq-orth1">Gl.&nbsp;<span>2.13</span></a> erfüllt ist.</p>
+<p><a href="#eq-bnnkk0">Gl.&nbsp;<span>2.16</span></a> ist ein Spezialfall von <span id="eq-k.period"><span class="math display">
+  {\int\limits_{\scriptscriptstyle \text{nEZ}}}e^{i\bm{k} \cdot \bm{r}}f(\bm{r})d^{3}\!\!\: r\,=0
+ \qquad(2.17)</span></span> für Funktionen <span class="math inline">f(\bm{r})</span>, die periodisch auf aEZ sind, und <span class="math inline">e^{i\bm{k} \cdot \bm{r}}</span> periodisch auf nEZ aber nicht auf aEZ, d.h. wenn <span class="math inline">\bm{k} \notin \{{\bm{\mathcal{G}}_{\mathnormal{m}}}\}</span> gilt. Dies wiederum ist nur ein Spezialfall der allgemeinen Aussage, daß <span class="math display">
+  {\int\limits_{\scriptscriptstyle \text{Kristall}}}e^{i\bm{k} \cdot \bm{r}}f(\bm{r})d^{3}\!\!\: r\,=0
+</span> für gitterperiodische Funktionen <span class="math inline">f(\bm{r})</span>, wenn <span class="math inline">\bm{k}</span> kein reziproker Gittervektor ist.</p>
 </section>
 <section id="sec-ansatz" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="sec-ansatz"><span class="header-section-number">2.3</span> Ansatz für die Wellenfunktion</h2>
+<p>Nachdem gezeigt wurde, daß unsere Basisfunktionen <span class="math inline">{\chi^{{\bm{\mathcal{K}}}}_{n\bm{k}}}</span> eine geeignete Basis für die Entwicklung der Eigenfunktionen <span class="math inline">\psi</span> in <a href="#eq-h0+h1">Gl.&nbsp;<span>2.11</span></a> sind, soll nun der Ansatz gemacht werden: <span class="math display">
+  \psi = \sum_{{{\bm{\mathcal{K}}}^{\prime}},{n^{\prime}}} {\int\limits_{\scriptscriptstyle \text{nBZ}}} d^{3}\!\!\: {{k}^{\prime}}\, {A^{{{\bm{\mathcal{K}}}^{\prime}}}_{{n^{\prime}}} \! ({\bm{k}^{\prime}}) \,}
+  {\chi^{{{\bm{\mathcal{K}}}^{\prime}}}_{{n^{\prime}}{\bm{k}^{\prime}}}}.
+</span> Wenn wir dies in <a href="#eq-h0+h1">Gl.&nbsp;<span>2.11</span></a> einsetzen, so ergibt sich <span id="eq-pre-sg"><span class="math display">
+  \sum_{{{\bm{\mathcal{K}}}^{\prime}},{n^{\prime}}} {\int\limits_{\scriptscriptstyle \text{nBZ}}} d^{3}\!\!\: {{k}^{\prime}}\,
+  {\langle {{n\,\bm{k}\,{\bm{\mathcal{K}}}}} | {H_{0}+H_{1}} | {{{n^{\prime}}\,{\bm{k}^{\prime}}\,{{\bm{\mathcal{K}}}^{\prime}}}} \rangle} {A^{{{\bm{\mathcal{K}}}^{\prime}}}_{{n^{\prime}}} \! ({\bm{k}^{\prime}}) \,}= E {A^{{\bm{\mathcal{K}}}}_{n} \! (\bm{k}) \,}.
+ \qquad(2.18)</span></span> Dabei steht <span class="math inline">{\langle {{n\,\bm{k}\,{\bm{\mathcal{K}}}}} | {H_{0}+H_{1}} | {{{n^{\prime}}\,{\bm{k}^{\prime}}\,{{\bm{\mathcal{K}}}^{\prime}}}} \rangle}</span> für Matrixelemente bezüglich der Basisfunktionen <span class="math inline">{\chi^{{\bm{\mathcal{K}}}}_{n\bm{k}}}(\bm{r}) = {\langle {\bm{r}} | {{n\,\bm{k}\,{\bm{\mathcal{K}}}}} \rangle}</span>.</p>
 <section id="sec-h0" class="level3" data-number="2.3.1">
 <h3 data-number="2.3.1" class="anchored" data-anchor-id="sec-h0"><span class="header-section-number">2.3.1</span> Matrixelemente von <span class="math inline">H_0</span></h3>
+<p>Zunächst sollen die Matrixelemente von <span class="math inline">H_{0}</span> bezüglich der Basisfunktionen <span class="math inline">{\chi^{{\bm{\mathcal{K}}}}_{n\bm{k}}}</span> untersucht werden. <span class="math display">
+\begin{aligned}
+  &amp; {\langle {{n\,\bm{k}\,{\bm{\mathcal{K}}}}} | {H_{0}} | {{{n^{\prime}}\,{\bm{k}^{\prime}}\,{{\bm{\mathcal{K}}}^{\prime}}}} \rangle} \\
+  &amp; ={\int\limits_{\scriptscriptstyle \text{Kristall}}}\!\!\!\! d^{3}\!\!\: r\, e^{-i\bm{(\bm{k}+{\bm{\mathcal{K}}})} \cdot \bm{r}}
+  u_{n{\bm{\mathcal{K}}}}^{\ast} H_{0} e^{i\bm{({\bm{k}^{\prime}}+{{\bm{\mathcal{K}}}^{\prime}})} \cdot \bm{r}}
+  u_{{n^{\prime}}{{\bm{\mathcal{K}}}^{\prime}}}\\
+%%%
+  &amp; ={\int\limits_{\scriptscriptstyle \text{Kristall}}}\!\!\!\! d^{3}\!\!\: r\, e^{i\bm{({\bm{k}^{\prime}}-\bm{k})} \cdot \bm{r}}
+  e^{-i\bm{{\bm{\mathcal{K}}}} \cdot \bm{r}} u_{n{\bm{\mathcal{K}}}}^{\ast}
+  (H_{0} + \frac{\hbar^{2}}{2m} {{{k}^{\prime}}}^{2}
+  + \frac{\hbar}{m}\bm{{\bm{k}^{\prime}}} \cdot \bm{p}) e^{i\bm{{{\bm{\mathcal{K}}}^{\prime}}} \cdot \bm{r}}
+  u_{{n^{\prime}}{{\bm{\mathcal{K}}}^{\prime}}}\\
+%%%
+  &amp; ={\int\limits_{\scriptscriptstyle \text{Kristall}}}\!\!\!\! d^{3}\!\!\: r\, e^{i\bm{({\bm{k}^{\prime}}-\bm{k})} \cdot \bm{r}}
+  \underbrace{e^{-i\bm{{\bm{\mathcal{K}}}} \cdot \bm{r}} u_{n{\bm{\mathcal{K}}}}^{\ast} \left(
+  \varepsilon_{{n^{\prime}}}({{\bm{\mathcal{K}}}^{\prime}}) + \frac{\hbar^{2}}{2m} {{{k}^{\prime}}}^{2} +
+  \frac{\hbar}{m} \bm{{\bm{k}^{\prime}}} \cdot \bm{p} \right)
+  e^{i\bm{{{\bm{\mathcal{K}}}^{\prime}}} \cdot \bm{r}} u_{{n^{\prime}}{{\bm{\mathcal{K}}}^{\prime}}}}_{\text{periodisch in nEZ}}.
+\end{aligned}
+</span> Auf Grund der Periodizität in nEZ können wir ähnlich wie beim Schritt von <a href="#eq-orth1">Gl.&nbsp;<span>2.13</span></a> zu <a href="#eq-orth2">Gl.&nbsp;<span>2.14</span></a> vorgehen. Damit erhalten wir <span id="eq-preh0"><span class="math display">
+\begin{aligned}
+  &amp; {\langle {{n\,\bm{k}\,{\bm{\mathcal{K}}}}} | {H_{0}} | {{{n^{\prime}}\,{\bm{k}^{\prime}}\,{{\bm{\mathcal{K}}}^{\prime}}}} \rangle} \\
+%%%
+  &amp; = \delta({\bm{k}^{\prime}}-\bm{k}) {\frac{(2\pi)}{\Omega}}^{3} \!\!\!
+  {\int\limits_{\scriptscriptstyle \text{nEZ}}}\! d^{3}\!\!\: r\, e^{-i\bm{{\bm{\mathcal{K}}}} \cdot \bm{r}} u_{n{\bm{\mathcal{K}}}}^{\ast}
+  \left( \varepsilon_{{n^{\prime}}}({{\bm{\mathcal{K}}}^{\prime}}) + \frac{\hbar^{2}}{2m} {{k}}^{2} +
+  \frac{\hbar}{m} \bm{\bm{k}} \cdot \bm{p} \right)
+  e^{i\bm{{{\bm{\mathcal{K}}}^{\prime}}} \cdot \bm{r}} u_{{n^{\prime}}{{\bm{\mathcal{K}}}^{\prime}}} \\
+%%%%
+  &amp; = \delta({\bm{k}^{\prime}}-\bm{k}) \bigg[ {\delta_{n\,{n^{\prime}}}}
+  {\delta_{{\bm{\mathcal{K}}}\,{{\bm{\mathcal{K}}}^{\prime}}}} \left( \varepsilon_{n}({\bm{\mathcal{K}}})
+    + \frac{\hbar^{2}}{2m} {k}^{2} \right)  \\
+%%%%
+  &amp; \qquad + \: {\frac{(2\pi)}{\Omega}}^{3} \frac{\hbar}{m}
+  {\int\limits_{\scriptscriptstyle \text{nEZ}}} d^{3}\!\!\: r\,
+  e^{-i\bm{{\bm{\mathcal{K}}}} \cdot \bm{r}} u_{n{\bm{\mathcal{K}}}}^{\ast}  \bm{\bm{k}} \cdot \bm{p}
+  e^{i\bm{{{\bm{\mathcal{K}}}^{\prime}}} \cdot \bm{r}} u_{{n^{\prime}}{{\bm{\mathcal{K}}}^{\prime}}}   \bigg]
+\end{aligned}
+ \qquad(2.19)</span></span> Der zweite Summand in <a href="#eq-preh0">Gl.&nbsp;<span>2.19</span></a> ergibt <span class="math display">
+\begin{aligned}
+  &amp; {\frac{(2\pi)}{\Omega}}^{3} \frac{\hbar}{m} {\int\limits_{\scriptscriptstyle \text{nEZ}}} d^{3}\!\!\: r\,
+  e^{-i\bm{{\bm{\mathcal{K}}}} \cdot \bm{r}} u_{n{\bm{\mathcal{K}}}}^{\ast} \bm{\bm{k}} \cdot \bm{p}
+  e^{i\bm{{{\bm{\mathcal{K}}}^{\prime}}} \cdot \bm{r}} u_{{n^{\prime}}{{\bm{\mathcal{K}}}^{\prime}}} \\
+%%%%
+  &amp; = {\delta_{n\,{n^{\prime}}}} {\delta_{{\bm{\mathcal{K}}}\,{{\bm{\mathcal{K}}}^{\prime}}}}
+  \frac{\hbar}{m} \bm{\bm{k}} \cdot \bm{{\bm{\mathcal{K}}}} + {\frac{(2\pi)}{\Omega}}^{3}
+  \frac{\hbar}{m} {\int\limits_{\scriptscriptstyle \text{nEZ}}} d^{3}\!\!\: r\, e^{i\bm{({{\bm{\mathcal{K}}}^{\prime}}-{\bm{\mathcal{K}}})} \cdot \bm{r}}
+  \underbrace{u_{n{\bm{\mathcal{K}}}}^{\ast} \bm{\bm{k}} \cdot \bm{p}
+  u_{{n^{\prime}}{{\bm{\mathcal{K}}}^{\prime}}}}_{\text{periodisch in  aEZ}}\\
+%%%%
+  &amp; = {\delta_{{\bm{\mathcal{K}}}\,{{\bm{\mathcal{K}}}^{\prime}}}} \frac{\hbar}{m}
+  \left( {\delta_{n\,{n^{\prime}}}} \bm{\bm{k}} \cdot \bm{{\bm{\mathcal{K}}}} +
+  {\frac{(2\pi)}{\Omega}}^{3} {\int\limits_{\scriptscriptstyle \text{nEZ}}}
+  d^{3}\!\!\: r\,  u_{n{\bm{\mathcal{K}}}}^{\ast} \bm{\bm{k}} \cdot \bm{p} u_{{n^{\prime}}{\bm{\mathcal{K}}}} \right) ,
+\end{aligned}
+</span> wobei im letzten Schritt <a href="#eq-k.period">Gl.&nbsp;<span>2.17</span></a> angewendet wurde.</p>
 <p>Es ergeben sich also keine Impulsmatrixelemente zwischen Zuständen verschiedener Entwicklungspunkte <span class="math inline">{\bm{\mathcal{K}}}</span>. In Analogie zu <a href="#eq-pnn">Gl.&nbsp;<span>2.6</span></a> definieren wir nun: <span id="eq-pnnk"><span class="math display">
   {\bm{p}^{{\bm{\mathcal{K}}}}_{\mathnormal{n{n^{\prime}}}}}:= {\frac{(2\pi)}{\Omega}}^{3} {\int\limits_{\scriptscriptstyle \text{nEZ}}} d^{3}\!\!\: r\,
   e^{-i\bm{{\bm{\mathcal{K}}}} \cdot \bm{r}} u_{n{\bm{\mathcal{K}}}}^{\ast} \, \bm{p}  \,
   e^{i\bm{{\bm{\mathcal{K}}}} \cdot \bm{r}} u_{{n^{\prime}}{\bm{\mathcal{K}}}}
  \qquad(2.20)</span></span> Damit ergibt sich aus <a href="#eq-preh0">Gl.&nbsp;<span>2.19</span></a>: <span id="eq-h0"><span class="math display">
-  {\langle {{n\,\bm{k}\,{\bm{\mathcal{K}}}}} | {H_{0}} | {{{n^{\prime}}\,{\bm{k}^{\prime}}\,{{\bm{\mathcal{K}}}^{\prime}}}} \rangle} 
+  {\langle {{n\,\bm{k}\,{\bm{\mathcal{K}}}}} | {H_{0}} | {{{n^{\prime}}\,{\bm{k}^{\prime}}\,{{\bm{\mathcal{K}}}^{\prime}}}} \rangle}
   = \delta({\bm{k}^{\prime}}-\bm{k}) {\delta_{{\bm{\mathcal{K}}}\,{{\bm{\mathcal{K}}}^{\prime}}}} \left[
   {\delta_{n\,{n^{\prime}}}} \left( \varepsilon_{n}({\bm{\mathcal{K}}}) + \frac{k^{2}}{2m}
   \right) + \frac{\bm{k} \cdot \bm{{\bm{p}^{{\bm{\mathcal{K}}}}_{\mathnormal{n{n^{\prime}}}}}}}{m} \right]
@@ -344,20 +446,20 @@ H_{\text{SO}} = \frac{\hbar}{4m^{2}c^{2}} (\bm{\sigma} \times
 <section id="sec-h1" class="level3" data-number="2.3.2">
 <h3 data-number="2.3.2" class="anchored" data-anchor-id="sec-h1"><span class="header-section-number">2.3.2</span> Matrixelemente von <span class="math inline">H_1</span></h3>
 <p>Die Matrixelemente des Störpotentials <span class="math inline">H_{1}</span> bezüglich der Basisfunktionen <span class="math inline">{\chi^{{\bm{\mathcal{K}}}}_{n\bm{k}}}</span>&nbsp;ergeben sich folgendermaßen: <span id="eq-h1mat"><span class="math display">
-  {\langle {{n\,\bm{k}\,{\bm{\mathcal{K}}}}} | {H_{1}} | {{{n^{\prime}}\,{\bm{k}^{\prime}}\,{{\bm{\mathcal{K}}}^{\prime}}}} \rangle} = 
+  {\langle {{n\,\bm{k}\,{\bm{\mathcal{K}}}}} | {H_{1}} | {{{n^{\prime}}\,{\bm{k}^{\prime}}\,{{\bm{\mathcal{K}}}^{\prime}}}} \rangle} =
   {\int\limits_{\scriptscriptstyle \text{Kristall}}}\!\!\!\! d^{3}\!\!\: r\, e^{-i\bm{(\bm{k}+{\bm{\mathcal{K}}})} \cdot \bm{r}}
   u_{n{\bm{\mathcal{K}}}}^{\ast} H_{1} e^{i\bm{({\bm{k}^{\prime}}+{{\bm{\mathcal{K}}}^{\prime}})} \cdot \bm{r}}
   u_{{n^{\prime}}{{\bm{\mathcal{K}}}^{\prime}}}
  \qquad(2.22)</span></span></p>
 <p>Da <span class="math inline">H_{1}</span> ein Potential und damit multiplikativ ist, vertauscht es mit allen übrigen Faktoren innerhalb des Integrals <a href="#eq-h1mat">Gl.&nbsp;<span>2.22</span></a>. Dadurch ergibt sich der gleiche Faktor wie auf der linken Seite von <a href="#eq-bloch-gm">Gl.&nbsp;<span>2.15</span></a>, so daß <a href="#eq-h1mat">Gl.&nbsp;<span>2.22</span></a> sich mit der Fourier-Entwicklung <a href="#eq-h1-gm">Gl.&nbsp;<span>2.10</span></a> als <span id="eq-preh1"><span class="math display">
 \begin{aligned}
-  {\langle {{n\,\bm{k}\,{\bm{\mathcal{K}}}}} | {H_{1}} | {{{n^{\prime}}\,{\bm{k}^{\prime}}\,{{\bm{\mathcal{K}}}^{\prime}}}} \rangle} 
-  &amp;=  \sum_{m,{m^{\prime}}} {B_{\!\!\!{n{n^{\prime}} \atop {\bm{\mathcal{K}}}{{\bm{\mathcal{K}}}^{\prime}}}}^{m}} \rho_{{m^{\prime}}} 
+  {\langle {{n\,\bm{k}\,{\bm{\mathcal{K}}}}} | {H_{1}} | {{{n^{\prime}}\,{\bm{k}^{\prime}}\,{{\bm{\mathcal{K}}}^{\prime}}}} \rangle}
+  &amp;=  \sum_{m,{m^{\prime}}} {B_{\!\!\!{n{n^{\prime}} \atop {\bm{\mathcal{K}}}{{\bm{\mathcal{K}}}^{\prime}}}}^{m}} \rho_{{m^{\prime}}}
   {\int\limits_{\scriptscriptstyle \text{Kristall}}}\!\!\!\! d^{3}\!\!\: r\, e^{i\bm{({\bm{k}^{\prime}}-\bm{k})} \cdot \bm{r}}
   e^{i\bm{({\bm{G}_{\mathnormal{{m^{\prime}}}}}-{\bm{G}_{\mathnormal{m}}})} \cdot \bm{r}} \\
-  &amp;= (2\pi)^{3} \sum_{m,{m^{\prime}}} {B_{\!\!\!{n{n^{\prime}} \atop {\bm{\mathcal{K}}}{{\bm{\mathcal{K}}}^{\prime}}}}^{m}} \rho_{{m^{\prime}}} 
+  &amp;= (2\pi)^{3} \sum_{m,{m^{\prime}}} {B_{\!\!\!{n{n^{\prime}} \atop {\bm{\mathcal{K}}}{{\bm{\mathcal{K}}}^{\prime}}}}^{m}} \rho_{{m^{\prime}}}
   \delta({\bm{G}_{\mathnormal{{m^{\prime}}}}}- {\bm{G}_{\mathnormal{{m^{\prime}}}}}+ {\bm{k}^{\prime}} - \bm{k})  \\
-  &amp;= (2\pi)^{3}  \delta({\bm{k}^{\prime}} - \bm{k}) 
+  &amp;= (2\pi)^{3}  \delta({\bm{k}^{\prime}} - \bm{k})
   \sum_{m,{m^{\prime}}} {B_{\!\!\!{n{n^{\prime}} \atop {\bm{\mathcal{K}}}{{\bm{\mathcal{K}}}^{\prime}}}}^{m}} \rho_{{m^{\prime}}} {\delta_{m\,{m^{\prime}}}}
 \end{aligned}
  \qquad(2.23)</span></span> schreiben läßt. Der letzte Schritt ist möglich, da <span class="math inline">\bm{k}</span>&nbsp;und <span class="math inline">{\bm{k}^{\prime}}</span> aus nBZ sind, zu der die <span class="math inline">\{{\bm{G}_{\mathnormal{m}}}\}</span> als reziproke Gittervektoren gehören. Hier bietet es sich an <span id="eq-vnnkk"><span class="math display">
@@ -365,16 +467,16 @@ H_{\text{SO}} = \frac{\hbar}{4m^{2}c^{2}} (\bm{\sigma} \times
   {V^{{\bm{\mathcal{K}}}{{\bm{\mathcal{K}}}^{\prime}}}_{n {n^{\prime}}}}&amp;:=  (2\pi)^{3} \sum_{m,{m^{\prime}}} {B_{\!\!\!{n{n^{\prime}} \atop {\bm{\mathcal{K}}}{{\bm{\mathcal{K}}}^{\prime}}}}^{m}} \rho_{{m^{\prime}}}
   {\delta_{m\,{m^{\prime}}}} \\
   &amp;= {\frac{(2\pi)}{\Omega}}^{3} {\int\limits_{\scriptscriptstyle \text{nEZ}}} d^{3}\!\!\: r\,
-  e^{-i\bm{{\bm{\mathcal{K}}}} \cdot \bm{r}} u_{n{\bm{\mathcal{K}}}}^{\ast} H_{1}  
+  e^{-i\bm{{\bm{\mathcal{K}}}} \cdot \bm{r}} u_{n{\bm{\mathcal{K}}}}^{\ast} H_{1}
   e^{i\bm{{{\bm{\mathcal{K}}}^{\prime}}} \cdot \bm{r}} u_{{n^{\prime}}{{\bm{\mathcal{K}}}^{\prime}}}
 \end{aligned}
  \qquad(2.24)</span></span> zu definieren, so daß wir insgesamt <span id="eq-h1"><span class="math display">
-  {\langle {{n\,\bm{k}\,{\bm{\mathcal{K}}}}} | {H_{1}} | {{{n^{\prime}}\,{\bm{k}^{\prime}}\,{{\bm{\mathcal{K}}}^{\prime}}}} \rangle} = 
+  {\langle {{n\,\bm{k}\,{\bm{\mathcal{K}}}}} | {H_{1}} | {{{n^{\prime}}\,{\bm{k}^{\prime}}\,{{\bm{\mathcal{K}}}^{\prime}}}} \rangle} =
   \delta({\bm{k}^{\prime}}-\bm{k}) {V^{{\bm{\mathcal{K}}}{{\bm{\mathcal{K}}}^{\prime}}}_{n {n^{\prime}}}}
  \qquad(2.25)</span></span> erhalten.</p>
 <p>Setzen wir nun <a href="#eq-h0">Gl.&nbsp;<span>2.21</span></a> und <a href="#eq-h1">Gl.&nbsp;<span>2.25</span></a> in <a href="#eq-pre-sg">Gl.&nbsp;<span>2.18</span></a> ein, so erhalten wir als letztendlich zu lösende Gleichung: <span id="eq-sg"><span class="math display">
 \begin{aligned}
-  \left( \varepsilon_{n}({\bm{\mathcal{K}}}) + \frac{\hbar^{2}}{2m} {k}^{2} \right) {A^{{\bm{\mathcal{K}}}}_{n} \! (\bm{k}) \,}&amp;+ 
+  \left( \varepsilon_{n}({\bm{\mathcal{K}}}) + \frac{\hbar^{2}}{2m} {k}^{2} \right) {A^{{\bm{\mathcal{K}}}}_{n} \! (\bm{k}) \,}&amp;+
   \frac{\hbar}{m} \sum_{{n^{\prime}}} \bm{\bm{k}} \cdot \bm{{\bm{p}^{{\bm{\mathcal{K}}}}_{\mathnormal{n{n^{\prime}}}}}} A^{{\bm{\mathcal{K}}}}_{{n^{\prime}}} \!
   (\bm{k}) \,   \\
 %%%%
@@ -387,6 +489,21 @@ H_{\text{SO}} = \frac{\hbar}{4m^{2}c^{2}} (\bm{\sigma} \times
 </section>
 <section id="sec-disk" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="sec-disk"><span class="header-section-number">2.4</span> Diskussion</h2>
+<p>Als erstes ist festzustellen, daß sich <a href="#eq-sg">Gl.&nbsp;<span>2.26</span></a> auf die normale <span class="math inline">\bm{k}\cdot \bm{p}</span>-Gleichung <a href="#eq-standard-k.p">Gl.&nbsp;<span>2.5</span></a> reduziert, wenn alle <span class="math inline">{V^{{\bm{\mathcal{K}}}{{\bm{\mathcal{K}}}^{\prime}}}_{n {n^{\prime}}}}</span> verschwinden und nur ein Entwicklungspunkt <span class="math inline">{\bm{\mathcal{K}}}</span>&nbsp;herangezogen wird. Schreiben wir <a href="#eq-sg">Gl.&nbsp;<span>2.26</span></a> für nichtverschwindende <span class="math inline">{V^{{\bm{\mathcal{K}}}{{\bm{\mathcal{K}}}^{\prime}}}_{n {n^{\prime}}}}</span>&nbsp;und zwei Entwicklungspunkte in Matrixform, so erhalten wir eine Matrix der Form <span class="math display">
+\left(
+  \begin{array}{c|c}
+    \text{$\bm{k}\cdot \bm{p}$-Matrix für ${\bm{\mathcal{K}}}$} &amp; 0 \\ \hline
+    0 &amp; \text{$\bm{k}\cdot \bm{p}$-Matrix für ${{\bm{\mathcal{K}}}^{\prime}}$}
+  \end{array}
+\right)
++
+\left(
+  \begin{array}{c|c}
+    {V^{{\bm{\mathcal{K}}}{\bm{\mathcal{K}}}}_{n {n^{\prime}}}}&amp; {V^{{\bm{\mathcal{K}}}{{\bm{\mathcal{K}}}^{\prime}}}_{n {n^{\prime}}}}\\ \hline
+    {V^{{{\bm{\mathcal{K}}}^{\prime}} {\bm{\mathcal{K}}}}_{n {n^{\prime}}}}&amp; {V^{{{\bm{\mathcal{K}}}^{\prime}} {{\bm{\mathcal{K}}}^{\prime}}}_{n {n^{\prime}}}}
+  \end{array}
+\right)
+</span> für den Hamilton-Operator <span class="math inline">H_{0}+H_{1}</span> in der Basis der <span class="math inline">{\chi^{{\bm{\mathcal{K}}}}_{n\bm{k}}}</span>. Dabei stellt jeder der obigen Quadranten eine unendlich-dimensionale Matrix dar, da es zu jedem Punkt im reziproken Raum unendlich viele Lösungen der ungestörten Schrödingergleichung <a href="#eq-ungestoert">Gl.&nbsp;<span>2.9</span></a> gibt, und damit auch unendlich viele Basisfunktionen <span class="math inline">{\chi^{{\bm{\mathcal{K}}}}_{n\bm{k}}}</span>&nbsp;zu jedem Entwicklungspunkt <span class="math inline">{\bm{\mathcal{K}}}</span>.</p>
 <p>Insgesamt ist es also gelungen, die Differentialgleichung <a href="#eq-h0+h1">Gl.&nbsp;<span>2.11</span></a> auf die algebraische Gleichung <a href="#eq-sg">Gl.&nbsp;<span>2.26</span></a> zurückzuführen. Da hierfür ein vollständiges Orthonormalsystem von Zuständen verwendet wurde, ist <a href="#eq-sg">Gl.&nbsp;<span>2.26</span></a> äquivalent zu <a href="#eq-h0+h1">Gl.&nbsp;<span>2.11</span></a>. Dies ist vergleichbar zu der in <a href="#sec-standard-k.p">Kap.&nbsp;<span>2.1</span></a> gezeigten Situation in normaler <span class="math inline">\bm{k}\cdot \bm{p}</span>-Theorie, wo auch ein differentielles Problem auf ein unendlich-dimensionales algebraisches Problem zurückgeführt wird <span class="citation" data-cites="kane:66">(<a href="references.html#ref-kane:66" role="doc-biblioref">Kane 1966</a>)</span>. Dieses unendlich dimensionale Problem können wir wieder mit Hilfe der Löwdin-Störungstheorie auf ein endlich-dimensionales Problem reduzieren, wenn wir die Basisfunktionen <span class="math inline">{\chi^{{\bm{\mathcal{K}}}}_{n\bm{k}}}</span>&nbsp;in zwei Gruppen zerlegen können, wie in <a href="#sec-standard-k.p">Kap.&nbsp;<span>2.1</span></a> skizziert.</p>
 </section>
 <section id="sec-erweiterungen" class="level2" data-number="2.5">
