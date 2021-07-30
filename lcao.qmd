@@ -10,10 +10,13 @@ close(input)
 
 In der Methode der Linearkombination atomarer Orbitale \[*linear
 combination of atomic orbitals* (LCAO), oft auch *tight-binding
-approximation* (TBA) genannt\] verwenden wir Bloch-Summen $$
+approximation* (TBA) genannt\] verwenden wir Bloch-Summen 
+
+$$
   \Phi_{i \vec{k}} (\vec{r}) = \frac{1}{\sqrt{N}} \sum_{j} e^{i
   \sprod{k}{R_{\mathnormal{j}}}} \phi_{i} (\vec{r} - \vec{R_{\mathnormal{j}}})
-$$ als Basis für die Entwicklung der Lösung des Problems eines Elektrons
+$$
+als Basis für die Entwicklung der Lösung des Problems eines Elektrons
 in einem periodischen Potential. Die
 $\phi_{i} (\vec{r} - \vec{R_{\mathnormal{i}}})$ stellen dabei atomare
 Orbitale dar, die auf dem Atom am Ort $\vec{R_{\mathnormal{j}}}$
