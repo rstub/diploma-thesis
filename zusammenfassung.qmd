@@ -1,0 +1,77 @@
+```{r, results='asis', echo=FALSE, eval=knitr::is_html_output()}
+input <- file("header.tex")
+cat(sub("%.*$", "", readLines(input)), sep = "\n")
+close(input)
+```
+
+# Zusammenfassung und Ausblick {sec-zusamm}
+
+Im Rahmen dieser Arbeit wurde eine Verallgemeinerung der $\kdotp$-Theorie
+abgeleitet, die eine effiziente Behandlung periodischer Störungen erlaubt.
+Dabei werden als Basis Bloch-Zustände des ungestörten Systems verwendet, die
+zu unterschiedlichen Punkten im reziproken Raum gehören, wobei die Auswahl
+dieser Punkte durch die periodische Störung bestimmt wird. Dadurch wird das
+Problem auf eine algebraische Gleichung abgebildet, die neben den Parametern
+der Standard $\kdotp$-Theorie noch zusätzliche Potentialmatrixelemente
+enthält.  Methoden, wie sie in der Standard $\kdotp$-Theorie verwendet werden,
+können auf Grund der formalen Ähnlichkeit zwischen den Gleichungen auf
+unsere Fragestellung übertragen werden.
+
+Als Beispiel einer Anwendung dieser Theorie diskutierten wir spontan geordnetes
+GaInP₂. Die in diesem Materialsystem beobachtete CuPt-artige Ordnung führt
+zu einer Wechselwirkung zwischen Zuständen vom $\Gamma$- und L-Punkt der
+ungeordneten Stuktur. Diese Wechselwirkung führt einerseits zu einer Mischung
+der untersten Leitungsband-Zustände von $\Gamma$- und L-Punkt, was die
+effektiven Masse im untersten Leitungsband erhöht. Andererseits verkleinert
+sie die Bandlücke, was eine Verringerung der effektiven Masse zur Folge hat.
+Deshalb ist eine richtige Beschreibung der Abhängigkeit der effektiven Masse
+im Leitungsband vom Ordnungsgrad nur dann möglich, wenn diese Wechselwirkung
+gut beschrieben wird.
+
+Mit Hilfe der hier vorgestellten Theorie wurde ein Modell  entwickelt,
+das sowohl die Wechselwirkung zwischen Zuständen an verschiedenen Punkten der
+Brillouin-Zone als auch die Veränderung der Wechselwirkung zwischen
+Zuständen am gleichen Punkt der Brillouin-Zone berücksichtigt. Dies war
+bisher im Rahmen von Standard $\kdotp$-Modellen nicht möglich.
+
+Die Form des Hamilton-Operators ist durch die Symmetrie der ungeordneten
+Struktur und der ordnungsbedingten Störung eingeschränkt. Mit Hilfe
+gruppentheoretischer Überlegungen bestimmten wir diese Form und reduzierten
+damit die Anzahl der in diesem Modell auftretenden Matrixelemente. Die
+Beträge dieser Matrixelemente erhielten wir aus Bandstrukturrechnungen oder
+konnten sie an Ergebnisse anderer Untersuchungen anpassen. Der einzige freie
+Parameter beschreibt den Grad an Ordnung. Die Bestimmung der Vorzeichen der
+Potentialmatrixelemente erwies sich als schwierig. Wir konnten jedoch die
+Anzahl der verschiedenen Möglichkeiten auf zwei reduzieren, von denen eine
+mit hoher Wahrscheinlichkeit auszuschließen ist.
+
+Die Ergebnisse für die Ordnungsabhängigkeit der effektiven Masse des
+untersten Leitungsbandes stehen in guter Übereinstimmung mit
+All-Elektronen-Rechnungen und experimentellen Daten. Außerdem erhalten wir
+Vorhersagen für die effektiven Massen des rückgefalteten
+Leitungsband-Zustandes des L-Punkts und die Impulsmatrixelemente zwischen
+Leitungsband- und Valenzband-Zuständen. Unser Modell sagt anisotrope
+Impulsmatrixelemente voraus. Diese Anisotropie ist wichtig für die
+Polarisationsabhängigkeit optischer Übergänge in diesem Material, wurde aber
+bisher nicht berücksichtigt.
+
+Für zukünftige Untersuchungen erscheinen uns verschiedene Erweiterungen des
+in dieser Arbeit verwendeten Modells interessant. So untersuchten wir nur die
+Leitungsband-Zustände, doch läßt sich dieses Modell auch auf
+Valenzband-Zustände anwenden, wenn aus Bandstrukturrechnungen die Parameter
+bestimmt werden, welche die Dispersion im Valenzband des ungeordneten Systems
+beschreiben. Auch die Einbeziehung der Spin-Bahn-Wechselwirkung sowie von
+Verzerrungen ist möglich. Neben GaInP₂ können auch andere Materialien mit
+CuPt-atriger Ordnung beschrieben werden, doch wäre es dabei vorteilhaft die
+Potentialmatrixelemente berechnen zu können, da nicht für alle derartigen
+Materialien genügend Daten aus anderen Untersuchungen vorliegen.
+
+Neben CuPt-Ordnung werden noch verschiedene andere Ordnungstypen in
+III--V-Halbleiterlegierungen beobachtet. Solche Systeme können analog zu dem
+hier beschriebenen Vorgehen behandelt werden, wenn die gruppentheoretische
+Analyse entsprechend angepaßt wird. Eine weitere Anwendungsmöglichkeit
+besteht in der Beschreibung künstlicher Übergitter, wo eine variable
+Störung durch unterschiedliche Periodizität erzeugt wird. Hier wäre es
+sinnvoll zu untersuchen, ob Zustände von allen rückfaltenden Punkten des
+reziproken Raumes berücksichtigt werden müssen oder ob eine Beschränkung
+auf ausgewählt Punkte möglich ist.
