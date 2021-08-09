@@ -45,9 +45,11 @@ format:
   html:
     theme: cosmo
     html-math-method: katex
+    keep-md: true
   pdf:
     documentclass: scrbook
     classoption: [10pt,a5paper,1headlines,headinclude,smallheadings,cleardoubleplain,bibtotoc]
+    keep-md: true
     keep-tex: true
     include-in-header: header.tex
     #cite-method: biblatex
