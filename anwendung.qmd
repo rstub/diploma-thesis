@@ -159,13 +159,13 @@ $$
 \end{array}\right)
 $$ {#eq-k.p-l}
 
-in der Basis $\ket{\LCB}$, $\ket{\LVBx}$ und $\ket{\LVBy}$, wobei $A$, $B$, $C$, $F$ und $G$ die Wechselwirkung mit energetisch weiter entfernten Bändern beschreiben. Das reduzierte Impulsmatrixelement \PL ist gegeben durch
+in der Basis $\ket{\LCB}$, $\ket{\LVBx}$ und $\ket{\LVBy}$, wobei $A$, $B$, $C$, $F$ und $G$ die Wechselwirkung mit energetisch weiter entfernten Bändern beschreiben. Das reduzierte Impulsmatrixelement $\PL$ ist gegeben durch
 
 $$
   \PL =  - i \frac{\hbar}{m} \matrixel{\LCB}{\op{p_{x}}}{\LVBx}.
 $$
 
-Dabei wurde neben $\ez \parallel [111]$ noch $\ex \parallel [1 \bar{1} 0]$ und $\ey \parallel [1 1 \bar{2}]$ gewählt. Da dann $x$ in einer Spiegelebene von \Cdv liegt, $y$ dagegen senkrecht zu dieser steht, erklärt dies die $x$-$y$-Asymmetrie in \@eq-k.p-l.
+Dabei wurde neben $\ez \parallel [111]$ noch $\ex \parallel [1 \bar{1} 0]$ und $\ey \parallel [1 1 \bar{2}]$ gewählt. Da dann $x$ in einer Spiegelebene von $C_{3v}$ liegt, $y$ dagegen senkrecht zu dieser steht, erklärt dies die $x$-$y$-Asymmetrie in \@eq-k.p-l.
 
 ![Bandstruktur in ungeordnetem GaInP₂. Senkrecht zur $[111]$-Richtung ist die Dispersion am L-Punkt qualitativ ähnlich zu der am $\Gamma$-Punkt.](images/band-long.png){#fig-band-long}
 
