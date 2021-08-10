@@ -10,11 +10,11 @@ In diesem Kapitel soll gezeigt werden, wie sich die in @sec-periodstoer abgeleit
 
 ## Allgemeines zum Materialsystem {#sec-materialsystem}
 
-Viele III--V-Halbleiterlegierungen $A_{x}B_{1-x}C$ mit Kationen $A$ und $B$ zeigen spontane, langreichweitige CuPt-Ordnung, wenn sie mit metallorganischer Gasphasen-Epitaxie \[*metalorganic vapour phase epitaxy* (MOVPE)\] auf $(001)$-orientierten Substraten gewachsen werden \[@zuma:94\]. Die geordnete Phase besteht aus abwechselnden Monolagen $A_{x+\eta/2}B_{1-x-\eta/2}C$ und $A_{x-\eta/2}B_{1-x+\eta/2}C$, die längs der \$\[111\]\$\$-Richtung angeordnet sind. Dabei ist $0 \le \eta \le 1$ der Ordnungsgrad. Die $[111]$-Richtung wird als Ordnungsrichtung bezeichnet.[^1]
+Viele III--V-Halbleiterlegierungen $A_{x}B_{1-x}C$ mit Kationen $A$ und $B$ zeigen spontane, langreichweitige CuPt-Ordnung, wenn sie mit metallorganischer Gasphasen-Epitaxie \[*metalorganic vapour phase epitaxy* (MOVPE)\] auf $(001)$-orientierten Substraten gewachsen werden [@zuma:94]. Die geordnete Phase besteht aus abwechselnden Monolagen $A_{x+\eta/2}B_{1-x-\eta/2}C$ und $A_{x-\eta/2}B_{1-x+\eta/2}C$, die längs der $[111]$-Richtung angeordnet sind. Dabei ist $0 \le \eta \le 1$ der Ordnungsgrad. Die $[111]$-Richtung wird als Ordnungsrichtung bezeichnet.[^1]
 
 [^1]: Im Prinzip wäre auch eine der drei Richtungen möglich, die zur $[111]$-Richtung äquivalent sind. Doch hat dies hier keinerlei Auswirkungen, so daß wir hier bei nur einer Richtung bleiben wollen.
 
-Ein prominentes Beispiel für diese Materialien ist Ga$_{x}$In$_{1-x}$P. Mit GaInP₂ wollen wir den Fall $x \approx 0.5$ bezeichnen, der gitterangepaßt auf GaAs Substraten aufgewachsen werden kann \[@kipp:97\]. Ein Vergleich der mikroskopischen Struktur der ungeordneten Zinkblende-Struktur und einem CuPt-geordneten Material ist in @fig-zns-cupt zu sehen.
+Ein prominentes Beispiel für diese Materialien ist Ga$_{x}$In$_{1-x}$P. Mit GaInP₂ wollen wir den Fall $x \approx 0.5$ bezeichnen, der gitterangepaßt auf GaAs Substraten aufgewachsen werden kann [@kipp:97]. Ein Vergleich der mikroskopischen Struktur der ungeordneten Zinkblende-Struktur und einem CuPt-geordneten Material ist in @fig-zns-cupt zu sehen.
 
 ![Vergleich der mikroskopischen Struktur in einem (a) Zinkblende-Gitter mit einem (b) vollständig CuPt-geordneten Material.](images/zns.png){#fig-zns-cupt}
 
@@ -24,24 +24,24 @@ Ein prominentes Beispiel für diese Materialien ist Ga$_{x}$In$_{1-x}$P. Mit GaI
 
 Beim Übergang vom ungeordneten ($\eta=0$) Zinkblende-System zu einem CuPt-geordneten Kristall wird die Einheitszelle verdoppelt und damit die Brillouin-Zone halbiert. Die Punktgruppe des Kristalls reduziert sich von $T_d$ zu $C_{3v}$.[^2] Diese Verkleinerung der Brillouin-Zone bewirkt ein Zurückfalten von Zuständen. An jedem Punkt der neuen Brillouin-Zone finden sich Zustände, die sich ursprünglich an zwei verschiedenen Punkten der Brillouin-Zone des Zinkblende-Gitters befanden. Die für uns interessanten Zustände befinden sich im Zentrum der neuen Brillouin-Zone. Der eine Teil der dort zu findenden Zustände war auch im Zinkblende-Gitter schon am $\Gamma$-Punkt. Der andere Teil faltet von dem L-Punkt zurück, der in Ordnungsrichtung liegt.[^3]
 
-[^2]: Die Bezeichnungen von Punktgruppen und derer (irreduziblen) Darstellungen folgt der Notation von \@kdws:63.
+[^2]: Die Bezeichnungen von Punktgruppen und derer (irreduziblen) Darstellungen folgt der Notation von @kdws:63.
 
 [^3]: Den vier prinzipiell möglichen Ordnungsrichtungen entsprechen auch vier L-Punkte.
 
 Dies führt zu einer ganzen Reihe von Effekten, von denen wir die wichtigsten hier behandeln wollen. Zwei der auffälligsten sind die Reduzierung der Bandlücke um $\Delta E_{\text{BGR}}$ und die Kristallfeldaufspaltung $\Delta_{\text{CF}}$. Letzteres bedeutet, daß das ohne Spin-Bahn-Wechselwirkung dreifach entartete $\GVB$-Valenzbandmaximum in einen zweifach entarteten $\bGVB{3} (\GVB)$-Zustand und einen einfach entarteten $\bGVB{1} (\GVB)$-Zustand aufspaltet.[^4]
 
-[^4]: Bei der Notation der Zustände in der teilgeordneten Phase, folgen wir hier der z.B. bei \@wfz:95 zu findenden. Dabei wird die Symmetrie eines Zustandes im CuPt-geordneten Kristall mit einem Strich versehen, während die Symmetrie desjenigen Zinkblende-Zustands der maßgeblich beiträgt in Klammern angegeben wird. Die Zuordnung der Zinkblende-Zustände ist @fig-band-short zu entnehmen.
+[^4]: Bei der Notation der Zustände in der teilgeordneten Phase, folgen wir hier der z.B. bei @wfz:95 zu findenden. Dabei wird die Symmetrie eines Zustandes im CuPt-geordneten Kristall mit einem Strich versehen, während die Symmetrie desjenigen Zinkblende-Zustands der maßgeblich beiträgt in Klammern angegeben wird. Die Zuordnung der Zinkblende-Zustände ist @fig-band-short zu entnehmen.
 
-Wird die Spin-Bahn-Wechselwirkung berücksichtigt, so zeigt sich die Kristallfeldaufspaltung in einer Aufhebung der vierfachen Entartung des $\Gamma_{\text{8v}}$ Valenzbandes. Die sich hier ergebende Aufspaltung entspricht *nicht* der Kristallfeldaufspaltung. Aus der Valenzbandaufspaltung läßt sich aber die Kristallfeldaufspaltung berechnen, wenn für die Spin-Bahn-Wechselwirkung die quasikubische Näherung gemacht wird \[@bipi:74\], bei der eine von der Symmetrie her mögliche Anisotropie in der Spin-Bahn-Wechselwirkung vernachlässigt wird.
+Wird die Spin-Bahn-Wechselwirkung berücksichtigt, so zeigt sich die Kristallfeldaufspaltung in einer Aufhebung der vierfachen Entartung des $\Gamma_{\text{8v}}$ Valenzbandes. Die sich hier ergebende Aufspaltung entspricht *nicht* der Kristallfeldaufspaltung. Aus der Valenzbandaufspaltung läßt sich aber die Kristallfeldaufspaltung berechnen, wenn für die Spin-Bahn-Wechselwirkung die quasikubische Näherung gemacht wird [@bipi:74], bei der eine von der Symmetrie her mögliche Anisotropie in der Spin-Bahn-Wechselwirkung vernachlässigt wird.
 
-Theoretische Vorhersagen \[@wezu:98\] und Messungen \[@fzcm:97; @fgmz:98\] haben gezeigt, daß zwischen Bandlückenreduzierung $\Delta E_{\text{BGR}}$ und Kristallfeldaufspaltung $\Delta_{\text{CF}}$ eine vom Ordnungsgrad unabhängige Beziehung herrscht. Für GaInP₂ finden diese Autoren
+Theoretische Vorhersagen [@wezu:98] und Messungen [@fzcm:97; @fgmz:98] haben gezeigt, daß zwischen Bandlückenreduzierung $\Delta E_{\text{BGR}}$ und Kristallfeldaufspaltung $\Delta_{\text{CF}}$ eine vom Ordnungsgrad unabhängige Beziehung herrscht. Für GaInP₂ finden diese Autoren
 
 $$
   \zeta_{\text{theo}} = \frac{\Delta E_{\text{BGR}}}{\Delta_{\text{CF}}} = 2{,}69
   \quad \text{bzw.} \quad \zeta_{\text{exp}} \approx 2{,}65 .
 $$ {#eq-zeta}
 
-Weiterhin sind in (teil-)geordnetem GaInP₂ optische Übergänge möglich, die im ungeordneten Fall dipolverboten sind. Einer von diesen ist der Übergang $\bGVB{3}(\GVB) \rightarrow \bGCB (\LCB)$, der vor kurzem genauer untersucht wurde \[\@kksk:99\]. Trägt man die Übergangsenergie als Funktion der Bandlückenreduzierung auf, so ergibt sich eine Gerade mit Steigung $\theta = 0,48$. Es besteht also ein eindeutiger Zusammenhang zwischen dem Ordnungsgrad, repräsentiert durch die Bandlückenreduzierung $\Delta E_{\text{BGR}}$, und der Änderung $\Delta E_{\Gamma \rightarrow \text{L}}$ der Energie des Übergang $\bGVB{3}(\GVB) \rightarrow \bGCB (\LCB)$, gegeben durch
+Weiterhin sind in (teil-)geordnetem GaInP₂ optische Übergänge möglich, die im ungeordneten Fall dipolverboten sind. Einer von diesen ist der Übergang $\bGVB{3}(\GVB) \rightarrow \bGCB (\LCB)$, der vor kurzem genauer untersucht wurde [@kksk:99]. Trägt man die Übergangsenergie als Funktion der Bandlückenreduzierung auf, so ergibt sich eine Gerade mit Steigung $\theta = 0,48$. Es besteht also ein eindeutiger Zusammenhang zwischen dem Ordnungsgrad, repräsentiert durch die Bandlückenreduzierung $\Delta E_{\text{BGR}}$, und der Änderung $\Delta E_{\Gamma \rightarrow \text{L}}$ der Energie des Übergang $\bGVB{3}(\GVB) \rightarrow \bGCB (\LCB)$, gegeben durch
 
 $$
   \theta = \frac{\Delta E_{\Gamma \rightarrow \text{L}}}
@@ -54,7 +54,7 @@ Die bisher erwähnten Untersuchungen beschäftigten sich nur mit den Energien ve
 
 Als erste versuchten @rats:94, die effektive Masse im Leitungsband über die Kopplung zwischen den Bändern $\GCB$ und $\LCB$ im Rahmen einer Effektive-Massen-Näherung zu beschreiben. Das unbekannte Matrixelement für diese Kopplung paßten sie dabei an beobachtete Bandlückenreduzierungen an, da $\LCB$ energetisch höher liegt als $\GCB$ und die Kopplung zu einer Abstoßung dieser Zustände führt. Außerdem mischen die Zustände auf Grund dieser Kopplung. Da die effektiven Massen von $\LCB$ anisotrop und größer als bei $\GCB$ sind, ergibt sich mit diesem Modell die Vorhersage eines Anstiegs der effektiven Masse im untersten Leitungsband als Funktion des Ordnungsgrades. Dabei sollte der Anstieg parallel zur Ordnungsrichtung größer sein als senkrecht zu ihr, also $m^{\ast}_{\parallel} > m^{\ast}_{\perp} > m^{\ast}_{\text{c}}$. Hier bezeichnet $m^{\ast}_{\text{c}}$ die isotrope effektive Masse von $\GCB$, $m^{\ast}_{\parallel}$ die effektive Masse parallel zur Ordnungsrichtung und $m^{\ast}_{\perp}$ die effektive Masse senkrecht zur Ordnungsrichtung.
 
-Problematisch bei diesem Ansatz ist, daß die Bandlückenreduzierung zu einer Verstärkung der Wechselwirkung zwischen Valenzbandmaximum und Leitungsbandminimum führt, was eine *Reduzierung* der effektiven Masse im Leitungsband zur Folge hat. Dies wurde von \@zhma:95 untersucht. Ausgehend von einem acht Bänder ($\Gamma_{\text{6c}}, \Gamma_{\text{8v}}, \Gamma_{\text{7v}}$) umfassenden $\kdotp$-Hamilton-Operator für den ungeordneten Kristall, berücksichtigten sie die Ordnungseffekte durch zwei Parameter, welche die Bandlückenreduzierung und Kristallfeldaufspaltung beschreiben.[^5] Sie erhielten damit eine reduzierte effektive Masse im Leitungsband. Bedingt durch die Kristallfeldaufspaltung im Valenzband fiel diese in Ordnungsrichtung schwächer aus, also $m^{\ast}_{\text{c}} > m^{\ast}_{\parallel} > m^{\ast}_{\perp}$.
+Problematisch bei diesem Ansatz ist, daß die Bandlückenreduzierung zu einer Verstärkung der Wechselwirkung zwischen Valenzbandmaximum und Leitungsbandminimum führt, was eine *Reduzierung* der effektiven Masse im Leitungsband zur Folge hat. Dies wurde von @zhma:95 untersucht. Ausgehend von einem acht Bänder ($\Gamma_{\text{6c}}, \Gamma_{\text{8v}}, \Gamma_{\text{7v}}$) umfassenden $\kdotp$-Hamilton-Operator für den ungeordneten Kristall, berücksichtigten sie die Ordnungseffekte durch zwei Parameter, welche die Bandlückenreduzierung und Kristallfeldaufspaltung beschreiben.[^5] Sie erhielten damit eine reduzierte effektive Masse im Leitungsband. Bedingt durch die Kristallfeldaufspaltung im Valenzband fiel diese in Ordnungsrichtung schwächer aus, also $m^{\ast}_{\text{c}} > m^{\ast}_{\parallel} > m^{\ast}_{\perp}$.
 
 [^5]: Tatsächlich führen sie zunächst mehr Parameter ein, deren Form sich aus Symmetrieüberlegungen ergibt, vernachlässigen dann aber die Übrigen.
 
@@ -64,14 +64,14 @@ Sowohl die $\Gamma$--L-Mischung, als auch die verstärkte Kopplung zum Valenzban
 
 ## Wahl der Basisfunktionen {#sec-basiswahl}
 
-Das ungestörte Problem von dem wir ausgehen wollen ist der ungeordnete Kristall, beschrieben durch den Hamilton-Operator $\op{H_{0}}$. Für diesen benötigen wir als Parameter die Energieeigenwerte $\veps_{n}(\vec{k})$ und die Impulsmatrixelemente $\pnnK$ aus \@eq-h0. Dazu führen wir eine Bandstruktur-Rechnung durch und beschreiben dabei den ungeordneten Kristall mit der Näherung eines virtuellen Kristalls \[*virtual crystal approximation* (VCA)\]. Für diese Berechnung verwenden wir die Methode der Linearkombination atomarer Orbitale \[*linear combination of atomic orbitals* (LCAO), oft auch *tight-binding approximation* (TBA) genannt\]. Dabei bleibt die Spin-Bahn-Wechselwirkung unberücksichtigt. Die Spin-Bahn-Aufspaltung ist mit einem Betrag von etwa $100~\text{meV}$ verglichen mit einer Bandlücke von $1{,}97~\text{eV}$ nicht vernachlässigbar, doch ist der Einfluß der Spin-Bahn-Aufspaltung auf die effektive Masse im Leitungsband sehr gering. Auf Details dieser Rechnung werden wir im Anhang @sec-lcao eingehen. Ergebnisse sind z.B. in @fig-band-short dargestellt.
+Das ungestörte Problem von dem wir ausgehen wollen ist der ungeordnete Kristall, beschrieben durch den Hamilton-Operator $\op{H_{0}}$. Für diesen benötigen wir als Parameter die Energieeigenwerte $\veps_{n}(\vec{k})$ und die Impulsmatrixelemente $\pnnK$ aus @eq-h0. Dazu führen wir eine Bandstruktur-Rechnung durch und beschreiben dabei den ungeordneten Kristall mit der Näherung eines virtuellen Kristalls \[*virtual crystal approximation* (VCA)\]. Für diese Berechnung verwenden wir die Methode der Linearkombination atomarer Orbitale \[*linear combination of atomic orbitals* (LCAO), oft auch *tight-binding approximation* (TBA) genannt\]. Dabei bleibt die Spin-Bahn-Wechselwirkung unberücksichtigt. Die Spin-Bahn-Aufspaltung ist mit einem Betrag von etwa $100~\text{meV}$ verglichen mit einer Bandlücke von $1{,}97~\text{eV}$ nicht vernachlässigbar, doch ist der Einfluß der Spin-Bahn-Aufspaltung auf die effektive Masse im Leitungsband sehr gering. Auf Details dieser Rechnung werden wir im Anhang @sec-lcao eingehen. Ergebnisse sind z.B. in @fig-band-short dargestellt.
 
 ![Bandstruktur in ungeordnetem GaInP₂](images/band-short.png){#fig-band-short}
 
 Die Störung $\op{H_{1}}$ entspricht dem Unterschied zwischen dem Kristallpotential im (teil-)geordneten und ungeordneten Fall. Dieses Ordnungspotential[^6]\
-hat nicht mehr die Symmetrie des Zinkblende-Gitters (Punktgruppe $T_d$) sondern die der geordneten Phase, für die CuPt-Struktur also Punktgruppe $C_{3v}$. Deshalb ist es in der Lage, Zustände verschiedener Symmetrie im Zinkblende-Gitter zu koppeln, wenn sie in der CuPt-geordneten Struktur die gleiche Symmetrie haben. Dabei wollen wir nur Kopplungen zwischen Zuständen berücksichtigen, die zu verschiedenen $\vec{k}$-Punkten im Zinkblende-Kristall gehören, aber nach der Faltung am gleichen $\vec{k}$-Punkt zu finden sind. Das bedeutet, daß in der Entwicklung @eq-h1-gm nur diejenigen Koeffizienten $\rho_{m}$ berücksichtigt werden, die zu *neuen* reziproken Gittervektoren $\nG$ gehören, aber nicht die, die zu alten reziproken Gittervektoren $\aG$ gehören. \@rats:94 haben gezeigt, daß dies im Rahmen der VCA exakt gilt, wenn im geordneten Kristall keine Relaxationen auftreten. Experimente, welche das Maß an Relaxation untersuchten, wurden bisher nicht veröffentlicht. Theoretische Untersuchungen \[\@wfz:95; \@ylcy:97\] lassen keinen eindeutigen Schluß zu, ob Relaxationen notwendig sind oder nicht, um beobachtete Größen wie z.B. die Kristallfeldaufspaltung zu erklären. Allerdings stimmen sie darin überein, daß Relaxationen auch die Kopplung zwischen Zuständen von verschiedenen $\vec{k}$-Punkten der Zinkblende-Brillouin-Zone verstärken würden, so daß es gerechtfertigt erscheint, die Matrixelemente zwischen Zuständen vom gleichen $\vec{k}$-Punkt zu vernachlässigen. Für die in @sec-disk skizzierte Matrixform des Hamilton-Operators heißt dies, daß die $\VnnKKee$ und $\VnnKKzz$ nicht berücksichtigt werden.
+hat nicht mehr die Symmetrie des Zinkblende-Gitters (Punktgruppe $T_d$) sondern die der geordneten Phase, für die CuPt-Struktur also Punktgruppe $C_{3v}$. Deshalb ist es in der Lage, Zustände verschiedener Symmetrie im Zinkblende-Gitter zu koppeln, wenn sie in der CuPt-geordneten Struktur die gleiche Symmetrie haben. Dabei wollen wir nur Kopplungen zwischen Zuständen berücksichtigen, die zu verschiedenen $\vec{k}$-Punkten im Zinkblende-Kristall gehören, aber nach der Faltung am gleichen $\vec{k}$-Punkt zu finden sind. Das bedeutet, daß in der Entwicklung @eq-h1-gm nur diejenigen Koeffizienten $\rho_{m}$ berücksichtigt werden, die zu *neuen* reziproken Gittervektoren $\nG$ gehören, aber nicht die, die zu alten reziproken Gittervektoren $\aG$ gehören. @rats:94 haben gezeigt, daß dies im Rahmen der VCA exakt gilt, wenn im geordneten Kristall keine Relaxationen auftreten. Experimente, welche das Maß an Relaxation untersuchten, wurden bisher nicht veröffentlicht. Theoretische Untersuchungen [@wfz:95; @ylcy:97] lassen keinen eindeutigen Schluß zu, ob Relaxationen notwendig sind oder nicht, um beobachtete Größen wie z.B. die Kristallfeldaufspaltung zu erklären. Allerdings stimmen sie darin überein, daß Relaxationen auch die Kopplung zwischen Zuständen von verschiedenen $\vec{k}$-Punkten der Zinkblende-Brillouin-Zone verstärken würden, so daß es gerechtfertigt erscheint, die Matrixelemente zwischen Zuständen vom gleichen $\vec{k}$-Punkt zu vernachlässigen. Für die in @sec-disk skizzierte Matrixform des Hamilton-Operators heißt dies, daß die $\VnnKKee$ und $\VnnKKzz$ nicht berücksichtigt werden.
 
-[^6]: Dieser Begriff wurde zuerst von \@wezu:89 eingeführt.
+[^6]: Dieser Begriff wurde zuerst von @wezu:89 eingeführt.
 
 Wie in @sec-basis gezeigt, sind die Zustände von $\Gamma$- und L-Punkt, die hier den Satz $\{\set\}$ aus @sec-basis bilden, ein vollständiges Orthonormalsystem. Doch ist das sich daraus ergebende unendlich-dimensionale Gleichungssystem für praktische Rechnungen nicht praktikabel, weshalb die Einschränkung auf eine geeignete Basis ein wichtiger Schritt ist. Die kleinste Basis, die es noch ermöglicht die wesentlichen physikalischen Vorgänge zu beschreiben, enthält die Zustände $\GCB$, $\GVB$, $\LCB$ und $\LVB$ (siehe @fig-band-short). Zwischen den Leitungsbandzuständen ist auf Grund des geringen Energieabstandes eine starke Wechselwirkung zu erwarten. Die Mischung dieser Zustände beeinflußt die effektiven Massen im Leitungsband unmittelbar. Zusätzlich reduziert sich noch die Bandlücke, was die $\kdotp$-Wechselwirkung mit dem Valenzband verstärkt. Um dies zu beschreiben, reicht es aber nicht aus, nur die $\GVB$-Zustände zu berücksichtigen, da die Kristallfeldaufspaltung zu einer Anisotropie in der $\kdotp$-Wechselwirkung zwischen Valenz- und Leitungsband führt. Die Kristallfeldaufspaltung können wir aber nur über die Wechselwirkung zwischen $\GVB$- und $\LVB$-Zuständen erklären, so daß die $\LVB$-Zustände auch in die Basis aufgenommen werden müssen.
 
@@ -82,44 +82,44 @@ Die Form des $\kdotp$-Hamilton-Operators, der zur Basis aus @sec-basiswahl gehö
 Der $\kdotp$-Hamilton-Operator für $\GCB$ und $\GVB$ ist wohlbekannt. Vernachlässigen wir das Fehlen von Inversionssymmetrie und wählen $x$, $y$ und $z$ entlang der kubischen Kristallachsen $[100]$, $[010]$ und $[001]$, so ist er durch
 
 $$
-\op{H_{\Gamma}} = 
+\op{H_{\Gamma}} =
 \left(
 \begin{array}{c|ccc}
 \begin{array}{c}
- E_{\Gamma\text{c}} + \frac{\hbar^{2}}{2m} k^{2} \\ + \pri{A} k^{2}  
+ E_{\Gamma\text{c}} + \frac{\hbar^{2}}{2m} k^{2} \\ + \pri{A} k^{2}
 \end{array}
-&  i\PG k_{x} 
-&  i\PG k_{y} 
+&  i\PG k_{x}
+&  i\PG k_{y}
 &  i\PG k_{z} \\
 %%%%%%%%%%%
 \hline
-  -i\cc{\PG} k_{x} 
+  -i\cc{\PG} k_{x}
 & \begin{array}{c}
-  \frac{\hbar^{2}}{2m} k^{2} + \pri{L} k_{x}^{2} \\ 
+  \frac{\hbar^{2}}{2m} k^{2} + \pri{L} k_{x}^{2} \\
   + \pri{M} (k_{y}^{2}+k_{z}^{2})
 \end{array}
-& \pri{N} k_{x} k_{y} 
+& \pri{N} k_{x} k_{y}
 & \pri{N} k_{x} k_{z} \\
 %%%%%%%%%%%
-  -i\cc{\PG} k_{y} 
-& \pri{N} k_{x} k_{y} 
+  -i\cc{\PG} k_{y}
+& \pri{N} k_{x} k_{y}
 & \begin{array}{c}
-  \frac{\hbar^{2}}{2m} k^{2} + \pri{L} k_{y}^{2} \\ 
+  \frac{\hbar^{2}}{2m} k^{2} + \pri{L} k_{y}^{2} \\
   + \pri{M} (k_{x}^{2}+k_{z}^{2})
 \end{array}
 & \pri{N} k_{y} k_{z} \\
 %%%%%%%%%%%
-  -i\cc{\PG} k_{z} 
-& \pri{N} k_{x} k_{z} 
-& \pri{N} k_{y} k_{z} 
+  -i\cc{\PG} k_{z}
+& \pri{N} k_{x} k_{z}
+& \pri{N} k_{y} k_{z}
 & \begin{array}{c}
-  \frac{\hbar^{2}}{2m} k^{2} + \pri{L} k_{z}^{2} \\ 
+  \frac{\hbar^{2}}{2m} k^{2} + \pri{L} k_{z}^{2} \\
   + \pri{M} (k_{x}^{2}+k_{y}^{2})
 \end{array} \\
-\end{array}\right) 
+\end{array}\right)
 $${#eq-k.p-g}
 
-in der Basis $\ket{\GCB}$, $\ket{\GVBx}$, $\ket{\GVBy}$ und $\ket{\GVBz}$ gegeben \[\@kane:66\], wobei $\pri{A}$, $\pri{L}$, $\pri{M}$ und $\pri{N}$ die Wechselwirkung mit energetisch weiter entfernten Bändern repräsentieren, die über Löwdin-Störungstheorie \[\@lowd:51\] berücksichtigt wurde; $m$ ist die Masse des freien Elektrons. Das reduzierte Impulsmatrixelement $\PG$ ist gegeben durch
+in der Basis $\ket{\GCB}$, $\ket{\GVBx}$, $\ket{\GVBy}$ und $\ket{\GVBz}$ gegeben [@kane:66], wobei $\pri{A}$, $\pri{L}$, $\pri{M}$ und $\pri{N}$ die Wechselwirkung mit energetisch weiter entfernten Bändern repräsentieren, die über Löwdin-Störungstheorie [@lowd:51] berücksichtigt wurde; $m$ ist die Masse des freien Elektrons. Das reduzierte Impulsmatrixelement $\PG$ ist gegeben durch
 
 $$
   \PG = - i \frac{\hbar}{m} \matrixel{\GCB}{\op{p_{x}}}{\GVBx}.
@@ -127,7 +127,7 @@ $$
 
 Dieses Matrixelement bezieht sich dabei auf ein Integral über die Einheitszelle von ungeordnetem GaInP₂ von der Form @eq-pnnk. Dort entspricht der Integrationsbereich zwar der Einheitszelle von geordnetem GaInP₂, doch wie bereits in @sec-h0 erwähnt, hängt der Wert des Impulsmatrixelements nicht vom Integrationsbereich ab, da sich das auftretende Normierungsvolumen entsprechend ändert.
 
-Der Hamilton-Operator für das $\LVB$-Band ist z.B. bei \@bipi:74 zu finden, wobei wiederum Terme linear in $\vec{k}$, die von der Inversionsasymmetrie des Zinkblende-Gitters herrühren, vernachlässigt werden. Wir wollen aber die Wechselwirkung mit $\LCB$ explizit berücksichtigen, so daß wir untersuchen müssen, welche Impulsmatrixelemente zwischen diesen Zuständen existieren. Wählen wir die $z$-Achse parallel zur $[111]$-Richtung, so transformiert sich die $z$-Komponente des Impulsoperators gemäß der irreduziblen Darstellung $\Gamma_1$ von $C_{3v}$, $x$- und $y$-Komponente wie $\Gamma_3$. Das Wigner-Eckart-Theorem zusammen mit den bei \@kdws:63 tabellierten Clebsch-Gordan-Koeffizienten ergibt nun, daß es am L-Punkt, ähnlich wie am $\Gamma$-Punkt, nur ein reduziertes Impulsmatrixelement innerhalb der von uns gewählten Basis gibt. Im Unterschied zum $\Gamma$-Punkt gibt es aber keine Kopplung in $z$-Richtung, da $\matrixel{\LCB}{\op{p}_{z}}{\LVB} = 0$ gilt.[^7] Somit erhalten wir
+Der Hamilton-Operator für das $\LVB$-Band ist z.B. bei @bipi:74 zu finden, wobei wiederum Terme linear in $\vec{k}$, die von der Inversionsasymmetrie des Zinkblende-Gitters herrühren, vernachlässigt werden. Wir wollen aber die Wechselwirkung mit $\LCB$ explizit berücksichtigen, so daß wir untersuchen müssen, welche Impulsmatrixelemente zwischen diesen Zuständen existieren. Wählen wir die $z$-Achse parallel zur $[111]$-Richtung, so transformiert sich die $z$-Komponente des Impulsoperators gemäß der irreduziblen Darstellung $\Gamma_1$ von $C_{3v}$, $x$- und $y$-Komponente wie $\Gamma_3$. Das Wigner-Eckart-Theorem zusammen mit den bei @kdws:63 tabellierten Clebsch-Gordan-Koeffizienten ergibt nun, daß es am L-Punkt, ähnlich wie am $\Gamma$-Punkt, nur ein reduziertes Impulsmatrixelement innerhalb der von uns gewählten Basis gibt. Im Unterschied zum $\Gamma$-Punkt gibt es aber keine Kopplung in $z$-Richtung, da $\matrixel{\LCB}{\op{p}_{z}}{\LVB} = 0$ gilt.[^7] Somit erhalten wir
 
 [^7]: In der Sprache der Gruppentheorie heißt das, daß $\Gamma_1$ nicht in der Produktdarstellung $\Gamma_{1} \otimes \Gamma_{3}$ enthalten ist.
 
@@ -136,24 +136,24 @@ $$
 %%%%%%%%%%%
 \begin{array}{c|cc}
 \begin{array}{c}
-  E_{\text{Lc}} + \frac{\hbar^{2}}{2m} k^{2} \\ 
-  + F k_{\perp}^{2} + G k_{z}^{2} 
+  E_{\text{Lc}} + \frac{\hbar^{2}}{2m} k^{2} \\
+  + F k_{\perp}^{2} + G k_{z}^{2}
 \end{array}
-& i\PL k_{x} 
+& i\PL k_{x}
 & i\PL k_{y} \\
 \hline
 %%%%%%%%%%%
-  -i\cc{\PL} k_{x} 
+  -i\cc{\PL} k_{x}
 & \begin{array}{c}
   E_{\text{Lv}} + \frac{\hbar^{2}}{2m} k^{2} + A k_{z}^{2} \\
   + B (k_{x}^{2}+k_{y}^{2}) + C k_{y} k_{z}
 \end{array}
 & C k_{x} k_{z} \\
 %%%%%%%%%%%
-  -i\cc{\PL} k_{y} 
-& C k_{x} k_{z} 
+  -i\cc{\PL} k_{y}
+& C k_{x} k_{z}
 & \begin{array}{c}
-  E_{\text{Lv}} + \frac{\hbar^{2}}{2m} k^{2} + A k_{z}^{2} \\ 
+  E_{\text{Lv}} + \frac{\hbar^{2}}{2m} k^{2} + A k_{z}^{2} \\
   + B (k_{x}^{2}+k_{y}^{2}) + C k_{y} k_{z}
 \end{array}\\
 \end{array}\right)
@@ -165,23 +165,23 @@ $$
   \PL =  - i \frac{\hbar}{m} \matrixel{\LCB}{\op{p_{x}}}{\LVBx}.
 $$
 
-Dabei wurde neben $\ez \parallel [111]$ noch $\ex \parallel [1 \bar{1} 0]$ und $\ey \parallel [1 1 \bar{2}]$ gewählt. Da dann $x$ in einer Spiegelebene von $C_{3v}$ liegt, $y$ dagegen senkrecht zu dieser steht, erklärt dies die $x$-$y$-Asymmetrie in \@eq-k.p-l.
+Dabei wurde neben $\ez \parallel [111]$ noch $\ex \parallel [1 \bar{1} 0]$ und $\ey \parallel [1 1 \bar{2}]$ gewählt. Da dann $x$ in einer Spiegelebene von $C_{3v}$ liegt, $y$ dagegen senkrecht zu dieser steht, erklärt dies die $x$-$y$-Asymmetrie in @eq-k.p-l.
 
 ![Bandstruktur in ungeordnetem GaInP₂. Senkrecht zur $[111]$-Richtung ist die Dispersion am L-Punkt qualitativ ähnlich zu der am $\Gamma$-Punkt.](images/band-long.png){#fig-band-long}
 
-Damit wir bei der Bestimmung der möglichen Potentialmatrixelemente das Wigner-Eckart-Theorem effektiv anwenden können, müssen wir \@eq-k.p-g im gleichen Koordinatensystem wie \@eq-k.p-l schreiben. Da wir hier nicht versuchen wollen, die Dispersion der Valenzbänder zu beschreiben, brauchen wir die Parameter $\pri{L}$, $\pri{M}$ und $\pri{N}$ in \@eq-k.p-g nicht zu berücksichtigen, wodurch die nötige Drehung des Koordinatensystems für die Hamilton-Matrix \@eq-k.p-g trivial wird. Aus den selben Gründen können wir auch $A$, $B$ und $C$ in \@eq-k.p-l vernachlässigen.
+Damit wir bei der Bestimmung der möglichen Potentialmatrixelemente das Wigner-Eckart-Theorem effektiv anwenden können, müssen wir @eq-k.p-g im gleichen Koordinatensystem wie @eq-k.p-l schreiben. Da wir hier nicht versuchen wollen, die Dispersion der Valenzbänder zu beschreiben, brauchen wir die Parameter $\pri{L}$, $\pri{M}$ und $\pri{N}$ in @eq-k.p-g nicht zu berücksichtigen, wodurch die nötige Drehung des Koordinatensystems für die Hamilton-Matrix @eq-k.p-g trivial wird. Aus den selben Gründen können wir auch $A$, $B$ und $C$ in @eq-k.p-l vernachlässigen.
 
-Es ist bekannt, daß im Zentrum der Brillouin-Zone die effektive Masse des untersten Leitungsbandes zum größten Teil über die Wechselwirkung mit dem Valenzbandmaximum erklärt werden kann. Dabei stammt der zweitgrößte Anteil von der Wechselwirkung mit dem untersten sich nach $\Gamma_{5}$ transformierenden Leitungsband. Das mit dieser Wechselwirkung assoziierte Matrixelement $\pri{\PG}$ (siehe @fig-short-v-p) beträgt aber etwa $0{,}35 \PG$ \[\@ccf:88\] und soll deshalb hier vernachlässigt werden. Wir wählen also $\pri{A}=0$ in der Hamilton-Matrix \@eq-k.p-g.
+Es ist bekannt, daß im Zentrum der Brillouin-Zone die effektive Masse des untersten Leitungsbandes zum größten Teil über die Wechselwirkung mit dem Valenzbandmaximum erklärt werden kann. Dabei stammt der zweitgrößte Anteil von der Wechselwirkung mit dem untersten sich nach $\Gamma_{5}$ transformierenden Leitungsband. Das mit dieser Wechselwirkung assoziierte Matrixelement $\pri{\PG}$ (siehe @fig-short-v-p) beträgt aber etwa $0{,}35 \PG$ [@ccf:88] und soll deshalb hier vernachlässigt werden. Wir wählen also $\pri{A}=0$ in der Hamilton-Matrix @eq-k.p-g.
 
-In @fig-band-long ist zu sehen, daß die Dispersion am L-Punkt *senkrecht* zur $[111]$-Richtung qualitativ ähnlich zu der am $\Gamma$-Punkt ist. Auch die Beziehung zwischen $\pri{\PL}$ und $\PL$ ist vergleichbar zu der von $\pri{\PG}$ und $\PG$, wie \@card:63 zeigen konnte. Deshalb wollen wir auch diesen Fernbandbeitrag vernachlässigen und damit in \@eq-k.p-l $F=0$ wählen.
+In @fig-band-long ist zu sehen, daß die Dispersion am L-Punkt *senkrecht* zur $[111]$-Richtung qualitativ ähnlich zu der am $\Gamma$-Punkt ist. Auch die Beziehung zwischen $\pri{\PL}$ und $\PL$ ist vergleichbar zu der von $\pri{\PG}$ und $\PG$, wie @card:63 zeigen konnte. Deshalb wollen wir auch diesen Fernbandbeitrag vernachlässigen und damit in @eq-k.p-l $F=0$ wählen.
 
 ![Bandstruktur in ungeordnetem GaInP mit (a) $\kdotp$- und (b) Potential-Matrixelementen.](images/short+V_P.png){#fig-short-v-p}
 
 Nur die Dispersion am L-Punkt parallel zur $[111]$-Richtung läßt sich nicht mit Wechselwirkungen innerhalb der hier gewählten Basis erklären. Deshalb behalten wir $G$ als einzigen Beitrag energetisch weiter entfernter Bänder in unserem Modell.
 
-Die Bestimmung der möglichen Potentialmatrixelemente ist direkt über das Wigner-Eckart Theorem möglich.[^8] $\LCB$ und $\op{H_{1}}$ transformieren sich gemäß $\Gamma_{1}$ von $C_{3v}$, $\LVBx$ und $\LVBy$ transformieren sich gemeinsam gemäß $\Gamma_{3}$. Die Wellenfunktionen des $\Gamma$-Punkts haben ein wohldefiniertes Transformationsverhalten unter den Operationen von $T_d$. Uns interessiert aber, wie sie sich unter Transformationen von $C_{3v}$ verhalten. Da $C_{3v}$ eine Untergruppe der $T_d$ ist, läßt sich diese Frage mit Hilfe der Kompatibilitätsrelationen beantworten, wie sie bei \@kdws:63 zu finden sind. Mit dem bei \@eq-k.p-l verwendeten Koordinatensystem erhalten wir, daß sich $\GCB$ und $\GVBz$ gemäß $\Gamma_{1}$ von $C_{3v}$ transformieren, und daß $\GVBx$ und $\GVBy$ sich gemeinsam gemäß $\Gamma_{3}$ von $C_{3v}$ transformieren. Damit ergibt sich, daß es nur drei verschiedene Matrixelemente zwischen den Zuständen in unserer Basis gibt:
+Die Bestimmung der möglichen Potentialmatrixelemente ist direkt über das Wigner-Eckart Theorem möglich.[^8] $\LCB$ und $\op{H_{1}}$ transformieren sich gemäß $\Gamma_{1}$ von $C_{3v}$, $\LVBx$ und $\LVBy$ transformieren sich gemeinsam gemäß $\Gamma_{3}$. Die Wellenfunktionen des $\Gamma$-Punkts haben ein wohldefiniertes Transformationsverhalten unter den Operationen von $T_d$. Uns interessiert aber, wie sie sich unter Transformationen von $C_{3v}$ verhalten. Da $C_{3v}$ eine Untergruppe der $T_d$ ist, läßt sich diese Frage mit Hilfe der Kompatibilitätsrelationen beantworten, wie sie bei @kdws:63 zu finden sind. Mit dem bei @eq-k.p-l verwendeten Koordinatensystem erhalten wir, daß sich $\GCB$ und $\GVBz$ gemäß $\Gamma_{1}$ von $C_{3v}$ transformieren, und daß $\GVBx$ und $\GVBy$ sich gemeinsam gemäß $\Gamma_{3}$ von $C_{3v}$ transformieren. Damit ergibt sich, daß es nur drei verschiedene Matrixelemente zwischen den Zuständen in unserer Basis gibt:
 
-[^8]: Da sich $\op{H_{1}}$ gemäß der trivialen Darstellung $\Gamma_{1}$ von $C_{3v}$ transformiert, kann auch eine spezielle Form des Wigner-Eckart-Theorems verwendet werden \[\@corn:69\]. Diese besagt, daß dann nur Matrixelemente zwischen Zuständen möglich sind, die sich nach der gleichen irreduziblen Darstellung transformieren, und die dazugehörigen Clebsch-Gordan-Koeffizienten proportional zur Einsmatrix sind.
+[^8]: Da sich $\op{H_{1}}$ gemäß der trivialen Darstellung $\Gamma_{1}$ von $C_{3v}$ transformiert, kann auch eine spezielle Form des Wigner-Eckart-Theorems verwendet werden [@corn:69]. Diese besagt, daß dann nur Matrixelemente zwischen Zuständen möglich sind, die sich nach der gleichen irreduziblen Darstellung transformieren, und die dazugehörigen Clebsch-Gordan-Koeffizienten proportional zur Einsmatrix sind.
 
 $$
 \begin{aligned}
@@ -196,72 +196,72 @@ Dabei bezieht sich das Matrixelement auf ein Integral über die Einheitszelle vo
 
 @fig-short-v-p zeigt nochmal im Überblick, welche Matrixelemente in unserem Modell berücksichtigt werden (durchgezogenen Linien). Als durchbrochene Linien sind noch diejenigen Impuls- und Potentialmatrixelemente eingezeichnet, die bei einer Verfeinerung des Modells als erste berücksichtigt werden sollten.
 
-Fassen wir nun \@eq-k.p-g und \@eq-k.p-l mit diesem Ergebnis zusammen, so erhalten wir als Hamilton-Operator
+Fassen wir nun @eq-k.p-g und @eq-k.p-l mit diesem Ergebnis zusammen, so erhalten wir als Hamilton-Operator
 
 $$
 \op{H_{\Gamma \text{L}}} = \left(
 \begin{array}{c|cc|c||c|cc}
 %%%%%%%%%%%
-E_{\Gamma\text{c}} + \frac{\hbar^{2}}{2m} k^{2} 
-& i\PG k_{x} 
-& i\PG k_{y} 
-& i\PG k_{z} 
-& \V{11} 
-& 0 
+E_{\Gamma\text{c}} + \frac{\hbar^{2}}{2m} k^{2}
+& i\PG k_{x}
+& i\PG k_{y}
+& i\PG k_{z}
+& \V{11}
+& 0
 & 0 \\
 \hline
 %%%%%%%%%%%
-  -i\cc{\PG} k_{x} 
-& \frac{\hbar^{2}}{2m}k ^{2} 
-& 0 
-& 0 
-& 0 
-& \V{35} 
+  -i\cc{\PG} k_{x}
+& \frac{\hbar^{2}}{2m}k ^{2}
+& 0
+& 0
+& 0
+& \V{35}
 & 0 \\
 %%%%%%%%%%%
-  -i\cc{\PG} k_{y} 
-& 0 
-& \frac{\hbar^{2}}{2m} k^{2} 
-& 0 
-& 0 
-& 0 
+  -i\cc{\PG} k_{y}
+& 0
+& \frac{\hbar^{2}}{2m} k^{2}
+& 0
+& 0
+& 0
 & \V{35}   \\
 %%%%%%%%%%%
 \hline
-  -i\cc{\PG} k_{z} 
-& 0 
-& 0 
-& \frac{\hbar^{2}}{2m} k^{2} 
-& \V{15} 
-& 0 
+  -i\cc{\PG} k_{z}
+& 0
+& 0
+& \frac{\hbar^{2}}{2m} k^{2}
+& \V{15}
+& 0
 & 0 \\
 \hline\hline
 %%%%%%%%%%%
-\cc{\V{11}} 
-& 0 
-& 0 
-& \cc{\V{15}} 
+\cc{\V{11}}
+& 0
+& 0
+& \cc{\V{15}}
 & \begin{array}{c} E_{\text{Lc}} + \frac{\hbar^{2}}{2m} k^{2}\\
   + G k_{z}^{2}
-  \end{array} 
-& i\PL k_{x} 
+  \end{array}
+& i\PL k_{x}
 & i\PL k_{y}\\
 %%%%%%%%%%%
 \hline
-0 
-& \cc{\V{35}} 
-& 0 
-& 0 
-& -i\cc{\PL} k_{x} 
-& E_{\text{Lv}} + \frac{\hbar^{2}}{2m} k^{2} 
+0
+& \cc{\V{35}}
+& 0
+& 0
+& -i\cc{\PL} k_{x}
+& E_{\text{Lv}} + \frac{\hbar^{2}}{2m} k^{2}
 & 0 \\
 %%%%%%%%%%%
-0 
-& 0 
-& \cc{\V{35}} 
-& 0 
-& -i\cc{\PL} k_{y} 
-& 0 
+0
+& 0
+& \cc{\V{35}}
+& 0
+& -i\cc{\PL} k_{y}
+& 0
 & E_{\text{Lv}} + \frac{\hbar^{2}}{2m} k^{2} \\
 \end{array} \right)
 $$
