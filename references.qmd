@@ -1,3 +1,8 @@
+```{r, results='asis', echo=FALSE, eval=knitr::is_html_output()}
+input <- file("header.tex")
+cat(sub("%.*$", "", readLines(input)), sep = "\n")
+close(input)
+```
 # Literatur {.unnumbered}
 
 ::: {#refs}
