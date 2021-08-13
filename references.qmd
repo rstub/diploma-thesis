@@ -3,6 +3,7 @@ input <- file("header.tex")
 cat(sub("%.*$", "", readLines(input)), sep = "\n")
 close(input)
 ```
+
 # Literatur {.unnumbered}
 
 ::: {#refs}
